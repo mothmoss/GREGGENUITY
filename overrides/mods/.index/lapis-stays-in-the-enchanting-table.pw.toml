@@ -1,0 +1,14 @@
+name = "Lapis Stays in the Enchanting Table"
+filename = "EnchantingTable-1.12-1.1.3.jar"
+side = "both"
+
+[download]
+mode = "metadata:curseforge"
+url = ""
+hash-format = "sha1"
+hash = "a2fdd06776ccb51092513571aa5e5bdd1b5a051c"
+
+[update]
+[update.curseforge]
+file-id = 2553810
+project-id = 263905

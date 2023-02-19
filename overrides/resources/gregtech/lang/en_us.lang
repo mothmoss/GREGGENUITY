@@ -1,0 +1,126 @@
+# GT Materials
+material.thaumium=Thaumium
+material.manasteel=Manasteel
+material.starmetal=Starmetal
+material.elementium=Elementium
+material.terrasteel=Terrasteel
+material.void=Void Metal
+material.mithrillium=Mithrillium
+material.pigiron=Pig Iron
+material.aer_infused=Aer Infused Crystal
+material.aqua_infused=Aqua Infused Crystal
+material.entropy_infused=Entropy Infused Crystal
+material.ignis_infused=Ignis Infused Crystal
+material.ordo_infused=Ordo Infused Crystal
+material.terra_infused=Terra Infused Crystal
+material.mica_based=Mica Based
+material.mica_insulator=Mica Insulator
+material.dark_steel=Dark Steel
+material.pulsating_iron=Pulsating Iron
+material.energetic_alloy=Energetic Alloy
+material.vibrant_alloy=Vibrant Alloy
+material.end_steel=End Steel
+material.concrete_mix=Concrete Mix
+material.botanic_mana=Botanic Mana
+material.moonliquid=Lunar Residue Fluid
+material.liquid_nitrogen=Liquid Nitrogen
+material.compressedair=Compressed Air
+material.moondust=Moondust
+material.dilute_petrotheum=Dilute Petrotheum
+material.petrotheum_base_dust=Petrotheum Base Dust
+material.graphite_epoxy=Graphite-Reinforced Epoxy Resin 
+material.lunar_alloy=Lunar-Grade Spacefaring Alloy
+
+# ContentTweaker
+item.contenttweaker.blankrune.name=Blank Rune
+item.contenttweaker.balanceshard.name=Balance Shard
+tile.contenttweaker.vibrant_casing.name=Vibrant Alloy Machine Casing
+item.contenttweaker.moon.name=Lunar Transport Chip
+tile.contenttweaker.concrete.name=Concrete Stone
+tile.contenttweaker.darkbrick.name=Darkbrick
+tile.contenttweaker.mars.name=Martian Stone
+tile.contenttweaker.mooncrete.name=Mooncrete
+tile.contenttweaker.darkcrete.name=Darkcrete
+tile.contenttweaker.blackstone.name=Blackstone
+tile.contenttweaker.vibrant_casing.name=Vibrant_Casing
+
+
+# Fixing Mods 
+metaitem.food.plutonium_241_caplet.name=Plutonium 241 Caplet
+material.gtfo_aniline=Aniline (GTFO)
+material.paracetamol=Paracetamol
+metaitem.component.iv_bag.name=IV Bag (GTFO)
+tile.engineersdecor.sign_caution.name=Caution Sign
+tile.catwalks.catwalk.unknown.name=Classic Catwalk
+
+
+
+# MultiblockTweaker
+multiblocktweaker.machine.excavator.name=Immersive Excavator
+mbt.machine.excavator.name=Immersive Excavator
+recipemap.excavator.name=Immersive Excavator
+
+multiblocktweaker.machine.fluidcompressor.name=Fluid Compressor
+mbt.machine.fluidcompressor.name=Fluid Compressor
+recipemap.fluidcompressor.name=Fluid Compressor
+
+
+# Tungsten & Platline Materials
+material.tungsten_trioxide=Tungsten Trioxide
+material.platinum_metallic=Metallic Platinum
+item.platinum_metallic.dust=Metallic Platinum Powder
+item.platinum_metallic.dustSmall=Small Pile of Metallic Platinum Powder
+item.platinum_metallic.dustTiny=Tiny Pile of Metallic Platinum Powder
+material.palladium_metallic=Metallic Palladium
+item.palladium_metallic.dust=Metallic Palladium Powder
+item.palladium_metallic.dustSmall=Small Pile of Metallic Palladium Powder
+item.palladium_metallic.dustTiny=Tiny Pile of Metallic Palladium Powder
+material.ammonium_hexachloroplatinate=Ammonium Hexachloroplatinate
+material.chloroplatinic_acid=Chloroplatinic Acid
+material.potassium_bisulfate=Potassium Bisulfate
+material.potassium_pyrosulfate=Potassium Pyrosulfate
+material.potassium_sulfate=Potassium Sulfate
+material.zinc_sulfate=Zinc Sulfate
+material.sodium_nitrate=Sodium Nitrate
+material.rhodium_nitrate=Rhodium Nitrate
+material.sodium_ruthenate=Sodium Ruthenate
+material.sodium_peroxide=Sodium Peroxide
+material.iridium_dioxide_residue=Iridium Dioxide Residue
+material.ammonium_hexachloroiridiate=Ammonium Hexachloroiridiate
+material.platinum_group_residue=Platinum Group Residue
+item.platinum_group_residue.dust=Platinum Group Residue
+item.platinum_group_residue.dustSmall=Small Pile of Platinum Group Residue
+item.platinum_group_residue.dustTiny=Tiny Pile of Platinum Group Residue
+material.palladium_rich_ammonia=Palladium Rich Ammonia
+material.crude_platinum_residue=Crude Platinum Residue
+item.crude_platinum_residue.dust=Crude Platinum Residue
+item.crude_platinum_residue.dustSmall=Small Pile of Crude Platinum Residue
+item.crude_platinum_residue.dustTiny=Tiny Pile of Crude Platinum Residue
+material.crude_palladium_residue=Crude Palladium Residue
+item.crude_palladium_residue.dust=Crude Palladium Residue
+item.crude_palladium_residue.dustSmall=Small Pile of Crude Palladium Residue
+item.crude_palladium_residue.dustTiny=Tiny Pile of Crude Palladium Residue
+material.iridium_group_sludge=Iridium Group Sludge
+item.iridium_group_sludge.dust=Iridium Group Sludge
+item.iridium_group_sludge.dustSmall=Small Pile of Iridium Group Sludge
+item.iridium_group_sludge.dustTiny=Tiny Pile of Iridium Group Sludge
+material.rhodium_sulfate_solution=Rhodium Sulfate Solution
+material.crude_rhodium_residue=Crude Rhodium Residue
+item.crude_rhodium_residue.dust=Crude Rhodium Residue
+item.crude_rhodium_residue.dustSmall=Small Pile of Crude Rhodium Residue
+item.crude_rhodium_residue.dustTiny=Tiny Pile of Crude Rhodium Residue
+material.rhodium_salt=Rhodium Salt
+material.acidic_sodium_ruthenate_solution=Acidic Sodium Ruthenate Solution
+material.acidic_iridium_dioxide_solution=Acidic Iridium Dioxide Solution
+material.platinum_palladium_leachate=Platinum-Palladium Leachate
+material.rhodium_salt_solution=Rhodium Salt Solution
+material.methyl_formate=Methyl Formate
+material.formic_acid=Formic Acid
+material.sodium_methoxide=Sodium Methoxide
+material.hydrogen_peroxide=Hydrogen Peroxide
+material.phthalic_anhydride=Phthalic Anhydride
+material.ethylanthraquinone=2-Ethylanthraquinone
+material.lithium_hydroxide=Lithium Hydroxide
+material.calcium_tungstate=Calcium Tungstate
+material.calcium_hydroxide=Calcium Hydroxide
+material.sodium_tungstate=Sodium Tungstate

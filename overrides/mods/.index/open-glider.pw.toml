@@ -1,0 +1,14 @@
+name = "Open Glider"
+filename = "OpenGlider-1.12.1-1.1.0.jar"
+side = "both"
+
+[download]
+mode = "metadata:curseforge"
+url = ""
+hash-format = "sha1"
+hash = "8d2f6a5321df463ea46abab13468785dc3847d12"
+
+[update]
+[update.curseforge]
+file-id = 2464501
+project-id = 252354

@@ -1,0 +1,14 @@
+name = "dan's Mouse Tweaks"
+filename = "MouseTweaks-3.1.2-mc1.12.2.jar"
+side = "both"
+
+[download]
+mode = "metadata:curseforge"
+url = ""
+hash-format = "sha1"
+hash = "8da65ff042f64a4ee551cafe57ceec24a352f81e"
+
+[update]
+[update.curseforge]
+file-id = 3962479
+project-id = 461660

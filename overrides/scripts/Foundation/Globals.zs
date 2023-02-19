@@ -1,0 +1,63 @@
+#priority 9999
+import crafttweaker.item.IItemStack;
+import mods.gregtech.recipe.RecipeMap;
+
+// ================ Globals ================ //
+    // ======== GregTech Recipemaps ======== //
+        global alloy                  as RecipeMap = RecipeMap.getByName("alloy_smelter"); 
+        global arc                    as RecipeMap = RecipeMap.getByName("arc_furnace"); 
+        global assembler              as RecipeMap = RecipeMap.getByName("assembler");
+        global assline                as RecipeMap = RecipeMap.getByName("assembly_line");
+        global autoclave              as RecipeMap = RecipeMap.getByName("autoclave");
+        global bender                 as RecipeMap = RecipeMap.getByName("bender");
+        global brewery                as RecipeMap = RecipeMap.getByName("brewery");
+        global canner                 as RecipeMap = RecipeMap.getByName("canner");
+        global centrifuge             as RecipeMap = RecipeMap.getByName("centrifuge");
+        global chembath               as RecipeMap = RecipeMap.getByName("chemical_bath");
+        global chemreactor            as RecipeMap = RecipeMap.getByName("chemical_reactor");
+        global circuitassembler       as RecipeMap = RecipeMap.getByName("circuit_assembler");
+        global cokeoven               as RecipeMap = RecipeMap.getByName("coke_oven");
+        global compressor             as RecipeMap = RecipeMap.getByName("compressor");
+        global cracker                as RecipeMap = RecipeMap.getByName("cracker");
+        global cutter                 as RecipeMap = RecipeMap.getByName("cutter");
+        global distillation           as RecipeMap = RecipeMap.getByName("distillation_tower");
+        global distillery             as RecipeMap = RecipeMap.getByName("distillery");
+        global ebf                    as RecipeMap = RecipeMap.getByName("electric_blast_furnace");
+        global efurnace               as RecipeMap = RecipeMap.getByName("electric_furnace");
+        global electrolyzer           as RecipeMap = RecipeMap.getByName("electrolyzer");
+        global separator              as RecipeMap = RecipeMap.getByName("electromagnetic_separator");
+        global extractor              as RecipeMap = RecipeMap.getByName("extractor");
+        global extruder               as RecipeMap = RecipeMap.getByName("extruder");
+        global fermenter              as RecipeMap = RecipeMap.getByName("fermenter");
+        global heater                 as RecipeMap = RecipeMap.getByName("fluid_heater");
+        global solidifier             as RecipeMap = RecipeMap.getByName("fluid_solidifier");
+        global hammer                 as RecipeMap = RecipeMap.getByName("forge_hammer");
+        global press                  as RecipeMap = RecipeMap.getByName("forming_press");
+        global reactor                as RecipeMap = RecipeMap.getByName("fusion_reactor");
+        global gascollector           as RecipeMap = RecipeMap.getByName("gas_collector");
+        global implosion              as RecipeMap = RecipeMap.getByName("implosion_compressor");
+        global lcr                    as RecipeMap = RecipeMap.getByName("large_chemical_reactor");
+        global laserengraver          as RecipeMap = RecipeMap.getByName("laser_engraver");
+        global lathe                  as RecipeMap = RecipeMap.getByName("lathe");
+        global macerator              as RecipeMap = RecipeMap.getByName("macerator");
+        global massfab                as RecipeMap = RecipeMap.getByName("mass_fabricator");
+        global mixer                  as RecipeMap = RecipeMap.getByName("mixer");
+        global washer                 as RecipeMap = RecipeMap.getByName("ore_washer");
+        global packager               as RecipeMap = RecipeMap.getByName("packer");
+        global polarizer              as RecipeMap = RecipeMap.getByName("polarizer");
+        global pbf                    as RecipeMap = RecipeMap.getByName("primitive_blast_furnace");
+        global pyrolyse               as RecipeMap = RecipeMap.getByName("pyrolyse_oven");
+        global replicator             as RecipeMap = RecipeMap.getByName("replicator");
+        global scanner                as RecipeMap = RecipeMap.getByName("scanner");
+        global sifter                 as RecipeMap = RecipeMap.getByName("sifter");
+        global thermalcentrifuge      as RecipeMap = RecipeMap.getByName("thermal_centrifuge");
+        global freezer                as RecipeMap = RecipeMap.getByName("vacuum_freezer");
+        global wiremill               as RecipeMap = RecipeMap.getByName("wiremill");
+        global combustiongen          as RecipeMap = RecipeMap.getByName("combustion_generator");
+        global gasgen                 as RecipeMap = RecipeMap.getByName("gas_turbine");
+        global plasmagen              as RecipeMap = RecipeMap.getByName("plasma_turbine");
+        global semigen                as RecipeMap = RecipeMap.getByName("semi_fluid_generator");
+        global steamgen               as RecipeMap = RecipeMap.getByName("steam_turbine");
+        global excavator              as RecipeMap = RecipeMap.getByName("excavator");
+        global fcompressor            as RecipeMap = RecipeMap.getByName("fluidcompressor");
+// ================ Globals ================ //

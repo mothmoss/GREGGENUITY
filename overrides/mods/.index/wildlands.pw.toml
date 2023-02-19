@@ -1,0 +1,14 @@
+name = "Wildlands"
+filename = "Wildlands-1.12.2-alpha-0.1.jar"
+side = "both"
+
+[download]
+mode = "metadata:curseforge"
+url = ""
+hash-format = "sha1"
+hash = "16b2f683c6c8fe76a3d47702540aa3ce5a3ae9cd"
+
+[update]
+[update.curseforge]
+file-id = 3231425
+project-id = 453979

@@ -1,0 +1,95 @@
+**Update 0.2A**
+
+**Mods Changed**
+Updated CraftTweaker
+Updated Xaero's Worldmap & Minimap
+Updated AE2FC
+Updated AE2
+Updated UniversalTweaks
+Updated GTCEU
+Updated LittleTiles
+Updated BogoSort
+Added JEI Utilities
+Added Roguelike Dungeons 
+Added Blur
+Added Modular Machinery 
+Added Modular Diversity 
+Added NormalASM 
+Added GroovyScript
+Added GTFO
+Added Catwalks
+Added Cucumber
+Added ExtendedCrafting
+Removed Doomlike Dungeons
+Removed FastWorkbench
+Removed Multiblocked
+Removed LoliASM
+Removed HoloInventory
+Removed ElevatorMod
+
+**Changelog**
+1. Adjusted Tempered Glass to use glassHard as input
+2. **Thanks to Gabo:** adjusted UI coloration to be closer to GGN Purple texture pack
+3. Replaced Botania Mortar with GT Mortar for consistency
+4. Added Fluid Compressor multiblock
+5. [GGN Dark] Fixed AE2 Lang
+6. [GGN Dark] Fixed single miscolored pixel on pattern2.png 
+7. Added Compressed Air, Lunar Residue Fluid, and Moon Dust 
+8. Increased XP from stronger mobs
+9. Lowered max HP of mobs, increased max DMG
+10. [GGN Dark] Added support for Wireless Crafting Terminal with updated states.png
+11. [GGN Dark] Fixed AE2 search bars being miscolored 
+12. Removed Thaumium recipes for steel
+13. Organized some scripts :desolate: 
+14. Increased Storage Drawer capacity to be in line with Fluid Drawers
+15. Changed AE2 Cable Anchors & Quartz Fibers to bolt extruder recipes
+16. Changed Dank Null recipes
+17. Adjusted components of EIO Materials; notably, Pulsating Iron now includes Iron
+18. Removed Ender Eye recipe (crafting table & chembath)
+19. Added Endervoir at MV (is also available at LV through Magic)
+20. Reduced Killer Joe tier from IV to HV (???)
+21. Re-enabled pitcher plants, since you can't extract from them
+22. Replaced Storage Drawer Controller using a random circuit board with circuitLv
+23. Made Red Sand recipe marginally "harder"
+24. Added easier Thaumcraft transmutation recipe for sulfur pre-nether
+25. Removed voltage recipe for Thaumium
+26. Added Balance Shards
+27. Changed recipe for TC Resonators
+28. Added reicpe for Compressed Air
+29. Added fluid heating recipes for Liquids -> Gasses
+30. Reworked Vacuum Freezer to use coolants 
+31. Nerfed output of Wrought Iron & Steel -> Thaumium to 2:1 and 1:1 
+32. **Thanks to Incandescence:** Changed Salis Mundus & Balance Shard recipe
+33. Dramatically nerfed Excavator speed
+34. Buffed Vibrant Alloy Pipes (2000k -> 2400k, 100mb/t -> 120mb/t)
+35. Re-added EnderIO Alloy recipes
+36. Added Mana Extrapolator with Modular Machines
+37. Reduced radius of veins by 25% in order to make flowers more accurate
+**38. Thanks to everyone who helped me with GroovyScript:** added Autoclave "centrifuging" of ores for 2x ore multiplication
+    38B. The goal here is to have an alternative, high yield ore processing line available through magic (and maybe tech)
+        Ore -> 2 Crushed Ore -> 4 Purified Ore -> 8 Centrifuged Ore
+39. Enabled High Tier machines
+40. Added a bunch of materials for Tungsten, Rockets, and Petrotheum
+41. Added Tungstenline
+42. Added Lunar Spacefaring Alloy 
+43. Added some decorative ContentTweaker blocks - Concrete Stone, Darkbrick, Mooncrete, Blackstone, and Darkcrete
+44. Added textures for HT components
+45. Compressed texture packs, removed unnecessary files, updated Modernity
+46. Reworked Advanced Rocketry recipes 
+47. Added Lunar Transport Chip - an artifact required to get to the Moon
+48. Added Excavator Veins for Nether & the Moon
+49. Added placeholder processing for Lunar Residue Fluid and Moondust as a source of Rutile, Chlorine, Silicon Dioxide, and Aluminium 
+50. Added recipe for SMD Diode using Electrum with lower yield to account for Platline being necessary 
+51. Added lower yield tech-only recipe for Salis Mundus
+52. Added recipes for Modular Machinery
+
+**Fixes**
+1. Fixed some Wrought Iron -> Steel recipes using 9x the intended input 
+2. Fixed Lazuli veins generating in non-Overworld dimensions
+3. Re-added Starmetal Block to oredict
+4. Added Starmetal to Starmetal oredict (lol)
+5. Fixed a ton of recycling mess
+6. Organized a ton of scripts
+7. Fixed recycling recipes defaulting to materials I didn't want them to 
+8. Added recipe for Aluminium fence
+9. Re-enabled Quartz Knife, whoops

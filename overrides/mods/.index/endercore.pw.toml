@@ -1,0 +1,14 @@
+name = "EnderCore"
+filename = "EnderCore-1.12.2-0.5.76.jar"
+side = "both"
+
+[download]
+mode = "url"
+url = "https://cdn.modrinth.com/data/oJcFXakG/versions/0.5.76/EnderCore-1.12.2-0.5.76.jar"
+hash-format = "sha512"
+hash = "f87b8e4faa2afa130fd51dbcbe94c98edb3b6a7b79cbd9345055f3f594ec82a8288d8102a53fd3b3e5916d92f945842d7ecef0808a087ab57835e515c5ca40ae"
+
+[update]
+[update.modrinth]
+mod-id = "oJcFXakG"
+version = "SQnnu0Om"

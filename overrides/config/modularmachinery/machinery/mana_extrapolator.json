@@ -1,0 +1,237 @@
+{
+    "registryname": "mana_extrapolator",
+    "localizedname": "Mana Extrapolator",
+    "requires-blueprint": true, 
+    "color": "1761c1", 
+    "parts": [
+        {
+            "x": -1,
+            "y": 0,
+            "z": 2,
+            "elements": [
+                "modularmachinery:blockcasing@0",
+                "modulardiversity:blockmanainputhatch",
+                "modulardiversity:blockmanaoutputhatch",
+                "casings_fluid"
+            ]
+        },
+        {
+            "x": -1,
+            "y": 0,
+            "z": 1,
+            "elements": [
+                "modularmachinery:blockcasing@0",
+                "modulardiversity:blockmanainputhatch",
+                "modulardiversity:blockmanaoutputhatch",
+                "casings_fluid"
+            ]
+        },
+        {
+            "x": 1,
+            "y": 0,
+            "z": 2,
+            "elements": [
+                "modularmachinery:blockcasing@0",
+                "modulardiversity:blockmanainputhatch",
+                "modulardiversity:blockmanaoutputhatch",
+                "casings_fluid"
+            ]
+        },
+        {
+            "x": -1,
+            "y": 0,
+            "z": 0,
+            "elements": [
+                "modularmachinery:blockcasing@0",
+                "modulardiversity:blockmanainputhatch",
+                "modulardiversity:blockmanaoutputhatch",
+                "casings_fluid"
+            ]
+        },
+        {
+            "x": 1,
+            "y": 0,
+            "z": 1,
+            "elements": [
+                "modularmachinery:blockcasing@0",
+                "modulardiversity:blockmanainputhatch",
+                "modulardiversity:blockmanaoutputhatch",
+                "casings_fluid"
+            ]
+        },
+        {
+            "x": 1,
+            "y": 0,
+            "z": 0,
+            "elements": [
+                "modularmachinery:blockcasing@0",
+                "modulardiversity:blockmanainputhatch",
+                "modulardiversity:blockmanaoutputhatch",
+                "casings_fluid"
+            ]
+        },
+        {
+            "x": 1,
+            "y": 1,
+            "z": 0,
+            "elements": [
+                "thaumcraft:metal_thaumium@0"
+            ]
+        },
+        {
+            "x": 1,
+            "y": 1,
+            "z": 2,
+            "elements": [
+                "thaumcraft:metal_thaumium@0"
+            ]
+        },
+        {
+            "x": 1,
+            "y": 1,
+            "z": 1,
+            "elements": [
+                "botania:livingrock@1"
+            ]
+        },
+        {
+            "x": -1,
+            "y": -1,
+            "z": 1,
+            "elements": [
+                "botania:livingrock@1"
+            ]
+        },
+        {
+            "x": -1,
+            "y": -1,
+            "z": 2,
+            "elements": [
+                "thaumcraft:metal_thaumium@0"
+            ]
+        },
+        {
+            "x": -1,
+            "y": 1,
+            "z": 2,
+            "elements": [
+                "thaumcraft:metal_thaumium@0"
+            ]
+        },
+        {
+            "x": -1,
+            "y": 1,
+            "z": 1,
+            "elements": [
+                "botania:livingrock@1"
+            ]
+        },
+        {
+            "x": -1,
+            "y": 1,
+            "z": 0,
+            "elements": [
+                "thaumcraft:metal_thaumium@0"
+            ]
+        },
+        {
+            "x": -1,
+            "y": -1,
+            "z": 0,
+            "elements": [
+                "thaumcraft:metal_thaumium@0"
+            ]
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "z": 2,
+            "elements": [
+                "modularmachinery:blockcasing@0",
+                "modulardiversity:blockmanainputhatch",
+                "modulardiversity:blockmanaoutputhatch",
+                "casings_fluid"
+            ]
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "z": 1,
+            "elements": [
+                "thaumcraft:infusion_matrix@0"
+            ]
+        },
+        {
+            "x": 0,
+            "y": -1,
+            "z": 1,
+            "elements": [
+                "botania:livingrock@1"
+            ]
+        },
+        {
+            "x": 1,
+            "y": -1,
+            "z": 2,
+            "elements": [
+                "thaumcraft:metal_thaumium@0"
+            ]
+        },
+        {
+            "x": 1,
+            "y": -1,
+            "z": 1,
+            "elements": [
+                "botania:livingrock@1"
+            ]
+        },
+        {
+            "x": 0,
+            "y": -1,
+            "z": 0,
+            "elements": [
+                "botania:livingrock@1"
+            ]
+        },
+        {
+            "x": 1,
+            "y": -1,
+            "z": 0,
+            "elements": [
+                "thaumcraft:metal_thaumium@0"
+            ]
+        },
+        {
+            "x": 0,
+            "y": -1,
+            "z": 2,
+            "elements": [
+                "botania:livingrock@1"
+            ]
+        },
+        {
+            "x": 0,
+            "y": 1,
+            "z": 1,
+            "elements": [
+                "botania:livingrock@1"
+            ]
+        },
+        {
+            "x": 0,
+            "y": 1,
+            "z": 0,
+            "elements": [
+                "botania:livingrock@1"
+            ]
+        },
+        {
+            "x": 0,
+            "y": 1,
+            "z": 2,
+            "elements": [
+                "botania:livingrock@1"
+            ]
+        }
+    ]
+}

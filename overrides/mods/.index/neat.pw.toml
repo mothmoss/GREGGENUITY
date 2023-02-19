@@ -1,0 +1,14 @@
+name = "Neat"
+filename = "Neat 1.4-17.jar"
+side = "both"
+
+[download]
+mode = "url"
+url = "https://cdn.modrinth.com/data/Ins7SzzR/versions/1.4-17/Neat%2B1.4-17.jar"
+hash-format = "sha512"
+hash = "dd80d6edb3351f0665d7d61af539838a4c38ac8a51c44a39be07fe28e811d5bcc0fa222955d253803cff906e27660ed49f7062133eaa812cec49232d252e549d"
+
+[update]
+[update.modrinth]
+mod-id = "Ins7SzzR"
+version = "Iysnk6U1"

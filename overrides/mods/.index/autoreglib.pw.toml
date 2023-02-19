@@ -1,0 +1,14 @@
+name = "AutoRegLib"
+filename = "AutoRegLib-1.3-32.jar"
+side = "both"
+
+[download]
+mode = "url"
+url = "https://cdn.modrinth.com/data/NvZ9ZhwE/versions/FgbUBupA/AutoRegLib-1.3-32.jar"
+hash-format = "sha512"
+hash = "863f62eb54bd5b545a136c2b3d00dfa0a0788ca65257507238b5f3af85ac8419697ec3f566bb11fb1ad787f0fa05184a22633de83953c1c01ff23b99b1f190bb"
+
+[update]
+[update.modrinth]
+mod-id = "NvZ9ZhwE"
+version = "FgbUBupA"

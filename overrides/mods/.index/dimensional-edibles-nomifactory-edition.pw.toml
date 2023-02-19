@@ -1,0 +1,14 @@
+name = "Dimensional Edibles: Nomifactory Edition"
+filename = "DimensionalEdibles-1.12.2-1.6.4.jar"
+side = "both"
+
+[download]
+mode = "metadata:curseforge"
+url = ""
+hash-format = "sha1"
+hash = "9966043928111309e8b1b029b3bff6386e7922fe"
+
+[update]
+[update.curseforge]
+file-id = 3671689
+project-id = 431982

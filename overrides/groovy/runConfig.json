@@ -1,0 +1,17 @@
+{
+  "packName": "",
+  "version": "1.0.0",
+  "debug": false,
+  "loaders": {
+    "preInit": [
+      "preInit/"
+    ],
+    "postInit": [
+      "postInit/",
+      "postInit/Foundation",
+      "postInit/GregTech",
+      "postInit/Tech",
+      "postInit/Misc"
+    ]
+  }
+}

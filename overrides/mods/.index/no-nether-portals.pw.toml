@@ -1,0 +1,14 @@
+name = "No Nether Portals"
+filename = "nonetherPortals_v1.0.0formc1.12.2.jar"
+side = "both"
+
+[download]
+mode = "metadata:curseforge"
+url = ""
+hash-format = "sha1"
+hash = "587d554ddbf61f4bd22dde5e8e283969e2ced35c"
+
+[update]
+[update.curseforge]
+file-id = 2573063
+project-id = 296057

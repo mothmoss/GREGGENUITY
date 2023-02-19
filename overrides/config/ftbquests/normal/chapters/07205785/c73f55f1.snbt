@@ -1,0 +1,138 @@
+{
+	title: "Starting Off",
+	icon: {
+		id: "astralsorcery:itemknowledgeshare",
+		tag: {
+			astralsorcery: {
+				creativeKnowledge: 1b
+			}
+		}
+	},
+	x: 0.0d,
+	y: 0.0d,
+	description: "Your journey begins.",
+	tasks: [{
+		uid: "49975f2d",
+		type: "item",
+		items: [{
+			id: "gregtech:meta_tool",
+			tag: {
+				GT.ToolStats: {
+					Material: "flint",
+					MaxDurability: 80,
+					HarvestLevel: 1,
+					DigSpeed: 6.0f,
+					AttackDamage: 2.0f
+				},
+				ench: [{
+					id: 20s,
+					lvl: 2s
+				}]
+			}
+		}],
+		ignore_nbt: 1b
+	},
+	{
+		uid: "f2e6fb93",
+		type: "item",
+		items: [{
+			id: "gregtech:meta_tool",
+			Damage: 1s,
+			tag: {
+				GT.ToolStats: {
+					Material: "flint",
+					MaxDurability: 80,
+					HarvestLevel: 1,
+					DigSpeed: 6.0f,
+					AttackDamage: 2.0f
+				}
+			}
+		}],
+		ignore_nbt: 1b
+	},
+	{
+		uid: "6bffa54c",
+		type: "item",
+		items: [{
+			id: "gregtech:meta_tool",
+			Damage: 3s,
+			tag: {
+				GT.ToolStats: {
+					Material: "flint",
+					MaxDurability: 80,
+					HarvestLevel: 1,
+					DigSpeed: 6.0f,
+					AttackDamage: 2.0f
+				}
+			}
+		}],
+		ignore_nbt: 1b
+	},
+	{
+		uid: "3414c662",
+		type: "item",
+		items: [{
+			id: "gregtech:meta_tool",
+			Damage: 2s,
+			tag: {
+				GT.ToolStats: {
+					Material: "flint",
+					MaxDurability: 80,
+					HarvestLevel: 1,
+					DigSpeed: 6.0f,
+					AttackDamage: 2.0f
+				}
+			}
+		}],
+		ignore_nbt: 1b
+	},
+	{
+		uid: "aacda1b0",
+		type: "item",
+		items: [{
+			item: "minecraft:clay"
+		}],
+		count: 16L
+	}],
+	rewards: [{
+		uid: "120c809a",
+		type: "item",
+		team_reward: false,
+		item: {
+			id: "thermalexpansion:satchel",
+			Damage: 100s,
+			tag: {
+				Accessible: 1b
+			}
+		}
+	},
+	{
+		uid: "e0d997c5",
+		type: "item",
+		item: "minecraft:log",
+		count: 32
+	},
+	{
+		uid: "4dcf2e9e",
+		type: "item",
+		item: "minecraft:brick_block",
+		count: 32
+	},
+	{
+		uid: "7c15cec0",
+		type: "item",
+		item: "minecraft:cooked_beef",
+		count: 16
+	},
+	{
+		uid: "415a933f",
+		type: "item",
+		team_reward: true,
+		item: {
+			id: "chisel:chisel_hitech",
+			tag: {
+				chiseldata: {}
+			}
+		}
+	}]
+}

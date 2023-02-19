@@ -1,0 +1,15 @@
+{
+  "name": "dungeon:crimson",
+  "exclusive": true,
+  "tower": {
+    "type" : "HOLE"
+  },
+  "inherit": [
+    "layout:size_small",
+    "segments:generic",
+    "rooms:generic",
+    "spawners:crimson",
+    "builtin:loot",
+    "theme:crimson"    
+  ]
+}

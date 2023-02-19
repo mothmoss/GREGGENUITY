@@ -1,0 +1,14 @@
+name = "Ender IO"
+filename = "EnderIO-1.12.2-5.3.70.jar"
+side = "both"
+
+[download]
+mode = "url"
+url = "https://cdn.modrinth.com/data/49ZofO4f/versions/5.3.70/EnderIO-1.12.2-5.3.70.jar"
+hash-format = "sha512"
+hash = "607f153cef2a2b976ebd45f8211e17a7d3dcea057fd07cca7550f47182a7f145866cf6d783b9183df3a7259062cde34651daeb432afa80a60dcdbd10cf529db6"
+
+[update]
+[update.modrinth]
+mod-id = "49ZofO4f"
+version = "Ju6pPR9V"

@@ -1,0 +1,14 @@
+name = "DrawerFPS Legacy"
+filename = "DrawerFPS-1.12.2-1.0.0.jar"
+side = "both"
+
+[download]
+mode = "metadata:curseforge"
+url = ""
+hash-format = "sha1"
+hash = "2a9dc70a228099e0132ab946fd0b5b89697c3eaa"
+
+[update]
+[update.curseforge]
+file-id = 3756455
+project-id = 614513

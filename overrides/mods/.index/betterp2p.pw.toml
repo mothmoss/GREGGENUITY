@@ -1,0 +1,14 @@
+name = "Better P2P"
+filename = "betterp2p-1.12.2-1.2.3-extended_life.jar"
+side = "both"
+
+[download]
+mode = "metadata:curseforge"
+url = ""
+hash-format = "sha1"
+hash = "537cfc1e2fbdea23abd0c6dde9850cf6c9592da5"
+
+[update]
+[update.curseforge]
+file-id = 3817892
+project-id = 538092

@@ -1,0 +1,14 @@
+name = "GregTech CE: Unofficial"
+filename = "gregtech-1.12.2-2.5.2-beta.jar"
+side = "both"
+
+[download]
+mode = "metadata:curseforge"
+url = ""
+hash-format = "sha1"
+hash = "2063a461897fdca3d35eccc8cac04719a235e943"
+
+[update]
+[update.curseforge]
+file-id = 4390983
+project-id = 557242

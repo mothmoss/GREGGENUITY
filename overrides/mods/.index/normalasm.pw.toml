@@ -1,0 +1,14 @@
+name = "NormalASM"
+filename = "normalasm-5.6.jar"
+side = "both"
+
+[download]
+mode = "url"
+url = "https://cdn.modrinth.com/data/yMgolhVI/versions/UGKH5G7K/normalasm-5.6.jar"
+hash-format = "sha512"
+hash = "857960032e80de15ca91786b3353b12944d34be8d34b6c59ad5116f0e4278b982415d3d7c1d5354d33c168b5df013191f78db21eaae54c65379d16daf4fa5b60"
+
+[update]
+[update.modrinth]
+mod-id = "yMgolhVI"
+version = "UGKH5G7K"

@@ -1,0 +1,14 @@
+name = "AE2 Wireless Terminal Library"
+filename = "AE2WTLib-1.12.2-1.0.34.jar"
+side = "both"
+
+[download]
+mode = "metadata:curseforge"
+url = ""
+hash-format = "sha1"
+hash = "d76ffb730d9e02aeb6dd5bb3c5dd5fa39f5fe1b9"
+
+[update]
+[update.curseforge]
+file-id = 2830114
+project-id = 304024

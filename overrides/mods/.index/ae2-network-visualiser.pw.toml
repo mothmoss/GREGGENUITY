@@ -1,0 +1,14 @@
+name = "AE2 Network Visualiser"
+filename = "AE-Net-Vis-Tool-1.12.2-1.0.3.0-universal.jar"
+side = "both"
+
+[download]
+mode = "metadata:curseforge"
+url = ""
+hash-format = "sha1"
+hash = "bac9c21d2a1c12d46b97b115e5d1376901776ca5"
+
+[update]
+[update.curseforge]
+file-id = 2711427
+project-id = 321720

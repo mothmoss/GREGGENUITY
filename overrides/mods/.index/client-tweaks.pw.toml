@@ -1,0 +1,14 @@
+name = "Client Tweaks"
+filename = "ClientTweaks_1.12.2-3.1.11.jar"
+side = "both"
+
+[download]
+mode = "metadata:curseforge"
+url = ""
+hash-format = "sha1"
+hash = "c6c31bc3e10fe8da49cb37088ec3d0e8d481ad46"
+
+[update]
+[update.curseforge]
+file-id = 2624712
+project-id = 251407

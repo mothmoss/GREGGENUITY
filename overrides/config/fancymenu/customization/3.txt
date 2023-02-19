@@ -1,0 +1,273 @@
+type = menu
+
+customization-meta {
+  identifier = net.minecraft.client.gui.GuiMainMenu
+  randomgroup = 1
+  renderorder = foreground
+  randommode = false
+  randomonlyfirsttime = false
+}
+
+customization {
+  restart_on_load = false
+  name = ggnmenu
+  action = animatebackground
+}
+
+customization {
+  keepaspectratio = false
+  action = backgroundoptions
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_multiplayer_button%
+  orientation = mid-centered
+  x = -190
+  action = movebutton
+  y = -43
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_multiplayer_button%
+  loopbackgroundanimations = true
+  restartbackgroundanimations = true
+  action = setbuttontexture
+  backgroundhovered = resources/fancymenu/Buttons/brightbutton.png
+  backgroundnormal = resources/fancymenu/Buttons/darkbutton.png
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_options_button%
+  orientation = mid-centered
+  x = -90
+  action = movebutton
+  y = -22
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_options_button%
+  width = 100
+  action = resizebutton
+  height = 21
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_options_button%
+  loopbackgroundanimations = true
+  restartbackgroundanimations = true
+  action = setbuttontexture
+  backgroundhovered = resources/fancymenu/Buttons/mediumbuttonhover.png
+  backgroundnormal = resources/fancymenu/Buttons/mediumbuttondefault.png
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_quit_button%
+  orientation = mid-centered
+  x = -138
+  action = movebutton
+  y = 0
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_quit_button%
+  width = 98
+  action = resizebutton
+  height = 21
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_quit_button%
+  loopbackgroundanimations = true
+  restartbackgroundanimations = true
+  action = setbuttontexture
+  backgroundhovered = resources/fancymenu/Buttons/mediumbuttonhover.png
+  backgroundnormal = resources/fancymenu/Buttons/mediumbuttondefault.png
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_language_button%
+  orientation = mid-centered
+  x = -39
+  action = movebutton
+  y = 0
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_language_button%
+  width = 21
+  action = resizebutton
+  height = 21
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_language_button%
+  loopbackgroundanimations = true
+  restartbackgroundanimations = true
+  action = setbuttontexture
+  backgroundhovered = resources/fancymenu/Buttons/smallbuttonbright.png
+  backgroundnormal = resources/fancymenu/Buttons/smalldarkbutton.png
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_singleplayer_button%
+  orientation = mid-centered
+  x = -190
+  action = movebutton
+  y = -65
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_singleplayer_button%
+  loopbackgroundanimations = true
+  restartbackgroundanimations = true
+  action = setbuttontexture
+  backgroundhovered = resources/fancymenu/Buttons/brightbutton.png
+  backgroundnormal = resources/fancymenu/Buttons/darkbutton.png
+}
+
+customization {
+  identifier = %id=button_compatibility_id:forge_titlescreen_mods_button%
+  orientation = mid-centered
+  x = -190
+  action = movebutton
+  y = -22
+}
+
+customization {
+  identifier = %id=button_compatibility_id:forge_titlescreen_mods_button%
+  width = 100
+  action = resizebutton
+  height = 21
+}
+
+customization {
+  identifier = %id=button_compatibility_id:forge_titlescreen_mods_button%
+  loopbackgroundanimations = true
+  restartbackgroundanimations = true
+  action = setbuttontexture
+  backgroundhovered = resources/fancymenu/Buttons/mediumbuttonhover.png
+  backgroundnormal = resources/fancymenu/Buttons/mediumbuttondefault.png
+}
+
+customization {
+  identifier = %id=376346%
+  action = hidebutton
+}
+
+customization {
+  orientation = top-left
+  hidden = true
+  x = 186
+  width = 268
+  action = deep_customization_element:title_screen_forge_top
+  actionid = e5164712-a15c-4138-8663-c387444df91f1672172301366
+  y = 4
+  height = 19
+}
+
+customization {
+  orientation = top-left
+  hidden = true
+  x = 2
+  width = 169
+  action = deep_customization_element:title_screen_branding
+  actionid = e13449ef-3a36-4f60-bb4a-9485de77830c1672172301389
+  y = 285
+  height = 50
+}
+
+customization {
+  orientation = top-left
+  hidden = true
+  x = 411
+  width = 228
+  action = deep_customization_element:title_screen_forge_copyright
+  actionid = 6152aaa8-cd6a-4450-a261-b4803fd159061672172301390
+  y = 317
+  height = 9
+}
+
+customization {
+  orientation = top-left
+  hidden = true
+  x = 423
+  width = 13
+  action = deep_customization_element:title_screen_realms_notification
+  actionid = 05c6211a-9295-486d-9e86-253ef581fe561672172301391
+  y = 184
+  height = 13
+}
+
+customization {
+  orientation = top-left
+  hidden = true
+  x = 183
+  width = 274
+  action = deep_customization_element:title_screen_logo
+  actionid = f37a2d4b-7108-443b-a830-7f83d8530fd11672172301391
+  y = 30
+  height = 52
+}
+
+customization {
+  orientation = original
+  splash_color = #ffff00
+  hidden = true
+  x = 0
+  width = 60
+  splash_rotation = -20
+  action = deep_customization_element:title_screen_splash
+  actionid = 528f3d6e-f715-4554-ad77-a5dc65510de51672172301391
+  y = 0
+  height = 30
+}
+
+customization {
+  orientation = top-centered
+  basecolor = #ffffff
+  shadow = true
+  splashfilepath = resources/fancymenu/splash.txt
+  rotation = 0.0
+  scale = 0.75
+  refresh = true
+  bouncing = true
+  vanilla-like = false
+  x = -104
+  actionid = 326258c7-c3b4-4fb1-aa0b-2c95973f71d11672173387979
+  action = addsplash
+  y = 89
+}
+
+customization {
+  path = resources/fancymenu/ggnlogo.png
+  orientation = top-centered
+  x = 11
+  width = 40
+  actionid = 3074ffa9-d353-4994-9c4c-c5535df1997c1673037881203
+  action = addtexture
+  y = 47
+  height = 40
+}
+
+customization {
+  path = resources/fancymenu/ggnlogo.png
+  orientation = top-centered
+  x = -228
+  width = 40
+  actionid = 0d30c176-88c3-465f-865c-b476f6764c601673038585756
+  action = addtexture
+  y = 47
+  height = 40
+}
+
+customization {
+  path = resources/fancymenu/ggntop.png
+  orientation = top-left
+  x = 100
+  width = 267
+  actionid = bb2e5653-7fcf-4a13-ae73-c48c3bfd5ba51676791230606
+  action = addtexture
+  y = 19
+  height = 81
+}
+

@@ -1,0 +1,14 @@
+name = "Extended Crafting: Nomifactory Edition"
+filename = "ExtendedCrafting-Nomifactory-Edition-1.7.0.jar"
+side = "both"
+
+[download]
+mode = "metadata:curseforge"
+url = ""
+hash-format = "sha1"
+hash = "e4a83a43a407080a2fc0697c233eed5135093246"
+
+[update]
+[update.curseforge]
+file-id = 3613140
+project-id = 398267

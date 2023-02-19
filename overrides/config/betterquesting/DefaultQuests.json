@@ -1,0 +1,1711 @@
+{
+  "build:8": "4.1.0",
+  "format:8": "2.0.0",
+  "questDatabase:9": {
+    "0:10": {
+      "preRequisites:11": [],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Welcome to §d§5§5Gregg§d§5enuity!\n§b(Version 0.07A)\n\n§fAs with any other pack, your first priority in a strange new land should be creating a simple starter base. For that, you\u0027ll probably want §5§5§0§f§e§fsome tools §f- best start with some §eFlint Tools§e§f, considering §cvanilla tools are disabled.\n\n§fA sword to defend yourself, a pickaxe to begin prospecting, and an axe to get quick wood should probably be your first priorities.\n\n(Note: the Void Satchel allows you to automatically void what you set it to.)",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "astralsorcery:itemknowledgeshare",
+            "tag:10": {
+              "astralsorcery:10": {
+                "creativeKnowledge:1": 1
+              }
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "The Beginning",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 0,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 100,
+              "OreDict:8": "",
+              "id:8": "thermalexpansion:satchel",
+              "tag:10": {
+                "Accessible:1": 1
+              }
+            },
+            "1:10": {
+              "Count:3": 8,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "minecraft:cooked_beef"
+            },
+            "2:10": {
+              "Count:3": 8,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "minecraft:clay"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:sword",
+              "tag:10": {
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
+                  "AttackDamage:5": 4.0,
+                  "AttackSpeed:5": -2.4,
+                  "Durability:3": 0,
+                  "Material:8": "flint",
+                  "MaxDurability:3": 64
+                },
+                "HideFlags:3": 2,
+                "ench:9": {
+                  "0:10": {
+                    "id:2": 20,
+                    "lvl:2": 2
+                  }
+                }
+              }
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:pickaxe",
+              "tag:10": {
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {
+                  "TorchPlacing:1": 1
+                },
+                "GT.Tool:10": {
+                  "AttackDamage:5": 2.0,
+                  "AttackSpeed:5": -2.8,
+                  "Durability:3": 0,
+                  "HarvestLevel:3": 1,
+                  "Material:8": "flint",
+                  "MaxDurability:3": 64,
+                  "ToolSpeed:5": 4.0
+                },
+                "HideFlags:3": 2
+              }
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:axe",
+              "tag:10": {
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {
+                  "DisableShields:1": 1,
+                  "TreeFelling:1": 1
+                },
+                "GT.Tool:10": {
+                  "AttackDamage:5": 6.0,
+                  "AttackSpeed:5": -3.2,
+                  "Durability:3": 0,
+                  "HarvestLevel:3": 1,
+                  "Material:8": "flint",
+                  "MaxDurability:3": 64,
+                  "ToolSpeed:5": 2.0
+                },
+                "HideFlags:3": 2
+              }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "1:10": {
+      "preRequisites:11": [
+        0
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Ore deposits form in large clusters instead of scattered throughout caves as per vanilla. Additionally: there are many methods to obtain the same material. For example, both §eYellow Limonite§f and §7§4§eBasaltic Mineral Sand§f can be smelted into §7§eIron.§f Acquainting yourself with the Material Byproducts §cJEI §ftab and the World Generation §cJEI §ftab will be invaluable.\n\nAdditionally: some ores, and ores in their most simplest form are usually only found with Immersive Engineering Ore Deposits. For now though, they\u0027re not essential to your progression.\n\nWhat §ois §o§o§ressential to your progression right now is §eIron, §8§7Coal, §6Copper, §fand Tin. So you should probably search for those.\n\n§bTip: §f§aBotania §fflowers can §lonly §rspawn near an ore-vein. §cJEI §fcan tell you which flower correlates to which ore vein. Additionally, there\u0027ll be a note in the top left if you\u0027re in a valid ore chunk, since they spawn in a grid.)\n",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:iron_ingot"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "The Path to Steel...",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 1,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 24,
+              "Damage:2": 25,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            },
+            "1:10": {
+              "Count:3": 8,
+              "Damage:2": 112,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            },
+            "2:10": {
+              "Count:3": 8,
+              "Damage:2": 271,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "botania:flower"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 15,
+              "OreDict:8": "",
+              "id:8": "botania:flower"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "botania:flower"
+            },
+            "3:10": {
+              "Count:3": 1,
+              "Damage:2": 7,
+              "OreDict:8": "",
+              "id:8": "botania:flower"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "2:10": {
+      "preRequisites:11": [
+        0
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "A lot of GregTech recipes, as well as recipes that have been \"Greggified\" (remade to use GT components) use a lot of crafting tools. Here are some of the tools you\u0027ll be using.\n\nWrenches can be used to break machines, rotate them, as well as rotate their outputs. GregTech wrenches are compatible with most every other type of mod present in the pack - so no more 10 wrenches cluttering up your inventory. They\u0027re additionally used for making connections on item pipes and fluid pipes.\n\nIn addition to being necessary for making plates, Hammers can be used as a mining tool to automatically crush your ores.\n\nScrewdrivers can be used to configure GT machine covers.\n\nAxes won\u0027t cut logs if you sneak while using them.\n\nAnd lastly: wire-cutters are used to create and sever connections between GT cables \u0026 wires.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "gregtech:hammer",
+            "tag:10": {
+              "DisallowContainerItem:1": 0,
+              "GT.Behaviours:10": {},
+              "GT.Tool:10": {
+                "AttackDamage:5": 3.0,
+                "AttackSpeed:5": -2.8,
+                "Durability:3": 0,
+                "HarvestLevel:3": 2,
+                "Material:8": "iron",
+                "MaxDurability:3": 256,
+                "ToolSpeed:5": 6.0
+              },
+              "HideFlags:3": 2
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Tools of the Trade",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 2,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "minecraft:enchanted_book",
+              "tag:10": {
+                "StoredEnchantments:9": {
+                  "0:10": {
+                    "id:2": 34,
+                    "lvl:2": 4
+                  }
+                }
+              }
+            },
+            "1:10": {
+              "Count:3": 6,
+              "Damage:2": 2012,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_ingot"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:hammer",
+              "tag:10": {
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
+                  "AttackDamage:5": 3.0,
+                  "AttackSpeed:5": -2.8,
+                  "Durability:3": 0,
+                  "HarvestLevel:3": 2,
+                  "Material:8": "iron",
+                  "MaxDurability:3": 256,
+                  "ToolSpeed:5": 6.0
+                },
+                "HideFlags:3": 2
+              }
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:screwdriver",
+              "tag:10": {
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
+                  "AttackDamage:5": 1.0,
+                  "AttackSpeed:5": 3.0,
+                  "Durability:3": 0,
+                  "Material:8": "iron",
+                  "MaxDurability:3": 256
+                },
+                "HideFlags:3": 2
+              }
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:saw",
+              "tag:10": {
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {
+                  "HarvestIce:1": 1
+                },
+                "GT.Tool:10": {
+                  "AttackDamage:5": 1.0,
+                  "AttackSpeed:5": -2.6,
+                  "Durability:3": 0,
+                  "Material:8": "iron",
+                  "MaxDurability:3": 256
+                },
+                "HideFlags:3": 2
+              }
+            },
+            "3:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:file",
+              "tag:10": {
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
+                  "AttackDamage:5": 0.0,
+                  "AttackSpeed:5": -2.4,
+                  "Durability:3": 0,
+                  "Material:8": "iron",
+                  "MaxDurability:3": 256
+                },
+                "HideFlags:3": 2
+              }
+            },
+            "4:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:mortar",
+              "tag:10": {
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
+                  "AttackDamage:5": 0.0,
+                  "AttackSpeed:5": -2.4,
+                  "Durability:3": 0,
+                  "Material:8": "iron",
+                  "MaxDurability:3": 256
+                },
+                "HideFlags:3": 2
+              }
+            },
+            "5:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:wrench",
+              "tag:10": {
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
+                  "AttackDamage:5": 3.0,
+                  "AttackSpeed:5": -2.8,
+                  "Durability:3": 0,
+                  "HarvestLevel:3": 2,
+                  "Material:8": "iron",
+                  "MaxDurability:3": 256,
+                  "ToolSpeed:5": 6.0
+                },
+                "HideFlags:3": 2
+              }
+            },
+            "6:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:wire_cutter",
+              "tag:10": {
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
+                  "AttackDamage:5": 1.0,
+                  "AttackSpeed:5": -2.4,
+                  "Durability:3": 0,
+                  "HarvestLevel:3": 2,
+                  "Material:8": "iron",
+                  "MaxDurability:3": 256,
+                  "ToolSpeed:5": 6.0
+                },
+                "HideFlags:3": 2
+              }
+            },
+            "7:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:knife",
+              "tag:10": {
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
+                  "AttackDamage:5": 2.0,
+                  "AttackSpeed:5": 3.0,
+                  "Durability:3": 0,
+                  "Material:8": "iron",
+                  "MaxDurability:3": 256
+                },
+                "HideFlags:3": 2
+              }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "3:10": {
+      "preRequisites:11": [
+        2,
+        1
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "1x1 mining is §oso §r2010s - 3x3 mining is the future. It\u0027s a good thing GregTech mining hammers mine in a 3x3 radius - but, they do use durability faster as a result. You\u0027ll probably want a few of them.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "gregtech:mining_hammer",
+            "tag:10": {
+              "DisallowContainerItem:1": 0,
+              "GT.Behaviours:10": {
+                "AoEColumn:3": 1,
+                "AoELayer:3": 0,
+                "AoERow:3": 1,
+                "MaxAoEColumn:3": 1,
+                "MaxAoELayer:3": 0,
+                "MaxAoERow:3": 1,
+                "TorchPlacing:1": 1
+              },
+              "GT.Tool:10": {
+                "AttackDamage:5": 3.5,
+                "AttackSpeed:5": -3.2,
+                "Durability:3": 0,
+                "HarvestLevel:3": 2,
+                "Material:8": "iron",
+                "MaxDurability:3": 256,
+                "ToolSpeed:5": 4.8
+              },
+              "HideFlags:3": 2
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Mining Away",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 3,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "cyclicmagic:tool_auto_torch",
+              "tag:10": {}
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:mining_hammer",
+              "tag:10": {
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {
+                  "AoEColumn:3": 1,
+                  "AoELayer:3": 0,
+                  "AoERow:3": 1,
+                  "MaxAoEColumn:3": 1,
+                  "MaxAoELayer:3": 0,
+                  "MaxAoERow:3": 1,
+                  "TorchPlacing:1": 1
+                },
+                "GT.Tool:10": {
+                  "AttackDamage:5": 3.5,
+                  "AttackSpeed:5": -3.2,
+                  "Durability:3": 0,
+                  "HarvestLevel:3": 2,
+                  "Material:8": "iron",
+                  "MaxDurability:3": 256,
+                  "ToolSpeed:5": 4.8
+                },
+                "HideFlags:3": 2
+              }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "4:10": {
+      "preRequisites:11": [
+        10
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Necessary not only for cables, but for a plunger and soft-mallet as well. You\u0027re going to need a lot of this - though, you only have the bad alloy smelter recipe at the moment.\n\n§9§bTip:§f Blaze Powder can be turned into Tiny Piles of Sulfur Dust. You can get Blaze Powder from Fel Pumpkins, or from Cinderpearls.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1068,
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_ingot"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Rubber",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 4,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 16,
+              "Damage:2": 103,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 32,
+              "Damage:2": 1068,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_ingot"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "5:10": {
+      "preRequisites:11": [
+        2,
+        4
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "While these tools are more niche, they still have their value and purposes.\n\nPlungers can be used to clear fluids from a machine.\nCrowbars can be used to pry covers or facades off.\nAnd soft-hammers can be used to stop a machine from working entirely.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "gregtech:plunger",
+            "tag:10": {
+              "GT.Behaviours:10": {},
+              "GT.Tool:10": {
+                "AttackDamage:5": 0.0,
+                "AttackSpeed:5": -2.4,
+                "Durability:3": 0,
+                "HarvestLevel:3": 1,
+                "Material:8": "rubber",
+                "MaxDurability:3": 256,
+                "ToolSpeed:5": 4.0
+              },
+              "HideFlags:3": 2
+            }
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Somebody call a plumber?",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 5,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 4,
+              "Damage:2": 78,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:crowbar",
+              "tag:10": {
+                "DisallowContainerItem:1": 0,
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
+                  "AttackDamage:5": 4.0,
+                  "AttackSpeed:5": -2.4,
+                  "Durability:3": 0,
+                  "HarvestLevel:3": 2,
+                  "Material:8": "iron",
+                  "MaxDurability:3": 256,
+                  "ToolSpeed:5": 6.0
+                },
+                "HideFlags:3": 2
+              }
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:plunger",
+              "tag:10": {
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
+                  "AttackDamage:5": 0.0,
+                  "AttackSpeed:5": -2.4,
+                  "Durability:3": 0,
+                  "HarvestLevel:3": 1,
+                  "Material:8": "rubber",
+                  "MaxDurability:3": 256,
+                  "ToolSpeed:5": 4.0
+                },
+                "HideFlags:3": 2
+              }
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "gregtech:mallet",
+              "tag:10": {
+                "GT.Behaviours:10": {},
+                "GT.Tool:10": {
+                  "AttackDamage:5": 1.0,
+                  "AttackSpeed:5": -2.4,
+                  "Durability:3": 0,
+                  "HarvestLevel:3": 1,
+                  "Material:8": "rubber",
+                  "MaxDurability:3": 256,
+                  "ToolSpeed:5": 4.0
+                },
+                "HideFlags:3": 2
+              }
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "6:10": {
+      "preRequisites:11": [
+        1
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Which assures this pack is well-balanced.\n\nWorking towards a Mason Table should be your priority after you find your footing. You may also want to search for a large source of lava.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 2,
+            "OreDict:8": "",
+            "id:8": "artisanworktables:worktable"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "...involves a lot of clay...",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 6,
+      "rewards:9": {
+        "0:10": {
+          "choices:9": {
+            "0:10": {
+              "Count:3": 16,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "minecraft:clay"
+            },
+            "1:10": {
+              "Count:3": 16,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "minecraft:brick_block"
+            }
+          },
+          "index:3": 0,
+          "rewardID:8": "bq_standard:choice"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 2,
+              "OreDict:8": "",
+              "id:8": "artisanworktables:worktable"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "7:10": {
+      "preRequisites:11": [
+        6
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Coke, or coke coal, is twice as effective as regular coal - though, significantly harder to make. Not only that, but it\u0027s required for making both §4§7Wrought Iron §fand §8Steel §fwithout access to power, so you\u0027ll want quite a bit of it. \n\nTo make it, you\u0027ll need a §eCoke Oven. §fYou\u0027ll want quite a bit of clay and red sand for this. If you\u0027re having difficulty finding §c§fred sand, you can craft some using §6Copper §f\u0026 §cRedstone§f - though it\u0027s probably best to avoid this as much as you can. Consider using a §aNature\u0027s Compass.\n\n§fYou\u0027ll also want something to pipe your creosote into, so I\u0027ve taken the liberty of giving you something.\n\n§bTip: §fIt\u0027s best to make Coke by the block - it\u0027s about 11% more efficient.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1017,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "...but starts with Coke.",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 7,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1611,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1017,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 23,
+              "Damage:2": 8,
+              "OreDict:8": "",
+              "id:8": "gregtech:metal_casing"
+            },
+            "2:10": {
+              "Count:3": 2,
+              "Damage:2": 1018,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "8:10": {
+      "preRequisites:11": [
+        7
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Not only is §e§7Wrought Iron§f stronger and more durable than regular iron - it\u0027s also an essential component towards making your first steps towards voltage. §eSteam Machines§f require a lot of Wrought Iron per, and it\u0027s also an essential component in creating §d§5§dThaumium§f or §8§7Steel.§f§f The short of it is that you\u0027re probably going to want a lot of it.\n\nThe unfortunate side effect is that you\u0027re going to need a lot of Coke for that. How about you start with a stack, and I\u0027ll match you with a half-stack of Coke?",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 335,
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_ingot"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Wrought Iron",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 8,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 32,
+              "Damage:2": 319,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_dust"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 64,
+              "Damage:2": 335,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_ingot"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "9:10": {
+      "preRequisites:11": [
+        10
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "And finally, your source of steel. There\u0027s not much to say here. Apart from the fact that after you create steel, the world will start growing more dangerous. So, be careful of that.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1000,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Primitive Blast Furnace",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 9,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 18,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thaumcraft:alumentum"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1000,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            },
+            "1:10": {
+              "Count:3": 32,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "gregtech:metal_casing"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "10:10": {
+      "preRequisites:11": [
+        8
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Your best friend for the forseeable future. Not only is it essential to create glass and therefore other machines, it also unlocks a much more efficient recipe for Wrought Iron.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 18,
+            "OreDict:8": "",
+            "id:8": "gregtech:machine"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Alloy Smelter",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 10,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 16,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "minecraft:glass"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 18,
+              "OreDict:8": "",
+              "id:8": "gregtech:machine"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "11:10": {
+      "preRequisites:11": [
+        9
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "And with that, you\u0027ve officially entered the Low Voltage age. \n\nYou\u0027re going to need a lot of this. You know the drill by now - start with a stack.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 324,
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_ingot"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Steel",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 11,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 8,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thaumcraft:ingot"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 64,
+              "Damage:2": 324,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_ingot"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "12:10": {
+      "preRequisites:11": [
+        1
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "If your only experience is Thaumcraft 4 or prior, it might be best to watch a guide to get a grasp of the basics. If your only experience is Thaumcraft 5, then I don\u0027t believe you.\n\n§l§e§lThaumcraft is §4§lNOT§e §lmandatory for progression.§f\n\n...but it is highly beneficial - giving you access to powerful fuel, strong utility tools, infinite water pre-HV, and often quicker or higher yield recipes. \n\nTo get started in Thaumcraft, you\u0027re going to need to find a Mystic Heat Vein and a Mystic Cold Vein, marked by Cinderleaf and Shimmerleaf respectively. From there, you\u0027ll need to hammer down some Vis Crystals into their shards, then further grind it down into Salis Mundus along with Pig Iron. After that - sprinkle some on a bookcase, and you\u0027re set and ready.\n\n",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 1,
+            "OreDict:8": "",
+            "id:8": "thaumcraft:thaumonomicon"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Thaumcraft ",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 12,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 8,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thaumcraft:salis_mundus"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thaumcraft:thaumonomicon"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "13:10": {
+      "preRequisites:11": [
+        12
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Not only is Nitor a top choice for an aesthetic light source, it also serves as a mandatory step in Thaumcraft progression and a much more convenient heating source for your cauldron than lava.\n\nIt may also have its uses here or there in §1§9Astral Sorcery,§f or other Magichem. \n\nWhy magenta nitor specifically as the quest icon and reward? Because it\u0027s a nice color.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "thaumcraft:nitor_magenta"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Nitor",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 14,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 16,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thaumcraft:nitor_magenta"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thaumcraft:nitor_yellow"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "14:10": {
+      "preRequisites:11": [
+        0
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "The ultimate storage solution, accessible to you as early as LV. While it can\u0027t quite store as much as its other competitors - like §6Thermal Foundation\u0027s §6§eCache,§f or §bGregTech\u0027s §§§b§eQuantum Chest§r, Storage Drawers provide an option that is cheaper, earlier, much more modular, and much more convenient.\n\nNot only that, but this pack includes §bFluid Drawers, §fallowing you to store fluids in a drawer system. With this, as well as using trim and controller slaves to expand your automation setups, you can make very compact and visually appealing setups. You don\u0027t normally have access to them just yet - but your first dose is free.\n\nUnfortunately, it looked like someone disabled default drawers. I guess you\u0027re going to need a framing table to match them to your base palette now. Shucks.\n\n§a§o(...you aren\u0027t lawnbasing, right?)",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "storagedrawers:drawer_key"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Drawers",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 15,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "fluiddrawers:tank_custom"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "storagedrawers:framingtable"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "storagedrawers:customdrawers"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "15:10": {
+      "preRequisites:11": [
+        8,
+        14
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Thaumium is not only a powerful tool material, but it also makes for a powerful cabling option, a path to quicker steel in the PBF, and a stepping stone to a more convenient LV Superconductor.\n\nAs a reward for getting some Thaumium, I\u0027ll spare you some microcrafting.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "thaumcraft:ingot"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Thaumium",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "questID:3": 17,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thaumcraft:morphic_resonator"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thaumcraft:vis_resonator"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "thaumcraft:ingot"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    }
+  },
+  "questLines:9": {
+    "0:10": {
+      "lineID:3": 0,
+      "order:3": 0,
+      "properties:10": {
+        "betterquesting:10": {
+          "bg_image:8": "",
+          "bg_size:3": 256,
+          "desc:8": "No Description",
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 335,
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_plate"
+          },
+          "name:8": "The Steam Age",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "quests:9": {
+        "0:10": {
+          "id:3": 0,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -12,
+          "y:3": 0
+        },
+        "1:10": {
+          "id:3": 1,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -12,
+          "y:3": 36
+        },
+        "2:10": {
+          "id:3": 2,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 24,
+          "y:3": 0
+        },
+        "3:10": {
+          "id:3": 3,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 24,
+          "y:3": 36
+        },
+        "4:10": {
+          "id:3": 4,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 60,
+          "y:3": 36
+        },
+        "5:10": {
+          "id:3": 5,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 60,
+          "y:3": 0
+        },
+        "6:10": {
+          "id:3": 6,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -12,
+          "y:3": 72
+        },
+        "7:10": {
+          "id:3": 7,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -12,
+          "y:3": 108
+        },
+        "8:10": {
+          "id:3": 8,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 24,
+          "y:3": 108
+        },
+        "9:10": {
+          "id:3": 9,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 60,
+          "y:3": 72
+        },
+        "10:10": {
+          "id:3": 10,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 24,
+          "y:3": 72
+        },
+        "11:10": {
+          "id:3": 11,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 60,
+          "y:3": 108
+        },
+        "12:10": {
+          "id:3": 12,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -48,
+          "y:3": 72
+        },
+        "13:10": {
+          "id:3": 14,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -48,
+          "y:3": 108
+        },
+        "14:10": {
+          "id:3": 15,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -48,
+          "y:3": 36
+        },
+        "15:10": {
+          "id:3": 17,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -12,
+          "y:3": 144
+        }
+      }
+    },
+    "1:10": {
+      "lineID:3": 1,
+      "order:3": 1,
+      "properties:10": {
+        "betterquesting:10": {
+          "bg_image:8": "",
+          "bg_size:3": 256,
+          "desc:8": "Low voltage, big dreams.",
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 324,
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_plate"
+          },
+          "name:8": "Low Voltage",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "quests:9": {}
+    },
+    "2:10": {
+      "lineID:3": 2,
+      "order:3": 2,
+      "properties:10": {
+        "betterquesting:10": {
+          "bg_image:8": "",
+          "bg_size:3": 256,
+          "desc:8": "Mo\u0027 voltage mo\u0027 problems.",
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 2,
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_plate"
+          },
+          "name:8": "Medium Voltage",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "quests:9": {}
+    },
+    "3:10": {
+      "lineID:3": 3,
+      "order:3": 3,
+      "properties:10": {
+        "betterquesting:10": {
+          "bg_image:8": "",
+          "bg_size:3": 256,
+          "desc:8": "Now the game begins.",
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 323,
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_plate"
+          },
+          "name:8": "High Voltage",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "quests:9": {}
+    },
+    "4:10": {
+      "lineID:3": 4,
+      "order:3": 4,
+      "properties:10": {
+        "betterquesting:10": {
+          "bg_image:8": "",
+          "bg_size:3": 256,
+          "desc:8": "Your guide to everything fun and useful you might miss.",
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "astralsorcery:itemgrapplewand"
+          },
+          "name:8": "Quality of Life",
+          "visibility:8": "NORMAL"
+        }
+      },
+      "quests:9": {}
+    }
+  },
+  "questSettings:10": {
+    "betterquesting:10": {
+      "editmode:1": 1,
+      "hardcore:1": 0,
+      "home_anchor_x:5": 0.25,
+      "home_anchor_y:5": 100.0,
+      "home_image:8": "greggenuity:textures/gui/title_card.png",
+      "home_offset_x:3": 0,
+      "home_offset_y:3": 0,
+      "livesdef:3": 3,
+      "livesmax:3": 10,
+      "pack_name:8": "greggenuity",
+      "pack_version:3": 0,
+      "party_enable:1": 1
+    }
+  }
+}

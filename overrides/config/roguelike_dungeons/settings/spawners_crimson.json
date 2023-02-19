@@ -1,0 +1,19 @@
+{
+  "name" : "spawners:crimson",
+  "spawners" : [
+    {
+      "level" : [0, 1, 2, 3, 4],
+      "weight" : 1,
+      "potentials" : [
+        {"name" : "thaumcraft:cultistcleric"},
+        {"name" : "thaumcraft:cultistknight"}
+      ]
+    },
+    {
+      "level" : [3, 4],
+      "potentials" : [
+        {"name" : "thaumcraft:cultistportallesser"}
+      ]
+    }
+  ]
+}

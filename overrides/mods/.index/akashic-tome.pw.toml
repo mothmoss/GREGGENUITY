@@ -1,0 +1,14 @@
+name = "Akashic Tome"
+filename = "AkashicTome-1.2-12.jar"
+side = "both"
+
+[download]
+mode = "url"
+url = "https://cdn.modrinth.com/data/JBthPdnp/versions/qAZUyIdA/AkashicTome-1.2-12.jar"
+hash-format = "sha512"
+hash = "bfebaa5a38069ae9d550950e588132f9c18a0a93100bd55d8333c2ef9affc19bbe451bf4dc488db0f91873c5c10c9603d70f83c91d8ee6b009b18d25c1770233"
+
+[update]
+[update.modrinth]
+mod-id = "JBthPdnp"
+version = "qAZUyIdA"

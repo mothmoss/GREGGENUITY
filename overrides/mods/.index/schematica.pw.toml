@@ -1,0 +1,14 @@
+name = "Schematica"
+filename = "Schematica-1.12.2-1.8.0.169-universal.jar"
+side = "both"
+
+[download]
+mode = "metadata:curseforge"
+url = ""
+hash-format = "sha1"
+hash = "cc8c851bc47ecf314c3974e3b90acfa1a62105ac"
+
+[update]
+[update.curseforge]
+file-id = 2554100
+project-id = 225603

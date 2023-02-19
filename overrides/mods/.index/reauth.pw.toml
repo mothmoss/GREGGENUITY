@@ -1,0 +1,14 @@
+name = "ReAuth"
+filename = "ReAuth-1.12-Forge-4.0.6.jar"
+side = "both"
+
+[download]
+mode = "metadata:curseforge"
+url = ""
+hash-format = "sha1"
+hash = "d8ab1281bd304cc59139c32ac007e5dc2a39b801"
+
+[update]
+[update.curseforge]
+file-id = 4120065
+project-id = 237701

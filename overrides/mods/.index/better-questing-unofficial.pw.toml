@@ -1,0 +1,14 @@
+name = "Better Questing Unofficial"
+filename = "BetterQuestingUnofficial-4.1.0.jar"
+side = "both"
+
+[download]
+mode = "metadata:curseforge"
+url = ""
+hash-format = "sha1"
+hash = "116a2767a05977b5bb5c3c161afe9554645da25f"
+
+[update]
+[update.curseforge]
+file-id = 4010084
+project-id = 629629

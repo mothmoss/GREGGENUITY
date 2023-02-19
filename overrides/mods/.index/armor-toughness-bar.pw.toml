@@ -1,0 +1,14 @@
+name = "Armor Toughness Bar"
+filename = "toughnessbar-2.4.jar"
+side = "both"
+
+[download]
+mode = "metadata:curseforge"
+url = ""
+hash-format = "sha1"
+hash = "a13eb8b797cec70dd07201fe5eb4b606ff7372e0"
+
+[update]
+[update.curseforge]
+file-id = 2851670
+project-id = 313816

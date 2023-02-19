@@ -1,0 +1,14 @@
+name = "Avaritia Tweaks"
+filename = "AvaritiaTweaks-1.12.2-1.3.jar"
+side = "both"
+
+[download]
+mode = "metadata:curseforge"
+url = ""
+hash-format = "sha1"
+hash = "1949032fb88b0705195e015786639b5fcaef6455"
+
+[update]
+[update.curseforge]
+file-id = 3076919
+project-id = 286652

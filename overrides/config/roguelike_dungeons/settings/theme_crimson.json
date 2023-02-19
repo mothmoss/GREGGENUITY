@@ -1,0 +1,25 @@
+{
+  "name": "theme:crimson",
+  "themes": [
+    {
+      "base": "TEMPLE",
+      "level": [0, 1, 2, 3, 4],
+      "primary": {
+        "lightblock": {"name":  "thaumcraft:nitor_red"},
+        "liquid": {"name": "thaumcraft:liquid_death"},
+        "pillar": {"name": "chisel:voidstone", "meta": 2},
+        "walls": {"name": "thaumicaugmentation:stone", "meta": 5},
+        "floor": {"name": "chisel:arcane_stone"},
+        "stair": {"name": "thaumcraft:stairs_arcane_brick"}
+      },
+        "secondary": {
+          "lightblock": {"name":  "thaumcraft:nitor_red"},
+          "liquid": {"name": "thaumcraft:liquid_death"},
+          "pillar": {"name": "chisel:voidstone", "meta": 2},
+          "walls": {"name": "thaumcraft:stone_ancient_glyphed", "meta": 0},
+          "floor": {"name": "chisel:arcane_stone"},
+          "stair": {"name": "thaumcraft:stairs_arcane_brick"}
+        }
+    }
+  ]
+}

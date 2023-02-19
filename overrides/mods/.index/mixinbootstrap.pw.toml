@@ -1,0 +1,14 @@
+name = "MixinBootstrap"
+filename = "_MixinBootstrap-1.1.0.jar"
+side = "both"
+
+[download]
+mode = "url"
+url = "https://cdn.modrinth.com/data/6a16628x/versions/hOGSWOX8/_MixinBootstrap-1.1.0.jar"
+hash-format = "sha512"
+hash = "973aeff50dd8e1976895d36917e3f06334dc70800dfbd12639e522fb2b71e130db3865fd67d494e2d13e2ca67efe76ecfc3ee60d138e880dc884ac9f82c35eb8"
+
+[update]
+[update.modrinth]
+mod-id = "6a16628x"
+version = "hOGSWOX8"
