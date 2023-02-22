@@ -35,6 +35,7 @@ import mods.gregtech.material.MaterialRegistry;
                     .color(0x002264)
                     .toolStats(17, 6, 6000, 9)
                     .cableProperties(512, 4, 2)
+                    .rotorStats(8.75f, 5.0f, 800)
                     .flags(["generate_plate", "generate_foil", "generate_fine_wire", "generate_rod", "generate_bolt_screw"])
                     .iconSet("shiny")
                     .build();
