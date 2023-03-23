@@ -57,11 +57,7 @@ import crafttweaker.command.ICommandManager;
                                 .aisle("SSS", "FFF", "FCF", "FFF", "SSS")
                                 .where('C', controller.self())
                                 .where("S", CTPredicate.states(<metastate:gregtech:metal_casing:5>))           
-                                .where("F", CTPredicate.states(<metastate:gregtech:metal_casing:3>)
-                                | CTPredicate.abilities(<mte_ability:IMPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1)
-                                | CTPredicate.abilities(<mte_ability:EXPORT_ITEMS>).setMinGlobalLimited(1).setPreviewCount(1)
-                                | CTPredicate.abilities(<mte_ability:IMPORT_FLUIDS>).setMinGlobalLimited(1).setPreviewCount(1)
-                                | CTPredicate.abilities(<mte_ability:INPUT_ENERGY>).setMinGlobalLimited(1).setPreviewCount(1))           
+                                .where("F", CTPredicate.states(<metastate:gregtech:metal_casing:3>) | controller.autoAbilities())
                                 .build();
                         } as IPatternBuilderFunction)
             .withRecipeMap(
@@ -73,4 +69,6 @@ import crafttweaker.command.ICommandManager;
                     .build())
             .withBaseTexture(<metastate:gregtech:metal_casing:3>) 
             .buildAndRegister();
+        
+        fluidcompressor.hasMaintenanceMechanics = true;
 // ================ Multiblocks ================ //

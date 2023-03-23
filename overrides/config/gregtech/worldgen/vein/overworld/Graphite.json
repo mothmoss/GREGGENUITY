@@ -27,13 +27,13 @@
         "primary": "ore:graphite"
       },
       {
-        "secondary": "ore:graphite"
+        "secondary": "ore:coal"
       },
       {
-        "between": "ore:coal"
+        "between": "ore:electrotine"
       },
       {
-        "sporadic": "ore:electrotine"
+        "sporadic": "ore:diamond"
       }
     ]
   }

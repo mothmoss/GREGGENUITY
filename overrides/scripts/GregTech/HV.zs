@@ -26,7 +26,7 @@ import mods.gregtech.recipe.RecipeMap;
             .EUt(128)
             .duration(40)
             .fluidInputs(<liquid:air> * 1000)
-            .fluidOutputs(<liquid:compressedair> * 1000)
+            .fluidOutputs(<liquid:compressed_air> * 1000)
             .buildAndRegister();
         // ==== Air Centrifuging ==== //
             // Regular air
@@ -39,7 +39,7 @@ import mods.gregtech.recipe.RecipeMap;
             // Compressed air
             // Made 25% faster to further incentivize Compressed Air
                 centrifuge.recipeBuilder().EUt(7).duration(1080)
-                .fluidInputs(<liquid:compressedair> * 10000)
+                .fluidInputs(<liquid:compressed_air> * 10000)
                 .fluidOutputs(<liquid:nitrogen> * 3900, <liquid:oxygen> * 1000)
                 .buildAndRegister();
         // ==== Math ==== //
@@ -57,8 +57,8 @@ import mods.gregtech.recipe.RecipeMap;
             freezer.recipeBuilder()
             .EUt(480)
             .duration(200)
-            .fluidInputs(<liquid:compressedair> * 4000)
-            .fluidOutputs(<liquid:liquid_air> * 4000)
+            .fluidInputs(<liquid:compressed_air> * 10000)
+            .fluidOutputs(<liquid:liquid_air> * 10000)
             .buildAndRegister();
 
             <recipemap:distillation_tower>.findRecipe(480, null, [<liquid:liquid_air> * 50000]).remove();
@@ -101,6 +101,27 @@ import mods.gregtech.recipe.RecipeMap;
                 .duration(25)
                 .circuit(1)
                 .buildAndRegister();
+            // Oxygen 
+                centrifuge.recipeBuilder()
+                .fluidInputs(<liquid:liquid_oxygen> * 1000)
+                .fluidOutputs(<liquid:oxygen> * 1000)
+                .EUt(30)
+                .duration(25)
+                .buildAndRegister();
+            // Nitrogen
+                centrifuge.recipeBuilder()
+                .fluidInputs(<liquid:liquid_nitrogen> * 1000)
+                .fluidOutputs(<liquid:nitrogen> * 1000)
+                .EUt(30)
+                .duration(25)
+                .buildAndRegister();
+            // Helium
+                centrifuge.recipeBuilder()
+                .fluidInputs(<liquid:liquid_helium> * 1000)
+                .fluidOutputs(<liquid:helium> * 1000)
+                .EUt(30)
+                .duration(25)
+                .buildAndRegister();
     // ======== Vacuum Freezing ======== //   
         // ==== Removing Entirely ==== //
             <recipemap:vacuum_freezer>.findRecipe(120, [<metaitem:ingotHotMaragingSteel300>], null).remove();
@@ -138,7 +159,7 @@ import mods.gregtech.recipe.RecipeMap;
                 <recipemap:vacuum_freezer>.findRecipe(120, [<metaitem:ingotHotTungstenSteel>], null).remove();
                 <recipemap:vacuum_freezer>.findRecipe(120, [<metaitem:ingotHotRuridit>], null).remove();
                 <recipemap:vacuum_freezer>.findRecipe(120, [<metaitem:ingotHotTungsten>], null).remove();
-                <recipemap:vacuum_freezer>.findRecipe(120, [<metaitem:ingotHotVibrantAlloy>], null).remove();
+                //<recipemap:vacuum_freezer>.findRecipe(120, [<metaitem:ingotHotVibrantAlloy>], null).remove();
 
 
                 var freezerMapNitro as IItemStack[IItemStack] = {
@@ -165,7 +186,7 @@ import mods.gregtech.recipe.RecipeMap;
                     <ore:ingotHotTungstenSteel>.firstItem : <ore:ingotTungstenSteel>.firstItem,
                     <ore:ingotHotRuridit>.firstItem : <ore:ingotRuridit>.firstItem,
                     <ore:ingotHotTungsten>.firstItem : <ore:ingotTungsten>.firstItem,
-                    <ore:ingotHotVibrantAlloy>.firstItem : <ore:ingotVibrantAlloy>.firstItem,
+                    //<ore:ingotHotVibrantAlloy>.firstItem : <ore:ingotVibrantAlloy>.firstItem,
                 };
 
                 for hotingot, ingot in freezerMapNitro {
@@ -199,12 +220,12 @@ import mods.gregtech.recipe.RecipeMap;
                 }
             // Special Case
                 // Terrasteel
-                    <recipemap:vacuum_freezer>.findRecipe(120, [<metaitem:ingotHotTerrasteel>], null).remove();
-                    freezer.recipeBuilder().EUt(120).duration(200)
-                    .inputs(<ore:ingotHotTerrasteel>)
-                    .fluidInputs(<liquid:botanic_mana> * 1000)
-                    .outputs(<ore:ingotTerrasteel>.firstItem)
-                    .buildAndRegister();
+                    #<recipemap:vacuum_freezer>.findRecipe(120, [<metaitem:ingotHotTerrasteel>], null).remove();
+                    #freezer.recipeBuilder().EUt(120).duration(200)
+                    #.inputs(<ore:ingotHotTerrasteel>)
+                    #.fluidInputs(<liquid:botanic_mana> * 1000)
+                    #.outputs(<ore:ingotTerrasteel>.firstItem)
+                    #.buildAndRegister();
 
 
     // ======== Thermal Centrifuging ======== //   

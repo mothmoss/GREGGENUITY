@@ -1,4 +1,4 @@
-ignoreUpdate:150
+ignoreUpdate:152
 updateNotification:true
 differentiateByServerAddress:true
 netherlikeCaveMapAllowed:true
