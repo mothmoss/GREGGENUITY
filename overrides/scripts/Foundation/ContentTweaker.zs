@@ -1,5 +1,4 @@
 #loader contenttweaker
-
 import mods.contenttweaker.VanillaFactory;
 import mods.contenttweaker.Item;
 import mods.contenttweaker.Block;
@@ -13,10 +12,6 @@ blankrune.register();
 var balanceshard = VanillaFactory.createItem("balanceshard");
 balanceshard.maxStackSize = 64;
 balanceshard.register();
-
-var moon = VanillaFactory.createItem("moon");
-moon.maxStackSize = 64;
-moon.register();
 
 var vibrant_casing = VanillaFactory.createBlock("vibrant_casing", <blockmaterial:iron>);
 vibrant_casing.blockSoundType = <soundtype:metal>;
@@ -35,29 +30,13 @@ concrete.blockHardness = 2;
 concrete.blockResistance = 3;
 concrete.register();
 
-var darkbrick = VanillaFactory.createBlock("darkbrick", <blockmaterial:rock>);
-darkbrick.blockSoundType = <soundtype:stone>;
-darkbrick.toolClass = "pickaxe";
-darkbrick.toolLevel = 1;
-darkbrick.blockHardness = 2;
-darkbrick.blockResistance = 3;
-darkbrick.register();
-
-var mars = VanillaFactory.createBlock("mars", <blockmaterial:rock>);
-mars.blockSoundType = <soundtype:stone>;
-mars.toolClass = "pickaxe";
-mars.toolLevel = 1;
-mars.blockHardness = 2;
-mars.blockResistance = 3;
-mars.register();
-
-var mooncrete = VanillaFactory.createBlock("mooncrete", <blockmaterial:rock>);
-mooncrete.blockSoundType = <soundtype:stone>;
-mooncrete.toolClass = "pickaxe";
-mooncrete.toolLevel = 1;
-mooncrete.blockHardness = 2;
-mooncrete.blockResistance = 3;
-mooncrete.register();
+var purplebrick = VanillaFactory.createBlock("purplebrick", <blockmaterial:rock>);
+purplebrick.blockSoundType = <soundtype:stone>;
+purplebrick.toolClass = "pickaxe";
+purplebrick.toolLevel = 1;
+purplebrick.blockHardness = 2;
+purplebrick.blockResistance = 3;
+purplebrick.register();
 
 var darkcrete = VanillaFactory.createBlock("darkcrete", <blockmaterial:rock>);
 darkcrete.blockSoundType = <soundtype:stone>;
@@ -74,3 +53,55 @@ blackstone.toolLevel = 1;
 blackstone.blockHardness = 2;
 blackstone.blockResistance = 3;
 blackstone.register();
+
+var quartz = VanillaFactory.createBlock("quartz", <blockmaterial:rock>);
+quartz.blockSoundType = <soundtype:stone>;
+quartz.toolClass = "pickaxe";
+quartz.toolLevel = 1;
+quartz.blockHardness = 2;
+quartz.blockResistance = 3;
+quartz.register();
+
+var purplequartz = VanillaFactory.createBlock("purplequartz", <blockmaterial:rock>);
+purplequartz.blockSoundType = <soundtype:stone>;
+purplequartz.toolClass = "pickaxe";
+purplequartz.toolLevel = 1;
+purplequartz.blockHardness = 2;
+purplequartz.blockResistance = 3;
+purplequartz.register();
+
+var blackquartz = VanillaFactory.createBlock("blackquartz", <blockmaterial:rock>);
+blackquartz.blockSoundType = <soundtype:stone>;
+blackquartz.toolClass = "pickaxe";
+blackquartz.toolLevel = 1;
+blackquartz.blockHardness = 2;
+blackquartz.blockResistance = 3;
+blackquartz.register();
+
+var reinforced_stone = VanillaFactory.createBlock("reinforced_stone", <blockmaterial:rock>);
+reinforced_stone.blockSoundType = <soundtype:stone>;
+reinforced_stone.toolClass = "pickaxe";
+reinforced_stone.toolLevel = 1;
+reinforced_stone.blockHardness = 2;
+reinforced_stone.blockResistance = 3;
+reinforced_stone.register();
+
+var petrified_foam = VanillaFactory.createBlock("petrified_foam", <blockmaterial:rock>);
+petrified_foam.blockSoundType = <soundtype:stone>;
+petrified_foam.toolClass = "pickaxe";
+petrified_foam.toolLevel = 1;
+petrified_foam.blockHardness = 2;
+petrified_foam.blockResistance = 3;
+petrified_foam.register();
+
+var wheel = VanillaFactory.createItem("wheel");
+wheel.maxStackSize = 64;
+wheel.register();
+
+var moonrover = VanillaFactory.createItem("t1_rover");
+moonrover.maxStackSize = 64;
+moonrover.register();
+
+var roverchassis1 = VanillaFactory.createItem("t1_chassis");
+roverchassis1.maxStackSize = 64;
+roverchassis1.register();

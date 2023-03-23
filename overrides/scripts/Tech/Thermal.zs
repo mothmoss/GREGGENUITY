@@ -1,3 +1,4 @@
+/*
 #priority 1000
 import mods.jei.JEI.removeAndHide as rh;
 import crafttweaker.item.IItemStack;
@@ -226,7 +227,6 @@ import mods.gregtech.recipe.RecipeMap;
                 [<ore:plateWroughtIron>, <ore:plateSteel>, <ore:gtFile>]
             ]);
 # ================ Thermal ================ #
-
-
+*/
 
 

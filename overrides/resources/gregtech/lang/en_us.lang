@@ -24,27 +24,50 @@ material.concrete_mix=Concrete Mix
 material.botanic_mana=Botanic Mana
 material.moonliquid=Lunar Residue Fluid
 material.liquid_nitrogen=Liquid Nitrogen
-material.compressedair=Compressed Air
+material.compressed_air=Compressed Air
 material.moondust=Moondust
 material.dilute_petrotheum=Dilute Petrotheum
 material.petrotheum_base_dust=Petrotheum Base Dust
-material.graphite_epoxy=Graphite-Reinforced Epoxy Resin 
+material.graphite_epoxy=Graphite-Epoxy Composite 
 material.lunar_alloy=Lunar-Grade Spacefaring Alloy
+material.lunar_regolith=Lunar Regolith
+material.fluix_steel=Fluixsteel
+material.fluix=Fluix
+material.desh=Desh
+material.alumina=Alumina
+material.cryolite=Cryolite
+material.polyurethane=Polyuerthane
+material.ethylene_glycol=Ethylene Glycol
+material.iron_oxide=Iron Oxide
+material.gas_rich_lunar_magma=Gas-Rich Lunar Magma
+material.lunar_magma=Lunar Magma
+material.toluene_diisocyanate=Toluene Diisocyanate
+material.superglue=Superglue
+material.fluminium=Fluminium
+material.titantheum=Titantheum
+material.resplendite=Resplendite
+material.vis=Vis
+material.flungstensteel=Flungstensteel
+material.resplendic_acid=Resplendic Acid
+material.titantheum_acetate=Titantheum Acetate
 
 # ContentTweaker
 item.contenttweaker.blankrune.name=Blank Rune
 item.contenttweaker.balanceshard.name=Balance Shard
 tile.contenttweaker.vibrant_casing.name=Vibrant Alloy Machine Casing
-item.contenttweaker.moon.name=Lunar Transport Chip
+item.contenttweaker.t1_rover.name=Grade 1 Rover
+item.contenttweaker.t1_chassis.name=Grade 1 Rover Chassis
+item.contenttweaker.wheel.name=Rover Wheel
 tile.contenttweaker.concrete.name=Concrete Stone
-tile.contenttweaker.darkbrick.name=Darkbrick
 tile.contenttweaker.purplebrick.name=Purplebrick
-tile.contenttweaker.mars.name=Martian Stone
-tile.contenttweaker.mooncrete.name=Mooncrete
-tile.contenttweaker.darkcrete.name=Darkcrete
 tile.contenttweaker.blackstone.name=Blackstone
 tile.contenttweaker.vibrant_casing.name=Vibrant_Casing
-tile.contenttweaker.quartz=Hewn Quartz
+tile.contenttweaker.quartz.name=Hewn Quartz
+tile.contenttweaker.purplequartz.name=Hewn Purple Quartz
+tile.contenttweaker.petrified_foam.name=Petrified Foam
+tile.contenttweaker.reinforced_stone.name=Reinforced Stone
+tile.contenttweaker.blackquartz.name=Hewn Black Quartz
+tile.contenttweaker.darkcrete.name=Darkcrete
 
 
 # Fixing Mods 
@@ -54,6 +77,13 @@ material.paracetamol=Paracetamol
 metaitem.component.iv_bag.name=IV Bag (GTFO)
 tile.engineersdecor.sign_caution.name=Caution Sign
 tile.catwalks.catwalk.unknown.name=Classic Catwalk
+tile.oxygen_storage_module_1.name=Oxygen Storage Cluster
+tile.oxygen_storage_module_1.desc=Stores a lot of oxygen
+tile.europa_surface_ice_2.name=Europa Surface Ice
+item.mars_rover.name=Mars Rover
+tile.barnada_c_grass_1.name =Barnada C Grass
+tile.barnada_c_birch_log.name =Barnada C Birch Log
+
 
 
 

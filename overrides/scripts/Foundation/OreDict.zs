@@ -40,6 +40,11 @@ import crafttweaker.oredict.IOreDictEntry;
                     <metaitem:blockDarkSteel>
                 ],
 
+                //blockDesh
+                <ore:blockDesh> : [
+                    <galacticraftplanets:mars:8>
+                ],
+
                 //blockPulsatingIron
                 <ore:blockPulsatingIron> : [
                     <metaitem:blockPulsatingIron>
@@ -60,15 +65,15 @@ import crafttweaker.oredict.IOreDictEntry;
                     <metaitem:blockEndSteel>
                 ],
 
-                //blockAluminium
-                <ore:blockAluminium> : [
-                    <libvulpes:metal0:9>
-                ],
-
                 //blockAluminum
                 <ore:blockAluminum>: [
                     <thermalfoundation:storage:4>,
-                    <libvulpes:metal0:9>
+                    <galacticraftcore:basic_block_core:11>,
+                ],
+
+                //blockAluminium
+                <ore:blockAluminium> : [
+                    <galacticraftcore:basic_block_core:11>
                 ],
 
                 //blockBronze
@@ -80,9 +85,8 @@ import crafttweaker.oredict.IOreDictEntry;
                 <ore:blockCopper> : [
                     <thermalfoundation:storage>,
                     <immersiveengineering:metal:5>,
-                    <libvulpes:metal0:4>
+                    <galacticraftcore:basic_block_core:9>,
                 ],
-
 
                 //blockCharcoal
                 <ore:blockCharcoal> : [
@@ -110,12 +114,12 @@ import crafttweaker.oredict.IOreDictEntry;
                 //blockIridium
                 <ore:blockIridium> : [
                     <thermalfoundation:storage:7>,
-                    <libvulpes:metal0:10>
                 ],
 
                 //blockLead
                 <ore:blockLead> : [
                     <thermalfoundation:storage:3>,
+                    <galacticraftplanets:venus:12>
                 ],
 
                 //blockNickel
@@ -133,21 +137,25 @@ import crafttweaker.oredict.IOreDictEntry;
                     <thermalfoundation:storage:2>,
                 ],
 
+                //blockSilicon
+                <ore:blockSilicon> : [
+                    <galacticraftcore:basic_block_core:13>,
+                ],
+
                 //blockSteel
                 <ore:blockSteel> : [
                     <thermalfoundation:storage_alloy>,
-                    <libvulpes:metal0:6>,
                 ],
 
                 //blockTin
                 <ore:blockTin> : [
                     <thermalfoundation:storage:1>,
-                    <libvulpes:metal0:5>
+                    <galacticraftcore:basic_block_core:10>,
                 ],
 
                 //blockTitanium
                 <ore:blockTitanium> : [
-                    <libvulpes:metal0:7>
+                    <galacticraftplanets:asteroids_block:7>
                 ],
 
                 //blockUranium 
@@ -168,14 +176,14 @@ import crafttweaker.oredict.IOreDictEntry;
                 <ore:dustAluminium> : [
                     <thermalfoundation:material:68>,
                     <immersiveengineering:metal:10>,
-                    <libvulpes:productdust:9>,
+                    <galacticraftcore:ic2compat>,
                 ],
 
                 //dustAluminum
                 <ore:dustAluminum>: [
                     <thermalfoundation:material:68>,
                     <immersiveengineering:metal:10>,
-                    <libvulpes:productdust:9>
+                    <galacticraftplanets:item_basic_asteroids:9>,
                 ],
 
                 //dustBronze
@@ -221,7 +229,6 @@ import crafttweaker.oredict.IOreDictEntry;
                     <enderio:item_material:26>,
                     <thermalfoundation:material:64>,
                     <immersiveengineering:metal:9>,
-                    <libvulpes:productdust:4>
                 ],
 
                 //dustDiamond
@@ -258,7 +265,6 @@ import crafttweaker.oredict.IOreDictEntry;
                     <enderio:item_material:25>,
                     <thermalfoundation:material:1>,
                     <immersiveengineering:metal:19>,
-                    <libvulpes:productdust:2>
                 ],
 
                 //dustIron
@@ -268,7 +274,6 @@ import crafttweaker.oredict.IOreDictEntry;
                     <appliedenergistics2:material:49>,
                     <thermalfoundation:material>,
                     <immersiveengineering:metal:18>,
-                    <libvulpes:productdust:1>
                 ],
 
                 //dustLapis
@@ -297,7 +302,6 @@ import crafttweaker.oredict.IOreDictEntry;
                 //dustIridium
                 <ore:dustIridium> : [
                     <thermalfoundation:material:71>,
-                    <libvulpes:productdust:10>
                 ],
 
                 //dustNetherQuartz
@@ -352,14 +356,12 @@ import crafttweaker.oredict.IOreDictEntry;
 
                 //dustSilicon
                 <ore:dustSilicon>: [
-                    <libvulpes:productdust:3>
                 ],
 
                 //dustSteel
                 <ore:dustSteel> : [
                     <thermalfoundation:material:96>,
                     <immersiveengineering:metal:17>,
-                    <libvulpes:productdust:6>
                 ],
 
                 //dustStarmetal
@@ -370,14 +372,24 @@ import crafttweaker.oredict.IOreDictEntry;
                 //dustSulfur
                 <ore:dustSulfur>: [
                     <thermalfoundation:material:771>,
-                    <immersiveengineering:material:25>
+                    <immersiveengineering:material:25>,
+                    <galaxyspace:gs_basic:7>
+                ],
+
+                //dustFluix
+                <ore:dustFluix> : [
+                    <appliedenergistics2:material:8>
+                ],
+
+                //dustFlour
+                <ore:dustFlour> : [
+                    <appliedenergistics2:material:4>
                 ],
 
                 //dustTin
                 <ore:dustTin>: [
                     <enderio:item_material:27>,
                     <thermalfoundation:material:65>,
-                    <libvulpes:productdust:5>
                 ],
 
                 //dustUranium
@@ -387,7 +399,7 @@ import crafttweaker.oredict.IOreDictEntry;
 
                 //dustTitanium
                 <ore:dustTitanium> : [
-                    <libvulpes:productdust:7>
+                    <galacticraftplanets:item_basic_asteroids:9>,
                 ],
 
                 //dustWood
@@ -419,6 +431,21 @@ import crafttweaker.oredict.IOreDictEntry;
                 <metaitem:ingotManasteel>
                 ],
 
+                //ingotMagnesium
+                <ore:ingotMagnesium> : [
+                    <galaxyspace:ingots:1>
+                ],
+
+                //ingotCobalt
+                <ore:ingotCobalt> : [
+                    <galaxyspace:ingots>
+                ],
+
+                //ingotDesh
+                <ore:ingotDesh> : [
+                    <galacticraftplanets:item_basic_mars:2>
+                ],
+
                 //ingotThaumium
                 <ore:ingotThaumium> : [
                 <metaitem:ingotThaumium>
@@ -427,6 +454,11 @@ import crafttweaker.oredict.IOreDictEntry;
                 //ingotElementium
                 <ore:ingotElvenElementium> : [
                 <metaitem:ingotElementium>
+                ],
+
+                //ingotFluixSteel
+                <ore:ingotFluixSteel> : [
+                    <threng:material>
                 ],
 
                 //ingotVoid
@@ -468,13 +500,11 @@ import crafttweaker.oredict.IOreDictEntry;
                 <ore:ingotAluminium> : [
                     <thermalfoundation:material:132>,
                     <immersiveengineering:metal:1>,
-                    <libvulpes:productingot:9>
                 ],
 
                 //ingotAluminum
                 <ore:ingotAluminum>: [
                     <thermalfoundation:material:132>,
-                    <libvulpes:productingot:9>
                 ],
 
                 //ingotBronze
@@ -492,7 +522,7 @@ import crafttweaker.oredict.IOreDictEntry;
                 <ore:ingotCopper> : [
                     <thermalfoundation:material:128>,
                     <immersiveengineering:metal>,
-                    <libvulpes:productingot:4>
+                    <galacticraftcore:basic_item:3>
                 ],
 
                 //ingotConstantan
@@ -509,7 +539,8 @@ import crafttweaker.oredict.IOreDictEntry;
                 //ingotLead
                 <ore:ingotLead> : [
                     <thermalfoundation:material:131>,
-                    <immersiveengineering:metal:2>
+                    <immersiveengineering:metal:2>,
+                    <galacticraftplanets:basic_item_venus:1>
                 ],
 
                 //ingotLumium
@@ -528,7 +559,6 @@ import crafttweaker.oredict.IOreDictEntry;
                 //ingotIridium
                 <ore:ingotIridium> : [
                     <thermalfoundation:material:135>,
-                    <libvulpes:productingot:10>
                 ],
 
                 //ingotInvar
@@ -539,7 +569,8 @@ import crafttweaker.oredict.IOreDictEntry;
                 //ingotNickel
                 <ore:ingotNickel> : [
                     <thermalfoundation:material:133>,
-                    <immersiveengineering:metal:4>
+                    <immersiveengineering:metal:4>,
+                    <galaxyspace:ingots:2>
                 ],
 
                 //ingotPlatinum
@@ -550,12 +581,12 @@ import crafttweaker.oredict.IOreDictEntry;
                 //ingotTin
                 <ore:ingotTin> : [
                     <thermalfoundation:material:129>,
-                    <libvulpes:productingot:5>
+                    <galacticraftcore:basic_item:4>
                 ],
 
                 //ingotTitanium
                 <ore:ingotTitanium> : [
-                    <libvulpes:productingot:7>
+                    <galacticraftplanets:item_basic_asteroids>
                 ],
 
                 //ingotUranium
@@ -576,14 +607,12 @@ import crafttweaker.oredict.IOreDictEntry;
 
                 //ingotSilicon
                 <ore:ingotSilicon>: [
-                    <libvulpes:productingot:3>,
                 ],
 
                 //ingotSteel
                 <ore:ingotSteel> : [
                     <thermalfoundation:material:160>,
                     <immersiveengineering:metal:8>,
-                    <libvulpes:productingot:6>,
                 ]
 
             };
@@ -600,18 +629,17 @@ import crafttweaker.oredict.IOreDictEntry;
                 //stickIron
                 <ore:stickIron> : [
                     <immersiveengineering:material:1>,
-                    <libvulpes:productrod:1>
                 ],
 
                 //stickSteel
                 <ore:stickSteel> : [
                     <immersiveengineering:material:2>,
-                    <libvulpes:productrod:6>
                 ],
                 
                 //stickAluminum
                 <ore:stickAluminum> : [
-                    <immersiveengineering:material:3>
+                    <immersiveengineering:material:3>,
+                    <galacticraftcore:basic_item:5>
                 ],
 
                 //stickAluminium
@@ -621,17 +649,14 @@ import crafttweaker.oredict.IOreDictEntry;
 
                 //stickCopper
                 <ore:stickCopper> : [
-                    <libvulpes:productrod:4>
                 ],
 
                 //stickTitanium
                 <ore:stickTitanium> : [
-                    <libvulpes:productrod:7>
                 ],
                 
                 //stickIridium
                 <ore:stickIridium> : [
-                    <libvulpes:productrod:10>
                 ]};
 
             for oreDictEntry, items in sticksDisabled {
@@ -644,13 +669,12 @@ import crafttweaker.oredict.IOreDictEntry;
             var nuggetsDisabled as IItemStack[][IOreDictEntry] = {
                 <ore:nuggetAluminium> :[
                     <thermalfoundation:material:196>,
-                    <libvulpes:productnugget:9>
-
+                    <immersiveengineering:metal:21>
                 ],
 
                 <ore:nuggetAluminum> : [
                     <thermalfoundation:material:196>,
-                    <libvulpes:productnugget:9>
+                    <immersiveengineering:metal:21>
                 ],
 
                 <ore:nuggetBronze> : [
@@ -661,7 +685,11 @@ import crafttweaker.oredict.IOreDictEntry;
                 <ore:nuggetCopper> : [
                     <thaumcraft:nugget:1>,
                     <thermalfoundation:material:192>,
-                    <libvulpes:productnugget:4>
+                ],
+
+                //nuggetCobalt
+                <ore:nuggetCobalt> : [
+                    <galaxyspace:nuggets>,
                 ],
 
                 //nuggetConstantan
@@ -696,7 +724,6 @@ import crafttweaker.oredict.IOreDictEntry;
 
                 <ore:nuggetIridium> : [
                     <thermalfoundation:material:199>,
-                    <libvulpes:productnugget:10>
                 ],
 
                 <ore:nuggetIron> : [
@@ -719,7 +746,12 @@ import crafttweaker.oredict.IOreDictEntry;
                 //nuggetNickel
                 <ore:nuggetNickel> : [
                     <thermalfoundation:material:197>,
+                    <galaxyspace:nuggets:2>,
+                ],
 
+                //nuggetMagnesium
+                <ore:nuggetMagnesium> : [
+                    <galaxyspace:nuggets:1>,
                 ],
 
                 //nuggetPlatinum
@@ -731,7 +763,6 @@ import crafttweaker.oredict.IOreDictEntry;
                 //nuggetSteel
                 <ore:nuggetSteel> : [
                     <thermalfoundation:material:224>,
-                    <libvulpes:productnugget:6>,
                     <immersiveengineering:metal:28>
                 ],
 
@@ -748,20 +779,17 @@ import crafttweaker.oredict.IOreDictEntry;
 
                 //nuggetSilicon
                 <ore:nuggetSilicon> : [
-                    <libvulpes:productnugget:3>
                 ],
 
                 //nuggetTin
                 <ore:nuggetTin> : [
                     <thermalfoundation:material:193>,
-                    <libvulpes:productnugget:5>,
                     <thaumcraft:nugget:2>
 
                 ],
 
                 //nuggetTitanium,
                 <ore:nuggetTitanium> : [
-                    <libvulpes:productnugget:7>
                 ],
 
                 //nuggetTerrasteel
@@ -839,26 +867,57 @@ import crafttweaker.oredict.IOreDictEntry;
                 <ore:oreAluminium> : [
                     <immersiveengineering:ore:1>,
                     <thermalfoundation:ore:4>,
-                    <libvulpes:ore0:9>
+                    <galacticraftcore:basic_block_core:7>,
+                    <galacticraftplanets:asteroids_block:3>,
+                    <galacticraftplanets:venus:6>,
+                    <galaxyspace:marsores:5>,
+                    <galaxyspace:haumeablocks:3>,
+                    <galaxyspace:barnarda_c_ores:9>,
                     ],
 
                 //oreAluminum
                 <ore:oreAluminum> : [
                     <immersiveengineering:ore:1>,
                     <thermalfoundation:ore:4>,
-                    <libvulpes:ore0:9>
+                    <galacticraftcore:basic_block_core:7>,
+                    <galacticraftplanets:asteroids_block:3>,
+                    <galaxyspace:europablocks:5>,
+                    <galaxyspace:marsores:5>,
+                    <galaxyspace:haumeablocks:3>,
+                    <galaxyspace:barnarda_c_ores:9>
                 ],
 
                 //oreCoal
                 <ore:oreCoal> : [
                     <minecraft:coal_ore>,
+                    <galaxyspace:marsores:2>,
+                    <galaxyspace:enceladusblocks:2>,
+                    <galaxyspace:titanblocks:6>,
+                    <galaxyspace:proxima_b_blocks:8>,
+                    <galaxyspace:barnarda_c_ores>,
+
+                ],
+
+                //oreCobalt
+                <ore:oreCobalt> : [
+                    <galaxyspace:gsores>,
+                    <galaxyspace:mirandablocks:7>,
+                    <galaxyspace:barnarda_c_ores:11>,
                 ],
 
                 //oreCopper
                 <ore:oreCopper> : [
                     <immersiveengineering:ore>,
                     <thermalfoundation:ore>,
-                    <libvulpes:ore0:4>
+                    <galacticraftcore:basic_block_moon>,
+                    <galacticraftcore:basic_block_core:5>,
+                    <galacticraftplanets:mars>,
+                    <galaxyspace:ioblocks:3>,
+                    <galacticraftplanets:venus:7>,
+                    <galaxyspace:proxima_b_blocks:7>,
+                    <galaxyspace:barnarda_c_ores:7>,
+
+
                 ],
 
                 //oreCinnabar
@@ -869,38 +928,78 @@ import crafttweaker.oredict.IOreDictEntry;
                 //oreDiamond
                 <ore:oreDiamond> : [
                     <minecraft:diamond_ore>,
+                    <galaxyspace:mirandablocks:5>,
+                    <galaxyspace:marsores>,
+                    <galaxyspace:titanblocks:5>,
+                    <galaxyspace:proxima_b_blocks:10>,
+                    <galaxyspace:barnarda_c_ores:5>,
+
+
+                ],
+
+                //oreDesh
+                <ore:oreDesh> : [
+                    <galacticraftplanets:mars:2>,
+                    <galaxyspace:phobosblocks:5>
                 ],
 
                 //oreEmerald
                 <ore:oreEmerald> : [
                     <minecraft:emerald_ore>,
+                    <galaxyspace:europablocks:3>,
+                    <galaxyspace:titanblocks:4>
                 ],
 
                 //oreGold
                 <ore:oreGold> : [
                     <minecraft:gold_ore>,
+                    <galaxyspace:marsores:1>,
+                    <galaxyspace:proxima_b_blocks:5>,
+                    <galaxyspace:barnarda_c_ores:2>,
+
                 ],
 
                 //oreIridium
                 <ore:oreIridium> : [
                     <thermalfoundation:ore:7>,
-                    <libvulpes:ore0:10>
+                ],
+
+                //oreIlmenite
+                <ore:oreIlmenite> : [
+                    <galacticraftplanets:asteroids_block:4>,
+                    <galaxyspace:ganymedeblocks:3>
+
                 ],
 
                 //oreIron
                 <ore:oreIron> : [
                     <minecraft:iron_ore>,
+                    <galacticraftplanets:mars:3>,
+                    <galacticraftplanets:asteroids_block:5>,
+                    <galaxyspace:phobosblocks:2>,
+                    <galaxyspace:mercuryblocks:4>,
+                    <galaxyspace:mirandablocks:3>,
+                    <galaxyspace:barnarda_c_ores:1>,
+
+
+
+
                 ],
 
                 //oreLapis
                 <ore:oreLapis> : [
                     <minecraft:lapis_ore>,
+                    <galaxyspace:titanblocks:7>,
+                    <galaxyspace:barnarda_c_ores:4>,
+
+
                 ],
 
                 //oreLead
                 <ore:oreLead>: [
                     <thermalfoundation:ore:3>,
-                    <immersiveengineering:ore:2>
+                    <immersiveengineering:ore:2>,
+                    <galacticraftplanets:venus:8>
                 ],
 
                 //oreNetherQuartz
@@ -911,7 +1010,12 @@ import crafttweaker.oredict.IOreDictEntry;
                 //oreNickel
                 <ore:oreNickel> : [
                     <immersiveengineering:ore:4>,
-                    <thermalfoundation:ore:5>
+                    <thermalfoundation:ore:5>,
+                    <galaxyspace:mercuryblocks:3>,
+                    <galaxyspace:gsores:1>,
+                    <galaxyspace:phobosblocks:4>,
+                    <galaxyspace:mirandablocks:8>,
+                    <galaxyspace:barnarda_c_ores:12>,
 
                 ],
 
@@ -923,22 +1027,29 @@ import crafttweaker.oredict.IOreDictEntry;
                 //oreRedstone
                 <ore:oreRedstone> : [
                     <minecraft:redstone_ore>,
-                ],
+                    <galaxyspace:marsores:3>,
+                    <galaxyspace:titanblocks:8>,
+                    <galaxyspace:barnarda_c_ores:3>,
 
-                //oreRutile
-                <ore:oreRutile> : [
-                    <libvulpes:ore0:8>
                 ],
 
                 //oreQuartz
                 <ore:oreQuartz>: [
-                    <minecraft:quartz_ore>
+                    <minecraft:quartz_ore>,
+                    <galaxyspace:mirandablocks:6>,
+                    <galaxyspace:barnarda_c_ores:10>,
+                    <galacticraftplanets:venus:9>,
                 ],
 
                 //oreTin
                 <ore:oreTin> : [
                     <thermalfoundation:ore:1>,
-                    <libvulpes:ore0:5>
+                    <galacticraftcore:basic_block_moon:1>,
+                    <galacticraftcore:basic_block_core:6>,
+                    <galacticraftplanets:mars:1>,
+                    <galaxyspace:proxima_b_blocks:6>,
+                    <galaxyspace:barnarda_c_ores:8>,
+                    <galacticraftplanets:venus:11>,
                 ],
 
                 //oreTitanium
@@ -951,9 +1062,67 @@ import crafttweaker.oredict.IOreDictEntry;
                     <immersiveengineering:ore:3>,
                 ],
 
+                //oreSolar
+                <ore:oreSolar> : [
+                    <galacticraftplanets:venus:13>
+                ],
+
+                //oreSilicon
+                <ore:oreSilicon> : [
+                    <galacticraftcore:basic_block_core:8>,
+                    <galacticraftplanets:venus:10>,
+                    <galaxyspace:europablocks:4>,
+                    <galaxyspace:marsores:4>,
+                    <galaxyspace:proxima_b_blocks:9>,
+                    <galaxyspace:barnarda_c_ores:6>,
+
+
+
+                ],
+
+                //oreSapphire
+                <ore:oreSapphire> : [
+                    <galacticraftcore:basic_block_moon:6>,
+                    <galaxyspace:titanblocks:3>,
+
+                ],
+
+                //oreSulfur
+                <ore:oreSulfur> : [
+                    <galaxyspace:ioblocks:4>
+
+                ],
+
+                //oreVolcanic
+                <ore:oreVolcanic> : [
+                    <galaxyspace:ioblocks:5>,
+                ],
+
+                //oreMagnesium
+                <ore:oreMagnesium> : [
+                    <galaxyspace:mercuryblocks:5>,
+                    <galaxyspace:ganymedeblocks:2>
+                ],
+
+                //oreMeteoricIron
+                <ore:oreMeteoricIron> : [
+                    <galaxyspace:ceresblocks:3>,
+                    <galaxyspace:phobosblocks:3>,
+
+                ],
+
+                //oreDolomite
+                <ore:oreDolomite> : [
+                    <galaxyspace:ceresblocks:2>,
+                    <galaxyspace:mirandablocks:4>,
+
+                ],
+
                 //oreUranium
                 <ore:oreUranium> : [
-                    <immersiveengineering:ore:5>
+                    <immersiveengineering:ore:5>,
+                    <galaxyspace:gsores:2>,
+
                 ]
 
             };
@@ -972,20 +1141,20 @@ import crafttweaker.oredict.IOreDictEntry;
                 <ore:plateAluminium> : [
                     <thermalfoundation:material:324>,
                     <immersiveengineering:metal:31>,
-                    <libvulpes:productplate:9>
+                    <galacticraftcore:basic_item:8>,
                 ],
 
                 //plateAluminum
                 <ore:plateAluminum> : [
                     <thermalfoundation:material:324>,
                     <immersiveengineering:metal:31>,
-                    <libvulpes:productplate:9>
                 ],
 
 
                 //plateBronze
                 <ore:plateBronze> : [
-                    <thermalfoundation:material:355>
+                    <thermalfoundation:material:355>,
+                    <galacticraftcore:basic_item:10>,
                 ],
 
                 //plateBrass
@@ -1000,11 +1169,26 @@ import crafttweaker.oredict.IOreDictEntry;
 
                 ],
 
+                //plateCobalt
+                <ore:plateCobalt> : [
+                    <galaxyspace:compressed_plates:1>,
+                ],
+
+                //plateCoal
+                <ore:plateCoal> : [
+                    <galaxyspace:compressed_plates>
+                ],
+
                 //plateCopper
                 <ore:plateCopper> : [
                     <thermalfoundation:material:320>,
                     <immersiveengineering:metal:30>,
-                    <libvulpes:productplate:4>
+                    <galacticraftcore:basic_item:6>,
+                ],
+
+                //plateDesh
+                <ore:plateDesh> : [
+                    <galacticraftplanets:item_basic_mars:5>,
                 ],
 
                 //plateElectrum
@@ -1023,7 +1207,6 @@ import crafttweaker.oredict.IOreDictEntry;
                 <ore:plateGold> : [
                     <thermalfoundation:material:33>,
                     <immersiveengineering:metal:40>,
-                    <libvulpes:productplate:2>
                 ],
 
                 //plateInvar
@@ -1034,7 +1217,6 @@ import crafttweaker.oredict.IOreDictEntry;
                 //plateIridium
                 <ore:plateIridium> : [
                     <thermalfoundation:material:327>,
-                    <libvulpes:productplate:10>
                 ],
 
                 //plateIron
@@ -1042,7 +1224,7 @@ import crafttweaker.oredict.IOreDictEntry;
                     <thermalfoundation:material:32>,
                     <thaumcraft:plate:1>,
                     <immersiveengineering:metal:39>,
-                    <libvulpes:productplate:1>
+                    <galacticraftcore:basic_item:11>,
                 ],
 
                 //plateLead
@@ -1059,7 +1241,8 @@ import crafttweaker.oredict.IOreDictEntry;
                 //plateNickel
                 <ore:plateNickel> : [
                     <thermalfoundation:material:325>,
-                    <immersiveengineering:metal:34>
+                    <immersiveengineering:metal:34>,
+                    <galaxyspace:compressed_plates:3>,
                 ],
 
                 //platePlatinum
@@ -1074,7 +1257,6 @@ import crafttweaker.oredict.IOreDictEntry;
 
                 //plateSilicon
                 <ore:plateSilicon> : [
-                    <libvulpes:productplate:3>
                 ],
 
                 //plateSilver
@@ -1087,13 +1269,15 @@ import crafttweaker.oredict.IOreDictEntry;
                 <ore:plateSteel> : [
                     <thermalfoundation:material:352>,
                     <immersiveengineering:metal:38>,
-                    <libvulpes:productplate:6>
+                    <galacticraftcore:basic_item:9>,
+
                 ],
 
                 //plateTin
                 <ore:plateTin> : [
                     <thermalfoundation:material:321>,
-                    <libvulpes:productplate:5>
+                    <galacticraftcore:basic_item:7>,
+
                 ],
 
                 //plateUranium
@@ -1108,12 +1292,17 @@ import crafttweaker.oredict.IOreDictEntry;
 
                 //plateTitanium
                 <ore:plateTitanium> : [
-                    <libvulpes:productplate:7>
+                    <galacticraftplanets:item_basic_asteroids:6>,
                 ],
 
                 //plateMithrillium
                 <ore:plateMithrillium> : [
                     <thaumadditions:mithrillium_plate>
+                ],
+
+                //plateMagnesium
+                <ore:plateMagnesium> : [
+                    <galaxyspace:compressed_plates:2>,
                 ],
 
                 //plateVoid
@@ -1218,7 +1407,6 @@ import crafttweaker.oredict.IOreDictEntry;
                 //gearSteel
                 <ore:gearSteel> : [
                     <thermalfoundation:material:288>,
-                    <libvulpes:productgear:6>
                 ],
 
                 //gearStone
@@ -1233,7 +1421,6 @@ import crafttweaker.oredict.IOreDictEntry;
 
                 //gearTitanium
                 <ore:gearTitanium> : [
-                    <libvulpes:productgear:7>
                 ],
 
                 //gearWood
@@ -1255,7 +1442,8 @@ import crafttweaker.oredict.IOreDictEntry;
                 //itemSilicon
                 <ore:itemSilicon> : [
                     <enderio:item_material:5>,
-                    <appliedenergistics2:material:5>
+                    <appliedenergistics2:material:5>,
+                    <galacticraftcore:basic_item:2>
                 ],
 
                 //fuelCoke
@@ -1276,6 +1464,8 @@ import crafttweaker.oredict.IOreDictEntry;
                 oreDictEntry.removeItems(items);
             }
     // ======== OreDict Consistency & Custom Tags ======== //
+        // Wafer
+            <ore:itemSilicon>.add(<metaitem:plateSilicon>);
         // Modularium
             <ore:ingotModularium>.add(<modularmachinery:itemmodularium>);
         // Salis Mundus
@@ -1382,9 +1572,6 @@ import crafttweaker.oredict.IOreDictEntry;
             // Thaumium
                 recipes.addShapeless("GGN_thaumiumfromgtblock", <thaumcraft:metal_thaumium>, [<metaitem:blockThaumium>]);
                 recipes.addShapeless("GGN_thaumiumfromgtingot", <thaumcraft:ingot>, [<metaitem:ingotThaumium>]);
-            // Certus  
-                recipes.addShapeless("GGN_certustogt", <metaitem:blockCertusQuartz>, [<appliedenergistics2:quartz_block>]);
-                recipes.addShapeless("GGN_certusfromgt", <appliedenergistics2:quartz_block>, [<metaitem:blockCertusQuartz>]);
             // Energetic
                 recipes.addShapeless("GGN_energeticfromgtblock", <enderio:block_alloy:1>, [<metaitem:blockEnergeticAlloy>]);
                 recipes.addShapeless("GGN_energeticfromgtingot", <enderio:item_alloy_ingot:1>, [<metaitem:ingotEnergeticAlloy>]);

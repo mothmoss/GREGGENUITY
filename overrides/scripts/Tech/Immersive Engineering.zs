@@ -224,7 +224,7 @@ import mods.multiblockstages.IEMultiBlockStages;
                     mods.immersiveengineering.Excavator.addMineral(
                         "Precious", 50, 0.005, 
                         ["oreNickel", "oreCobalt", "oreGold", "oreDiamond"], 
-                        [100, 50, 40, 10], 
+                        [80, 50, 40, 30], 
                         [0], false
                     );
 
@@ -233,8 +233,8 @@ import mods.multiblockstages.IEMultiBlockStages;
                     .EUt(1024)
                     .inputs(<immersiveengineering:metal_multiblock:11>)
                     .circuit(6)
-                    .outputs(<ore:oreNickel>.firstItem * 100, <ore:oreCobalt>.firstItem * 50, 
-                    <ore:oreGold>.firstItem * 40, <ore:oreDiamond>.firstItem * 10)
+                    .outputs(<ore:oreNickel>.firstItem * 80, <ore:oreCobalt>.firstItem * 50, 
+                    <ore:oreGold>.firstItem * 40, <ore:oreDiamond>.firstItem * 30)
                     .buildAndRegister();
                 // Magnetic
                     // Redstone - 100

@@ -1,4 +1,3 @@
-/* groovylint-disable CompileStatic */
 //Imports
 
 // ================ Globals ================ //
@@ -54,7 +53,7 @@
         wiremill               = recipemap('wiremill')
         combustiongen          = recipemap('combustion_generator')
         gasgen                 = recipemap('gas_turbine')
-        plasmagen              = recipemap('plasma_turbine')
+        plasmagen              = recipemap('plasma_generator')
         semigen                = recipemap('semi_fluid_generator')
         steamgen               = recipemap('steam_turbine')
         excavator              = recipemap('excavator')
@@ -62,6 +61,16 @@
     // ======== GregTech Recipemaps ======== //
         circuit1 = metaitem('circuit.integrated').withNbt([Configuration: 1])
         circuit2 = metaitem('circuit.integrated').withNbt([Configuration: 2])
+        circuit3 = metaitem('circuit.integrated').withNbt([Configuration: 3])
+        circuit4 = metaitem('circuit.integrated').withNbt([Configuration: 4])
+        circuit5 = metaitem('circuit.integrated').withNbt([Configuration: 5])
+        circuit6 = metaitem('circuit.integrated').withNbt([Configuration: 6])
+        circuit7 = metaitem('circuit.integrated').withNbt([Configuration: 7])
+        circuit8 = metaitem('circuit.integrated').withNbt([Configuration: 8])
+        circuit9 = metaitem('circuit.integrated').withNbt([Configuration: 9])
+        circuit10 = metaitem('circuit.integrated').withNbt([Configuration: 10])
+        circuit11 = metaitem('circuit.integrated').withNbt([Configuration: 11])
+        circuit12 = metaitem('circuit.integrated').withNbt([Configuration: 12])
         gtsaw = ore('gtSaw')
         gthammer = ore('gtHammer')
         gtwrench = ore('gtWrench')
@@ -70,4 +79,6 @@
         gtmortar = ore('gtMortar')
         gtwirecutter = ore('gtWirecutter')
         gtknife = ore('gtKnife')
+    // ======== Fluids ======== //
+
 // ================ Globals ================ //

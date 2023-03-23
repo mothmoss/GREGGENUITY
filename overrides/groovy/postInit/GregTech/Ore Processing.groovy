@@ -1,9 +1,9 @@
-import gregtech.api.unification.material.properties.PropertyKey;
-import gregtech.api.unification.ore.OrePrefix;
+import gregtech.api.unification.material.properties.PropertyKey
+import gregtech.api.unification.ore.OrePrefix
 
 // ================ Ore Processing ================ //
     // ======== Definitions ======== //
-        def petrodust = item('thermalfoundation:material', 1027);
+        def petrodust = item('thermalfoundation:material', 1027)
     // ======== Chemical Production ======== //
         // Petrotheum
             //Mixing base dust

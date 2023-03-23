@@ -16,33 +16,10 @@ import mods.gregtech.recipe.RecipeMap;
             mods.jei.JEI.hideCategory("threng.purify");
             mods.jei.JEI.hideCategory("threng.etch");
             mods.jei.JEI.hideCategory("threng.energize");
-        val AE2Removal = [
-            <appliedenergistics2:material:13>, #presses
-            <appliedenergistics2:material:14>,
-            <appliedenergistics2:material:15>,
-            <appliedenergistics2:material:21>,
-            <appliedenergistics2:crystal_seed>, #seeds
-            <appliedenergistics2:crystal_seed:600>,
-            <appliedenergistics2:crystal_seed:1200>,
-            <threng:machine:5>, #lazyae2 machines
-            <threng:machine:1>,
-            <threng:machine:2>,
-            <appliedenergistics2:material:10>, #pure crystals
-            <appliedenergistics2:material:11>,
-            <appliedenergistics2:material:16>,
-            <appliedenergistics2:material:17>, #printed circuits
-            <appliedenergistics2:material:18>,
-            <appliedenergistics2:material:19>,
-            <appliedenergistics2:material:20>,
-            <appliedenergistics2:material:22>,
-            <threng:material>,
-            <threng:material:1>,
-            <threng:material:2>,
-        ] as IItemStack[];
-            for item in AE2Removal {
-                recipes.remove(item);
-                rh(item);
-            }
+            
+/*
+
+
 
 
     # ======== Decoration ======== #
@@ -157,14 +134,6 @@ import mods.gregtech.recipe.RecipeMap;
                 .outputs(logicP * 12)
                 .fluidInputs(<liquid:soldering_alloy> * 72)
                 .buildAndRegister();
-
-                assembler.recipeBuilder()
-                .EUt(16)
-                .duration(2400)
-                .inputs(<ore:plateSilicon> * 2, <ore:plateGarnetYellow> * 2, <ore:plateRedAlloy> * 2, <ore:crystalFluix> * 2)
-                .outputs(logicP * 12)
-                .fluidInputs(<liquid:tin> * 144)
-                .buildAndRegister();
             # Calculation - Certus Quartz
                 assembler.recipeBuilder()
                 .EUt(16)
@@ -173,14 +142,6 @@ import mods.gregtech.recipe.RecipeMap;
                 .outputs(calcP * 12)
                 .fluidInputs(<liquid:soldering_alloy> * 72)
                 .buildAndRegister();
-
-                assembler.recipeBuilder()
-                .EUt(16)
-                .duration(2400)
-                .inputs(<ore:plateSilicon> * 2, <ore:plateCertusQuartz> * 2, <ore:plateRedAlloy> * 2, <ore:crystalFluix> * 2)
-                .outputs(calcP * 12)
-                .fluidInputs(<liquid:tin> * 144)
-                .buildAndRegister();
             # Engineering - Diamond
                 assembler.recipeBuilder()
                 .EUt(16)
@@ -188,14 +149,6 @@ import mods.gregtech.recipe.RecipeMap;
                 .inputs(<ore:plateSilicon> * 2, <ore:plateDiamond> * 2, <ore:plateRedAlloy> * 2, <ore:crystalFluix> * 2)
                 .outputs(engP * 12)
                 .fluidInputs(<liquid:soldering_alloy> * 72)
-                .buildAndRegister();
-
-                assembler.recipeBuilder()
-                .EUt(16)
-                .duration(2400)
-                .inputs(<ore:plateSilicon> * 2, <ore:plateDiamond> * 2, <ore:plateRedAlloy> * 2, <ore:crystalFluix> * 2)
-                .outputs(engP * 12)
-                .fluidInputs(<liquid:tin> * 144)
                 .buildAndRegister();
             # Formation Core
                 assembler.recipeBuilder()
@@ -206,30 +159,12 @@ import mods.gregtech.recipe.RecipeMap;
                 .circuit(1)
                 .outputs(formCore * 3)
                 .buildAndRegister();
-
-                assembler.recipeBuilder()
-                .EUt(4)
-                .duration(60)
-                .inputs(engP, calcP, logicP)
-                .fluidInputs(<liquid:tin> * 144)
-                .circuit(1)
-                .outputs(formCore * 3)
-                .buildAndRegister();
             # Destruction Core
                 assembler.recipeBuilder()
                 .EUt(4)
                 .duration(60)
                 .inputs(engP, calcP, logicP)
                 .fluidInputs(<liquid:soldering_alloy> * 72)
-                .circuit(2)
-                .outputs(anniCore * 3)
-                .buildAndRegister();
-
-                assembler.recipeBuilder()
-                .EUt(4)
-                .duration(60)
-                .inputs(engP, calcP, logicP)
-                .fluidInputs(<liquid:tin> * 144)
                 .circuit(2)
                 .outputs(anniCore * 3)
                 .buildAndRegister();
@@ -627,13 +562,6 @@ import mods.gregtech.recipe.RecipeMap;
                     .duration(80)
                     .buildAndRegister();
 
-                    assembler.recipeBuilder()
-                    .inputs(formCore, <ore:foilElectrum> * 8, <ore:gemBlueTopaz>, anniCore)
-                    .fluidInputs(<liquid:tin> * 144)
-                    .outputs(<appliedenergistics2:material:35>)
-                    .EUt(16)
-                    .duration(80)
-                    .buildAndRegister();
                 # 4k
                     assembler.recipeBuilder()
                     .inputs(<ore:gemBlueTopaz> * 4, <appliedenergistics2:material:35> * 4)
@@ -643,25 +571,10 @@ import mods.gregtech.recipe.RecipeMap;
                     .duration(80)
                     .buildAndRegister();
 
-                    assembler.recipeBuilder()
-                    .inputs(<ore:gemBlueTopaz> * 4, <appliedenergistics2:material:35> * 4)
-                    .fluidInputs(<liquid:tin> * 288)
-                    .outputs(<appliedenergistics2:material:36>)
-                    .EUt(16)
-                    .duration(80)
-                    .buildAndRegister();
                 # 16k
                     assembler.recipeBuilder()
                     .inputs(<ore:gemFlawlessBlueTopaz> * 4, <appliedenergistics2:material:36> * 4)
                     .fluidInputs(<liquid:soldering_alloy> * 288)
-                    .outputs(<appliedenergistics2:material:37>)
-                    .EUt(16)
-                    .duration(80)
-                    .buildAndRegister();
-
-                    assembler.recipeBuilder()
-                    .inputs(<ore:gemFlawlessBlueTopaz> * 4, <appliedenergistics2:material:36> * 4)
-                    .fluidInputs(<liquid:tin> * 576)
                     .outputs(<appliedenergistics2:material:37>)
                     .EUt(16)
                     .duration(80)
@@ -675,13 +588,6 @@ import mods.gregtech.recipe.RecipeMap;
                     .duration(80)
                     .buildAndRegister();
 
-                    assembler.recipeBuilder()
-                    .inputs(<ore:gemFlawlessBlueTopaz> * 4, <appliedenergistics2:material:37> * 4)
-                    .fluidInputs(<liquid:tin> * 1152)
-                    .outputs(<appliedenergistics2:material:38>)
-                    .EUt(16)
-                    .duration(80)
-                    .buildAndRegister();
         # Fluid - 1k, 4k, 16k, 64k
                 # 1k
                     recipes.remove(<appliedenergistics2:material:35>);
@@ -693,13 +599,6 @@ import mods.gregtech.recipe.RecipeMap;
                     .duration(80)
                     .buildAndRegister();
 
-                    assembler.recipeBuilder()
-                    .inputs(formCore, <ore:foilSterlingSilver> * 8, <ore:gemGreenSapphire>, anniCore)
-                    .fluidInputs(<liquid:tin> * 144)
-                    .outputs(<appliedenergistics2:material:54>)
-                    .EUt(16)
-                    .duration(80)
-                    .buildAndRegister();
                 # 4k
                     assembler.recipeBuilder()
                     .inputs(<ore:gemGreenSapphire> * 4, <appliedenergistics2:material:54> * 4)
@@ -709,25 +608,10 @@ import mods.gregtech.recipe.RecipeMap;
                     .duration(80)
                     .buildAndRegister();
 
-                    assembler.recipeBuilder()
-                    .inputs(<ore:gemGreenSapphire> * 4, <appliedenergistics2:material:54> * 4)
-                    .fluidInputs(<liquid:tin> * 288)
-                    .outputs(<appliedenergistics2:material:55>)
-                    .EUt(16)
-                    .duration(80)
-                    .buildAndRegister();
                 # 16k
                     assembler.recipeBuilder()
                     .inputs(<ore:gemFlawlessGreenSapphire> * 4, <appliedenergistics2:material:55> * 4)
                     .fluidInputs(<liquid:soldering_alloy> * 288)
-                    .outputs(<appliedenergistics2:material:56>)
-                    .EUt(16)
-                    .duration(80)
-                    .buildAndRegister();
-
-                    assembler.recipeBuilder()
-                    .inputs(<ore:gemFlawlessGreenSapphire> * 4, <appliedenergistics2:material:55> * 4)
-                    .fluidInputs(<liquid:tin> * 576)
                     .outputs(<appliedenergistics2:material:56>)
                     .EUt(16)
                     .duration(80)
@@ -741,13 +625,6 @@ import mods.gregtech.recipe.RecipeMap;
                     .duration(80)
                     .buildAndRegister();
 
-                    assembler.recipeBuilder()
-                    .inputs(<ore:gemFlawlessGreenSapphire> * 4, <appliedenergistics2:material:56> * 4)
-                    .fluidInputs(<liquid:tin> * 1152)
-                    .outputs(<appliedenergistics2:material:57>)
-                    .EUt(16)
-                    .duration(80)
-                    .buildAndRegister();
         # Storage Cells
             # Default - 1k, 4k, 16k, 64k
                 # 1k
@@ -804,3 +681,4 @@ import mods.gregtech.recipe.RecipeMap;
             mods.chisel.Carving.addVariation("AE2", i);
             }
 # ================ AE2 ================ #
+*/
