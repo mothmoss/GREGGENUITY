@@ -396,7 +396,7 @@ import team.chisel.api.carving.CarvingUtils
             item('appliedenergistics2:material', 7), //fluix crystal
         ]
                 for (entry in hidemap) {
-                    mods.hei.yeet(entry)
+                    mods.jei.ingredient.yeet(entry)
                 }
 
     // ======== Components ======== //
@@ -711,7 +711,7 @@ import team.chisel.api.carving.CarvingUtils
                     crafting.addShapeless("ggn_ae_conversionmonitor", conversionmonitor, [anypanel, conversionupgrade])
             // Terminals
                 // Crafting Terminal
-                    crafting.addShaped("ggn_ae_fluidpatternterminal", craftingterminal,
+                    crafting.addShaped("ggn_ae_patternterminal", craftingterminal,
                     [
                         [screwFluixSteel.copy() * 1, engineeringProcessor.copy() * 1, screwFluixSteel.copy() * 1],
                         [annihilationCore.copy() * 1, anypanel * 1, formationCore.copy() * 1],
@@ -887,6 +887,7 @@ import team.chisel.api.carving.CarvingUtils
                 crafting.removeByOutput(craftingUnit1024k)
                 crafting.removeByOutput(craftingUnit4096k)
                 crafting.removeByOutput(craftingUnit16384k)
+
                 canner.recipeBuilder().EUt(7).duration(200).inputs(craftingUnitBase.copy() * 1, storagecell1k.copy() * 1).outputs(craftingUnit1k.copy() * 1).buildAndRegister()
                 canner.recipeBuilder().EUt(7).duration(200).inputs(craftingUnitBase.copy() * 1, storagecell4k.copy() * 1).outputs(craftingUnit4k.copy() * 1).buildAndRegister()
                 canner.recipeBuilder().EUt(7).duration(200).inputs(craftingUnitBase.copy() * 1, storagecell16k.copy() * 1).outputs(craftingUnit16k.copy() * 1).buildAndRegister()
@@ -895,6 +896,7 @@ import team.chisel.api.carving.CarvingUtils
                 canner.recipeBuilder().EUt(7).duration(200).inputs(craftingUnitBase.copy() * 1, storagecell1024k.copy() * 1).outputs(craftingUnit1024k.copy() * 1).buildAndRegister()
                 canner.recipeBuilder().EUt(7).duration(200).inputs(craftingUnitBase.copy() * 1, storagecell4096k.copy() * 1).outputs(craftingUnit4096k.copy() * 1).buildAndRegister()
                 canner.recipeBuilder().EUt(7).duration(200).inputs(craftingUnitBase.copy() * 1, storagecell16384k.copy() * 1).outputs(craftingUnit16384k.copy() * 1).buildAndRegister()
+
                 canner.recipeBuilder().EUt(7).duration(200).outputs(craftingUnitBase.copy() * 1, storagecell1k.copy() * 1).inputs(craftingUnit1k.copy() * 1).buildAndRegister()
                 canner.recipeBuilder().EUt(7).duration(200).outputs(craftingUnitBase.copy() * 1, storagecell4k.copy() * 1).inputs(craftingUnit4k.copy() * 1).buildAndRegister()
                 canner.recipeBuilder().EUt(7).duration(200).outputs(craftingUnitBase.copy() * 1, storagecell16k.copy() * 1).inputs(craftingUnit16k.copy() * 1).buildAndRegister()

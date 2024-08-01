@@ -84,7 +84,7 @@ import mods.multiblockstages.IEMultiBlockStages;
             <immersiveengineering:stone_decoration_stairs_concrete>.displayName="Construction Concrete Stairs";
             <immersiveengineering:stone_decoration_stairs_concrete_tile>.displayName="Leaded Construction Concrete Tile Stairs";
             <immersiveengineering:stone_decoration_stairs_concrete_leaded>.displayName="Leaded Construction Concrete Stairs";
-
+    /*
     // ======== Mineral Deposits ======== //
         // ==== Removal ==== //
                 mods.immersiveengineering.Excavator.removeMineral("Bauxite");
@@ -128,6 +128,7 @@ import mods.multiblockstages.IEMultiBlockStages;
                     .outputs(<ore:oreTin>.firstItem * 100, <ore:oreWulfenite>.firstItem * 50, 
                     <ore:oreCassiteriteSand>.firstItem * 25, <ore:oreStibnite>.firstItem * 25)
                     .buildAndRegister();
+
                 // Argentum
                     // Silver (75)
                     // Lead (75)
@@ -418,8 +419,7 @@ import mods.multiblockstages.IEMultiBlockStages;
                     .circuit(15)
                     .outputs(<ore:oreChromite>.firstItem * 150, <ore:oreAluminium>.firstItem * 50)
                     .buildAndRegister();
-
-
+            */
     // ======== Components ======== //
         // ==== Engineering Blocks ==== //
             // Redstone

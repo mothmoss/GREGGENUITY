@@ -14,6 +14,7 @@ import mods.gregtech.recipe.RecipeMap;
         val circuitEV = <ore:circuitEv>;
         val fluidregHV = <metaitem:fluid.regulator.hv>;
     // ======== Fluid Compressor ======== //
+        /*
         // ==== Controller ==== //
             recipes.addShaped("GGN_fluid_compressor", <metaitem:mbt:fluidcompressor>,
             [
@@ -122,6 +123,7 @@ import mods.gregtech.recipe.RecipeMap;
                 .EUt(30)
                 .duration(25)
                 .buildAndRegister();
+        */
     // ======== Vacuum Freezing ======== //   
         // ==== Removing Entirely ==== //
             <recipemap:vacuum_freezer>.findRecipe(120, [<metaitem:ingotHotMaragingSteel300>], null).remove();

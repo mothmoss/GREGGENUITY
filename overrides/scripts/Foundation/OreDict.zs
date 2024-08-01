@@ -1,4 +1,4 @@
-#priority 10000
+/*#priority 10000
 import mods.jei.JEI.removeAndHide as rh;
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.IItemDefinition;
@@ -1467,7 +1467,7 @@ import crafttweaker.oredict.IOreDictEntry;
         // Wafer
             <ore:itemSilicon>.add(<metaitem:plateSilicon>);
         // Modularium
-            <ore:ingotModularium>.add(<modularmachinery:itemmodularium>);
+            #<ore:ingotModularium>.add(<modularmachinery:itemmodularium>);
         // Salis Mundus
             <ore:salismundus>.add(<thaumcraft:salis_mundus>);
         // Ironwood

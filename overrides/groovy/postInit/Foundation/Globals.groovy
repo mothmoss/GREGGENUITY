@@ -56,8 +56,8 @@
         plasmagen              = recipemap('plasma_generator')
         semigen                = recipemap('semi_fluid_generator')
         steamgen               = recipemap('steam_turbine')
-        excavator              = recipemap('excavator')
-        fcompressor            = recipemap('fluidcompressor')
+        //excavator              = recipemap('excavator')
+        //fcompressor            = recipemap('fluidcompressor')
     // ======== GregTech Recipemaps ======== //
         circuit1 = metaitem('circuit.integrated').withNbt([Configuration: 1])
         circuit2 = metaitem('circuit.integrated').withNbt([Configuration: 2])

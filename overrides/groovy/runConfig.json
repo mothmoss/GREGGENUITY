@@ -1,5 +1,6 @@
 {
-  "packName": "",
+  "packName": "Greggenuity",
+  "packId": "greggenuity",
   "version": "1.0.0",
   "debug": false,
   "loaders": {

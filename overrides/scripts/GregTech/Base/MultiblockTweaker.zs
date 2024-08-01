@@ -1,5 +1,5 @@
+/*
 #priority 10000
-
 import crafttweaker.block.IBlockState;
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
@@ -72,3 +72,4 @@ import crafttweaker.command.ICommandManager;
         
         fluidcompressor.hasMaintenanceMechanics = true;
 // ================ Multiblocks ================ //
+*/

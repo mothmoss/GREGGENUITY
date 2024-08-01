@@ -56,6 +56,6 @@ import mods.gregtech.recipe.RecipeMap;
         global plasmagen              as RecipeMap = RecipeMap.getByName("plasma_turbine");
         global semigen                as RecipeMap = RecipeMap.getByName("semi_fluid_generator");
         global steamgen               as RecipeMap = RecipeMap.getByName("steam_turbine");
-        global excavator              as RecipeMap = RecipeMap.getByName("excavator");
-        global fcompressor            as RecipeMap = RecipeMap.getByName("fluidcompressor");
+        #global excavator              as RecipeMap = RecipeMap.getByName("excavator");
+        #global fcompressor            as RecipeMap = RecipeMap.getByName("fluidcompressor");
 // ================ Globals ================ //
