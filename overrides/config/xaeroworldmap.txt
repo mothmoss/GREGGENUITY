@@ -10,7 +10,7 @@ loadChunks:true
 updateChunks:true
 terrainSlopes:2
 terrainDepth:true
-footsteps:true
+footsteps:false
 flowers:true
 coordinates:true
 hoveredBiome:true

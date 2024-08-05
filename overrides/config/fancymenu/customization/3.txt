@@ -263,11 +263,11 @@ customization {
 customization {
   path = resources/fancymenu/ggntop.png
   orientation = top-left
-  x = 100
+  x = 207
   width = 267
   actionid = bb2e5653-7fcf-4a13-ae73-c48c3bfd5ba51676791230606
   action = addtexture
-  y = 19
+  y = 16
   height = 81
 }
 

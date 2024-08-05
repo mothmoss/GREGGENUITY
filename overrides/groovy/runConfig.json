@@ -5,12 +5,12 @@
   "debug": false,
   "loaders": {
     "preInit": [
-      "preInit/",
-      "preInit/GregTech/"
+      "preInit/"
     ],
     "postInit": [
       "postInit/",
       "postInit/Foundation/",
+      "postInit/Foundation/Cutter",
       "postInit/GregTech/",
       "postInit/Tech/",
       "postInit/Misc/"

@@ -3,111 +3,6 @@ import team.chisel.api.carving.CarvingUtils
 
 // ================ AE2 ================ //
     // ======== Definitions ======== //
-        //Fluids
-            def solder = fluid("soldering_alloy")
-            def hydrogen = fluid("hydrogen")
-            def oxygen = fluid("oxygen")
-            def liquidlead = fluid("lead")
-            def liquidredalloy = fluid("red_alloy")
-            def liquidender = fluid("ender")
-            def liquidfluix = fluid("fluix")
-            def liquidrubber = fluid("rubber")
-            def liquidsteel = fluid("steel")
-            def liquidborosilicate = fluid("borosilicate_glass")
-            def liquidmana = fluid("botanic_mana")
-            def liquidplastic = fluid("plastic")
-            def liquidptfe = fluid("polytetrafluoroethylene")
-            def liquidpbi = fluid("polybenzimidazole")
-            def liquidvis = fluid("vis")
-            def liquidglowstone = fluid("glowstone")
-        //Oredicts
-            def anypanel = ore("itemIlluminatedPanel")
-            def anychest = ore("chest")
-            def plateFluix = ore("plateFluix").first
-            def plateDiamond = ore("plateDiamond").first
-            def plateGold = ore("plateGold").first
-            def plateNetherQuartz = ore("plateNetherQuartz").first
-            def plateQuartzite = ore("plateQuartzite").first
-            def plateFluixSteel = ore("plateFluixSteel").first
-            def plateCertusQuartz = ore("plateCertusQuartz").first
-            def plateStainlessSteel = ore("plateStainlessSteel").first
-            def plateElectrum = ore("plateElectrum").first
-            def plateFluminium = ore("plateFluminium").first
-            def plateThaumium = ore("plateThaumium").first
-            def platePolyethylene = ore("platePlastic").first
-            def plateGlass = ore("plateGlass").first
-            def plateSteel = ore("plateSteel").first
-            def plateAluminium = ore("plateAluminium").first
-            def plateTitanium = ore("plateTitanium").first
-            def plateDarkSteel = ore("plateDarkSteel").first
-            def platePlastic = ore("platePlastic").first
-            def platePtfe = ore("platePolytetrafluoroethylene").first
-            def plateFlungstensteel = ore("plateFlungstensteel").first
-
-            def plateDoubleFluixSteel = ore("plateDoubleFluixSteel").first
-            def plateDoubleFluminium = ore("plateDoubleFluminium").first
-
-            def dustCertusQuartz = ore("dustCertusQuartz").first
-            def dustQuartzite = ore("dustQuartzite").first
-            def dustNetherQuartz = ore("dustNetherQuartz").first
-            def dustIron = ore("dustIron").first
-            def dustFluix = ore("dustFluix").first
-            def dustAluminium = ore("dustAluminium").first
-            def dustChrome = ore("dustChrome").first
-            def dustSteel = ore("dustSteel").first
-            def dustFluixSteel = ore("dustFluixSteel").first
-            def dustGlass = ore('dustGlass').first
-
-            def foilSilicon = ore("foilSilicon").first
-            def foilRubber = ore("foilRubber").first
-
-            def gemCertusQuartz = ore("gemCertusQuartz").first
-
-            def pearlFluix = ore("pearlFluix").first
-            def gemFluix = ore("gemFluix").first
-            def lensFluix = ore("lensFluix").first
-            def wireFineFluix = ore("wireFineFluix").first
-
-            def stickWood = ore("stickWood").first
-            def stickFluix = ore("stickFluix").first
-            def stickFluixSteel = ore("stickFluixSteel").first
-            def stickFluminium = ore("stickFluminium").first
-
-
-            def screwFluixSteel = ore("screwFluixSteel").first
-            def screwFluminium = ore("screwFluminium").first
-            def screwThaumium = ore("screwThaumium").first
-            def screwFluix = ore("screwFluix").first
-            def screwElectrum = ore("screwElectrum").first
-            def screwSteel = ore("screwSteel").first
-            def screwFlungstensteel = ore("screwFlungstensteel").first
-
-        //Metaitems & GT
-            def nandChip = metaitem("circuit.nand_chip")
-            def circuitlv = ore("circuitLv")
-            def circuitmv = ore("circuitMv")
-            def circuithv = ore("circuitHv")
-            def circuitev = ore("circuitEv")
-            def extrudershapewire = metaitem("shape.extruder.wire")
-            def extrudershapebolt = metaitem('shape.extruder.bolt')
-            def ramchip = metaitem("plate.random_access_memory")
-            def cpuchip = metaitem("plate.central_processing_unit")
-            def nanocpuchip = metaitem("plate.nano_central_processing_unit")
-            def qubitcpuchip = metaitem("plate.qbit_central_processing_unit")
-            def conveyormv = metaitem('conveyor.module.mv')
-            def pumpmv = metaitem('electric.pump.mv')
-            def sensormv = metaitem('sensor.mv')
-            def emittermv = metaitem('emitter.mv')
-            def shuttercover = metaitem('cover.shutter')
-            def assemblerlv = metaitem('assembler.lv')
-        //Aspects
-            def aer = aspect("aer")
-            def aqua = aspect("aqua")
-            def ordo = aspect("ordo")
-            def entropy = aspect("perditio")
-            def ignis = aspect("ignis")
-            def terra = aspect("terra")
-
         //AE2
             def siliconPrinted = item("appliedenergistics2:material", 20)
 
@@ -398,6 +293,7 @@ import team.chisel.api.carving.CarvingUtils
                 for (entry in hidemap) {
                     mods.jei.ingredient.yeet(entry)
                 }
+            mods.jei.category.hideCategory("appliedenergistics2.inscriber")
 
     // ======== Components ======== //
         // ==== Fluix ==== //
@@ -520,23 +416,27 @@ import team.chisel.api.carving.CarvingUtils
             //1k
             canner.recipeBuilder().EUt(7).duration(100).inputs(fluidcomponent1k.copy() * 1, storagehousing.copy() * 1).outputs(fluidcell1k).buildAndRegister()
             canner.recipeBuilder().EUt(7).duration(100).outputs(fluidcomponent1k.copy() * 1, storagehousing.copy() * 1).inputs(fluidcell1k).buildAndRegister()
+
             canner.recipeBuilder().EUt(7).duration(100).inputs(itemcomponent1k.copy() * 1, storagehousing.copy() * 1).outputs(storagecell1k).buildAndRegister()
-            canner.recipeBuilder().EUt(7).duration(100).outputs(storagecell1k.copy() * 1, storagehousing.copy() * 1).inputs(itemcomponent1k).buildAndRegister()
+            canner.recipeBuilder().EUt(7).duration(100).inputs(storagecell1k.copy() * 1, storagehousing.copy() * 1).outputs(itemcomponent1k).buildAndRegister()
             //4k
             canner.recipeBuilder().EUt(7).duration(100).inputs(fluidcomponent4k.copy() * 1, storagehousing.copy() * 1).outputs(fluidcell4k).buildAndRegister()
             canner.recipeBuilder().EUt(7).duration(100).outputs(fluidcomponent4k.copy() * 1, storagehousing.copy() * 1).inputs(fluidcell4k).buildAndRegister()
+
             canner.recipeBuilder().EUt(7).duration(100).inputs(itemcomponent4k.copy() * 1, storagehousing.copy() * 1).outputs(storagecell4k).buildAndRegister()
-            canner.recipeBuilder().EUt(7).duration(100).outputs(storagecell4k.copy() * 1, storagehousing.copy() * 1).inputs(itemcomponent4k).buildAndRegister()
+            canner.recipeBuilder().EUt(7).duration(100).inputs(storagecell4k.copy() * 1, storagehousing.copy() * 1).outputs(itemcomponent4k).buildAndRegister()
             //16k
             canner.recipeBuilder().EUt(7).duration(100).inputs(fluidcomponent16k.copy() * 1, storagehousing.copy() * 1).outputs(fluidcell16k).buildAndRegister()
             canner.recipeBuilder().EUt(7).duration(100).outputs(fluidcomponent16k.copy() * 1, storagehousing.copy() * 1).inputs(fluidcell16k).buildAndRegister()
+
             canner.recipeBuilder().EUt(7).duration(100).inputs(itemcomponent16k.copy() * 1, storagehousing.copy() * 1).outputs(storagecell16k).buildAndRegister()
-            canner.recipeBuilder().EUt(7).duration(100).outputs(storagecell16k.copy() * 1, storagehousing.copy() * 1).inputs(itemcomponent16k).buildAndRegister()
+            canner.recipeBuilder().EUt(7).duration(100).inputs(storagecell16k.copy() * 1, storagehousing.copy() * 1).outputs(itemcomponent16k).buildAndRegister()
             //64k
             canner.recipeBuilder().EUt(7).duration(100).inputs(fluidcomponent64k.copy() * 1, storagehousing.copy() * 1).outputs(fluidcell64k).buildAndRegister()
             canner.recipeBuilder().EUt(7).duration(100).outputs(fluidcomponent64k.copy() * 1, storagehousing.copy() * 1).inputs(fluidcell64k).buildAndRegister()
+
             canner.recipeBuilder().EUt(7).duration(100).inputs(itemcomponent64k.copy() * 1, storagehousing.copy() * 1).outputs(storagecell64k).buildAndRegister()
-            canner.recipeBuilder().EUt(7).duration(100).outputs(storagecell64k.copy() * 1, storagehousing.copy() * 1).inputs(itemcomponent64k).buildAndRegister()
+            canner.recipeBuilder().EUt(7).duration(100).inputs(storagecell64k.copy() * 1, storagehousing.copy() * 1).outputs(itemcomponent64k).buildAndRegister()
         // ==== Housing ==== //
             //Normal
                 crafting.removeByOutput(storagehousing)
@@ -572,21 +472,21 @@ import team.chisel.api.carving.CarvingUtils
                 crafting.addShaped("ggn_ae_4kcomponent", itemcomponent4k,
                 [
                     [plateFluixSteel, pearlFluix, plateFluixSteel],
-                    [itemcomponent1k, circuitlv, itemcomponent1k],
+                    [itemcomponent1k, circuitLv, itemcomponent1k],
                     [plateFluixSteel, itemcomponent1k, plateFluixSteel]
                 ])
             //16k
                 crafting.addShaped("ggn_ae_16kcomponent", itemcomponent16k,
                 [
                     [plateFluixSteel, pearlFluix, plateFluixSteel],
-                    [itemcomponent4k, circuitmv, itemcomponent4k],
+                    [itemcomponent4k, circuitMv, itemcomponent4k],
                     [plateFluixSteel, itemcomponent4k, plateFluixSteel]
                 ])
             //64k
                 crafting.addShaped("ggn_ae_64kcomponent", itemcomponent64k,
                 [
                     [plateFluixSteel, pearlFluix, plateFluixSteel],
-                    [itemcomponent16k, circuithv, itemcomponent16k],
+                    [itemcomponent16k, circuitHv, itemcomponent16k],
                     [plateFluixSteel, itemcomponent16k, plateFluixSteel],
                 ])
         // ==== Fluid ==== //
@@ -601,21 +501,21 @@ import team.chisel.api.carving.CarvingUtils
                 crafting.addShaped("ggn_ae_4kcomponentf", fluidcomponent4k,
                 [
                     [plateFluminium, pearlFluix, plateFluminium],
-                    [fluidcomponent1k, circuitlv, fluidcomponent1k],
+                    [fluidcomponent1k, circuitLv, fluidcomponent1k],
                     [plateFluminium, fluidcomponent1k, plateFluminium]
                 ])
             //16k
                 crafting.addShaped("ggn_ae_16kcomponentf", fluidcomponent16k,
                 [
                     [plateFluminium, pearlFluix, plateFluminium],
-                    [fluidcomponent4k, circuitmv, fluidcomponent4k],
+                    [fluidcomponent4k, circuitMv, fluidcomponent4k],
                     [plateFluminium, fluidcomponent4k, plateFluminium]
                 ])
             //64k
                 crafting.addShaped("ggn_ae_64kcomponentf", fluidcomponent64k,
                 [
                     [plateFluminium, pearlFluix, plateFluminium],
-                    [fluidcomponent16k, circuithv, fluidcomponent16k],
+                    [fluidcomponent16k, circuitHv, fluidcomponent16k],
                     [plateFluminium, fluidcomponent16k, plateFluminium],
                 ])
         // ==== Essentia ==== //
@@ -623,7 +523,7 @@ import team.chisel.api.carving.CarvingUtils
                 mods.thaumcraft.ArcaneWorkbench.removeByOutput(essentiacomponent1k)
                 mods.thaumcraft.ArcaneWorkbench.shapedBuilder()
                     .vis(25)
-                    .aspect(aer).aspect(aqua).aspect(ordo).aspect(entropy)
+                    .aspect(aer).aspect(aqua).aspect(ordo).aspect(perditio)
                     .row("POP")
                     .row("DCF")
                     .row("PGP")
@@ -639,42 +539,42 @@ import team.chisel.api.carving.CarvingUtils
                 mods.thaumcraft.ArcaneWorkbench.removeByOutput(essentiacomponent4k)
                 mods.thaumcraft.ArcaneWorkbench.shapedBuilder()
                     .vis(50)
-                    .aspect(aer).aspect(aqua).aspect(ordo).aspect(entropy)
+                    .aspect(aer).aspect(aqua).aspect(ordo).aspect(perditio)
                     .row("PGP")
                     .row("LCL")
                     .row("PLP")
                     .key("P", plateFluix)
                     .key("G", pearlFluix)
                     .key("L", itemcomponent1k)
-                    .key("C", circuitlv)
+                    .key("C", circuitLv)
                     .output(essentiacomponent4k)
                     .register()
             //16k
                 mods.thaumcraft.ArcaneWorkbench.removeByOutput(essentiacomponent16k)
                 mods.thaumcraft.ArcaneWorkbench.shapedBuilder()
                     .vis(100)
-                    .aspect(aer).aspect(aqua).aspect(ordo).aspect(entropy)
+                    .aspect(aer).aspect(aqua).aspect(ordo).aspect(perditio)
                     .row("PGP")
                     .row("LCL")
                     .row("PLP")
                     .key("P", plateFluix)
                     .key("G", pearlFluix)
                     .key("L", itemcomponent4k)
-                    .key("C", circuitmv)
+                    .key("C", circuitMv)
                     .output(essentiacomponent16k)
                     .register()
             //64k
                 mods.thaumcraft.ArcaneWorkbench.removeByOutput(essentiacomponent64k)
                 mods.thaumcraft.ArcaneWorkbench.shapedBuilder()
                     .vis(200)
-                    .aspect(aer).aspect(aqua).aspect(ordo).aspect(entropy)
+                    .aspect(aer).aspect(aqua).aspect(ordo).aspect(perditio)
                     .row("PGP")
                     .row("LCL")
                     .row("PLP")
                     .key("P", plateFluix)
                     .key("G", pearlFluix)
                     .key("L", itemcomponent16k)
-                    .key("C", circuithv)
+                    .key("C", circuitHv)
                     .output(essentiacomponent64k)
                     .register()
     // ======== System ======== //
@@ -764,7 +664,7 @@ import team.chisel.api.carving.CarvingUtils
                     mods.thaumcraft.ArcaneWorkbench.removeByOutput(essentiaterminal)
                     mods.thaumcraft.ArcaneWorkbench.shapedBuilder()
                         .vis(75)
-                        .aspect(aer).aspect(aqua).aspect(ordo).aspect(entropy).aspect(terra).aspect(ignis)
+                        .aspect(aer).aspect(aqua).aspect(ordo).aspect(perditio).aspect(terra).aspect(ignis)
                         .row("SPS")
                         .row("DAF")
                         .row("SCS")
@@ -781,7 +681,7 @@ import team.chisel.api.carving.CarvingUtils
                     mods.thaumcraft.ArcaneWorkbench.removeByOutput(arcaneterminal)
                     mods.thaumcraft.ArcaneWorkbench.shapedBuilder()
                         .vis(75)
-                        .aspect(aer).aspect(aqua).aspect(ordo).aspect(entropy).aspect(terra).aspect(ignis)
+                        .aspect(aer).aspect(aqua).aspect(ordo).aspect(perditio).aspect(terra).aspect(ignis)
                         .row("SPS")
                         .row("DAF")
                         .row("SCS")
@@ -1001,6 +901,7 @@ import team.chisel.api.carving.CarvingUtils
                         .outputs(importBusFluid)
                         .buildAndRegister()
                 // Essentia
+                    mods.thaumcraft.arcane_workbench.removeByOutput(importBusEssentia)
                     assembler.recipeBuilder()
                         .EUt(30).duration(400)
                         .inputs(plateThaumium.copy() * 6, pumpmv.copy() * 2, coalescenceCore.copy() * 2)
@@ -1023,6 +924,7 @@ import team.chisel.api.carving.CarvingUtils
                         .outputs(exportBusFluid)
                         .buildAndRegister()
                 // Essentia
+                    mods.thaumcraft.arcane_workbench.removeByOutput(exportBusEssentia)
                     assembler.recipeBuilder()
                         .EUt(30).duration(400)
                         .inputs(plateThaumium.copy() * 6, pumpmv.copy() * 2, diffusionCore.copy() * 2)

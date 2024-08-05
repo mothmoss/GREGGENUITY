@@ -58,7 +58,7 @@
         steamgen               = recipemap('steam_turbine')
         //excavator              = recipemap('excavator')
         //fcompressor            = recipemap('fluidcompressor')
-    // ======== GregTech Recipemaps ======== //
+    // ======== Utilities ======== //
         circuit1 = metaitem('circuit.integrated').withNbt([Configuration: 1])
         circuit2 = metaitem('circuit.integrated').withNbt([Configuration: 2])
         circuit3 = metaitem('circuit.integrated').withNbt([Configuration: 3])
@@ -71,14 +71,311 @@
         circuit10 = metaitem('circuit.integrated').withNbt([Configuration: 10])
         circuit11 = metaitem('circuit.integrated').withNbt([Configuration: 11])
         circuit12 = metaitem('circuit.integrated').withNbt([Configuration: 12])
-        gtsaw = ore('gtSaw')
-        gthammer = ore('gtHammer')
-        gtwrench = ore('gtWrench')
-        gtfile = ore('gtFile')
-        gtscrewdriver = ore('gtScrewdriver')
-        gtmortar = ore('gtMortar')
-        gtwirecutter = ore('gtWirecutter')
-        gtknife = ore('gtKnife')
+        gtsaw = ore('toolSaw')
+        gthammer = ore('toolHammer')
+        gtwrench = ore('toolWrench')
+        gtfile = ore('toolFile')
+        gtscrewdriver = ore('toolScrewdriver')
+        gtmortar = ore('toolMortar')
+        gtwirecutter = ore('toolWirecutter')
+        gtknife = ore('toolKnife')
+        extrudershapewire = metaitem("shape.extruder.wire")
+        extrudershapebolt = metaitem('shape.extruder.bolt')
     // ======== Fluids ======== //
+        solder = fluid("soldering_alloy")
+        lubricant = fluid("lubricant")
+        hydrogen = fluid("hydrogen")
+        oxygen = fluid("oxygen")
+        liquidlead = fluid("lead")
+        liquidredalloy = fluid("red_alloy")
+        liquidender = fluid("ender")
+        liquidfluix = fluid("fluix")
+        liquidrubber = fluid("rubber")
+        liquidsteel = fluid("steel")
+        liquidborosilicate = fluid("borosilicate_glass")
+        liquidmana = fluid("botanic_mana")
+        liquidplastic = fluid("plastic")
+        liquidptfe = fluid("polytetrafluoroethylene")
+        liquidpbi = fluid("polybenzimidazole")
+        liquidvis = fluid("vis")
+        liquidglowstone = fluid("glowstone")
+        liquidconcrete = fluid("concrete")
+        liquidstarlight = fluid('astralsorcery.liquidstarlight')
+        liquidwater = fluid("water")
+        liquiddistilledwater = fluid("distilled_water")
+        mercury = fluid("mercury")
+        acetone = fluid("acetone")
+    
+    // ======== Metaitems ======== //
+        //LV
+        hulllv = metaitem('hull.lv')
+        conveyorlv = metaitem('conveyor.module.lv')
+        pumplv = metaitem('electric.pump.lv')
+        sensorlv = metaitem('sensor.lv')
+        emitterlv = metaitem('emitter.lv')
+        motorlv = metaitem('electric.motor.lv')
+        pistonlv = metaitem('electric.piston.lv')
+        robotarmlv = metaitem('robot.arm.lv')
+        fieldgenlv = metaitem('field.generator.lv')
+        emitterlv = metaitem('emitter.lv')
+        sensorlv = metaitem('sensor.lv')
 
+        //MV
+        hullmv = metaitem('hull.mv')
+        conveyormv = metaitem('conveyor.module.mv')
+        pumpmv = metaitem('electric.pump.mv')
+        sensormv = metaitem('sensor.mv')
+        emittermv = metaitem('emitter.mv')
+        motormv = metaitem('electric.motor.mv')
+        pistonmv = metaitem('electric.piston.mv')
+        robotarmmv = metaitem('robot.arm.mv')
+        fieldgenmv = metaitem('field.generator.mv')
+        emittermv = metaitem('emitter.mv')
+        sensormv = metaitem('sensor.mv')
+
+        //HV
+        hullhv = metaitem('hull.hv')
+        conveyorhv = metaitem('conveyor.module.hv')
+        pumphv = metaitem('electric.pump.hv')
+        sensorhv = metaitem('sensor.hv')
+        emitterhv = metaitem('emitter.hv')
+        motorhv = metaitem('electric.motor.hv')
+        pistonhv = metaitem('electric.piston.hv')
+        robotarmhv = metaitem('robot.arm.hv')
+        fieldgenhv = metaitem('field.generator.hv')
+        emitterhv = metaitem('emitter.hv')
+        sensorhv = metaitem('sensor.hv')
+
+        //LUV
+        hullluv = metaitem('hull.luv')
+        conveyorluv = metaitem('conveyor.module.luv')
+        pumpluv = metaitem('electric.pump.luv')
+        sensorluv = metaitem('sensor.luv')
+        emitterluv = metaitem('emitter.luv')
+        motorluv = metaitem('electric.motor.luv')
+        pistonluv = metaitem('electric.piston.luv')
+        robotarmluv = metaitem('robot.arm.luv')
+        fieldgenluv = metaitem('field.generator.luv')
+        emitterluv = metaitem('emitter.luv')
+        sensorluv = metaitem('sensor.luv')
+
+        //Chips
+        nandChip = metaitem("circuit.nand_chip")
+        ramchip = metaitem("plate.random_access_memory")
+        cpuchip = metaitem("plate.central_processing_unit")
+        nanocpuchip = metaitem("plate.nano_central_processing_unit")
+        qubitcpuchip = metaitem("plate.qbit_central_processing_unit")
+
+        //Machines
+        assemblerlv = metaitem('assembler.lv')
+
+        //Misc
+        shuttercover = metaitem('cover.shutter')
+        glasstube = metaitem('component.glass.tube')
+
+    // ======== General ======== //
+        //Any
+            anypanel = ore("itemIlluminatedPanel")
+            anychest = ore("chest")
+            anydrawer = ore("drawerBasic")
+            anyshard = ore("anyShard")
+        //Block
+            blockCopper = metaitem("blockCopper")
+            blockSteel = metaitem("blockSteel")
+            blockElectrum = metaitem("blockElectrum")
+            blockGlassTempered = item('gregtech:transparent_casing')
+            blockGlassInvar = item('thermalfoundation:glass_alloy', 2)
+            blockGlassReinforced = item('thermalfoundation:glass_alloy', 2)
+            blockGlassSignalum = item('thermalfoundation:glass_alloy', 2)
+            blockDarkSteel = ore("blockDarkSteel")
+            blockThaumium = ore("blockThaumium")
+        //Circuits
+            circuitLv = ore("circuitLv")
+            circuitMv = ore("circuitMv")
+            circuitHv = ore("circuitHv")
+            circuitEv = ore("circuitEv")
+            circuitIv = ore("circuitIv")
+
+        //Dust
+            dustCertusQuartz = metaitem("dustCertusQuartz")
+            dustQuartzite = metaitem("dustQuartzite")
+            dustNetherQuartz = metaitem("dustNetherQuartz")
+            dustIron = metaitem("dustIron")
+            dustFluix = metaitem("dustFluix")
+            dustAluminium = metaitem("dustAluminium")
+            dustChrome = metaitem("dustChrome")
+            dustSteel = metaitem("dustSteel")
+            dustFluixSteel = metaitem("dustFluixSteel")
+            dustGlass = ore('dustGlass')
+            dustAluminium = metaitem("dustAluminium")
+            dustStone = metaitem("dustStone")
+            dustAer = metaitem('dustAerInfused')
+            dustAqua = metaitem('dustAquaInfused')
+            dustPerditio = metaitem('dustPerditioInfused')
+            dustIgnis = metaitem('dustIgnisInfused')
+            dustOrdo = metaitem('dustOrdoInfused')
+            dustTerra = metaitem('dustTerraInfused')
+            dustRedstone = ore("dustRedstone").first
+        
+        //Dust (Small)
+            dustSmallThaumium = metaitem("dustSmallThaumium")
+            dustSmallIron = metaitem("dustSmallIron")
+
+        //Foils
+            foilSilicon = metaitem("foilSilicon")
+            foilRubber = metaitem("foilRubber")
+            foilRedAlloy = metaitem("foilRedAlloy")
+            foilAnnealedCopper = metaitem("foilAnnealedCopper")
+            foilElectrum = metaitem("foilElectrum")
+            foilCopper = metaitem("foilCopper")
+            foilSteel = metaitem("foilSteel")
+            foilStainlessSteel = metaitem("foilStainlessSteel")
+            foilAluminium = metaitem("foilAluminium")
+            foilBlackSteel = metaitem("foilBlackSteel")
+            foilIridium = metaitem("foilIridium")
+            foilAer = metaitem('foilAerInfused')
+            foilAqua = metaitem('foilAquaInfused')
+            foilPerditio = metaitem('foilPerditioInfused')
+            foilIgnis = metaitem('foilIgnisInfused')
+            foilOrdo = metaitem('foilOrdoInfused')
+            foilTerra = metaitem('foilTerraInfused')
+        //Gear
+            gearCobaltBrass = metaitem('gearCobaltBrass')
+
+        //Gems
+            gemCertusQuartz = metaitem("gemCertusQuartz")
+            gemFluix = metaitem("gemFluix")
+            gemAer = metaitem('gemAerInfused')
+            gemAqua = metaitem('gemAquaInfused')
+            gemPerditio = metaitem('gemPerditioInfused')
+            gemIgnis = metaitem('gemIgnisInfused')
+            gemOrdo = metaitem('gemOrdoInfused')
+            gemTerra = metaitem('gemTerraInfused')
+            gemCoke = metaitem("gemCoke")
+
+        //Ingots
+            ingotIron = ore("ingotIron").first
+            ingotAluminium = metaitem("ingotAluminium")
+            ingotBrass = metaitem("ingotBrass")
+            ingotWroughtIron = metaitem("ingotWroughtIron")
+            ingotSteel = metaitem("ingotSteel")
+            ingotThaumium = ore("ingotThaumium").first
+ 
+        //Lens
+            lensFluix = metaitem("lensFluix")
+
+        //Pearls
+            pearlFluix = ore("pearlFluix").first
+            pearlEnder = ore("enderpearl").first
+            pearlEnderEye = ore("pearlEnderEye").first
+
+        //Plate
+            plateFluix = metaitem("plateFluix")
+            plateDiamond = metaitem("plateDiamond")
+            plateGold = metaitem("plateGold")
+            plateNetherQuartz = metaitem("plateNetherQuartz")
+            plateQuartzite = metaitem("plateQuartzite")
+            plateFluixSteel = metaitem("plateFluixSteel")
+            plateCertusQuartz = metaitem("plateCertusQuartz")
+            plateStainlessSteel = metaitem("plateStainlessSteel")
+            plateElectrum = metaitem("plateElectrum")
+            plateFluminium = metaitem("plateFluminium")
+            plateThaumium = metaitem("plateThaumium")
+            platePolyethylene = metaitem("platePlastic")
+            plateGlass = metaitem("plateGlass")
+            plateSteel = metaitem("plateSteel")
+            plateAluminium = metaitem("plateAluminium")
+            plateTitanium = metaitem("plateTitanium")
+            plateDarkSteel = metaitem("plateDarkSteel")
+            platePlastic = metaitem("platePlastic")
+            platePtfe = metaitem("platePolytetrafluoroethylene")
+            plateFlungstensteel = metaitem("plateFlungstensteel")
+            plateInvar = metaitem("plateInvar")
+            plateAquaInfused = metaitem("plateAquaInfused")
+            plateBronze = metaitem("plateBronze")
+            plateObsidian = metaitem("plateObsidian")
+            plateSignalum = metaitem("plateSignalum")
+            plateEnderium = metaitem("plateEnderium")
+            plateIron = metaitem("plateIron")
+            plateWroughtIron = metaitem("plateWroughtIron")
+            plateBatteryAlloy = metaitem("plateBatteryAlloy")
+            plateAer = metaitem('plateAerInfused')
+            plateAqua = metaitem('plateAquaInfused')
+            plateOrdo = metaitem('plateOrdoInfused')
+            platePerditio = metaitem('platePerditioInfused')
+            plateIgnis = metaitem('plateIgnisInfused')
+            plateTerra = metaitem('plateTerraInfused')
+            plateBrass = metaitem("plateBrass")
+            plateSilver = metaitem("plateSilver")
+            plateTitaniumCarbide = metaitem("plateTitaniumCarbide")
+        //Plate (Double)
+            plateDoubleFluixSteel = metaitem("plateDoubleFluixSteel")
+            plateDoubleFluminium = metaitem("plateDoubleFluminium")
+            plateDoubleSteel = metaitem("plateDoubleSteel")
+
+        //Plate (Dense)
+            plateDenseAquaInfused = metaitem("plateDenseAquaInfused")
+            plateDenseSteel = metaitem("plateDenseSteel")
+        //Ring
+            ringThaumium = metaitem("ringThaumium")
+        //Rotor
+            rotorSteel = metaitem('rotorSteel')
+
+        //Saplings
+            treeSapling = ore("treeSapling")
+
+        //Sticks
+            stickWood = ore("stickWood").first
+            stickFluix = metaitem("stickFluix")
+            stickFluixSteel = metaitem("stickFluixSteel")
+            stickFluminium = metaitem("stickFluminium")
+            stickAluminium = metaitem("stickAluminium")
+            stickBlaze = ore("stickBlaze").first
+            stickThaumium = metaitem("stickThaumium")
+
+        //Screws
+            screwFluixSteel = metaitem("screwFluixSteel")
+            screwFluminium = metaitem("screwFluminium")
+            screwThaumium = metaitem("screwThaumium")
+            screwFluix = metaitem("screwFluix")
+            screwElectrum = metaitem("screwElectrum")
+            screwSteel = metaitem("screwSteel")
+            screwInvar = metaitem("screwInvar")
+            screwFlungstensteel = metaitem("screwFlungstensteel")
+            screwBronze = metaitem("screwBronze")
+            screwSignalum = metaitem("screwInvar")
+            screwEnderium = metaitem("screwInvar")
+        
+        //Wire (Fine)
+            wireFineFluix = metaitem("wireFineFluix")
+        
+        //Misc
+            seedWheat = ore("seedWheat").first
+            itemLeather = ore("itemLeather").first
+            itemString = ore("string").first
+
+
+
+    // ======== Aspects ======== //
+        aer = aspect("aer")
+        aqua = aspect("aqua")
+        ordo = aspect("ordo")
+        perditio = aspect("perditio")
+        ignis = aspect("ignis")
+        terra = aspect("terra")
+
+        bestia = aspect("bestia")
+        fabrico = aspect("fabrico")
+        herba = aspect("herba")
+        praecantatio = aspect("praecantatio")
+        potentia = aspect("potentia")
+        lux = aspect("lux")
+        tenebrae = aspect("tenebrae")
+        victus = aspect("victus")
+        humanus = aspect("humanus")
+        vacuos = aspect("vacuos")
+        motus = aspect("motus")
+        praemunio = aspect("praemunio")
+        permutatio = aspect("permutatio")
+        machina = aspect("machina")
 // ================ Globals ================ //
