@@ -70,8 +70,9 @@ import gregtech.api.fluids.FluidBuilder;
             def cryolite = new Material.Builder(32107, resource("greggenuity", "cryolite"))
                 .dust().color(0x84b2b3).iconSet("rough")
                 .ore(1, 1, true)
+                .liquid(new FluidBuilder())
                 .flags("disable_decomposition")
-                .components(material("sodium") * 2,  material("oxygen") * 1, material("fluorine") * 1)
+                .components(material("sodium") * 3,  material("aluminium") * 1, material("fluorine") * 6)
                 .addOreByproducts(material("sodium"), material("alumina"))
                 .build()
         // ==== 32108: Toluene Diisocyanate ==== //
@@ -185,12 +186,24 @@ import gregtech.api.fluids.FluidBuilder;
                 .liquid()
                 .color(0xff42b6)
                 .build()
+        // ==== 32124: Sodium Fluoride ==== //
+            def sodiumfluoride = new Material.Builder(32124, resource("greggenuity", "sodium_fluoride"))
+                .dust().iconSet("dull")
+                .components(material("sodium") * 1, material("fluorine") * 1)
+                .colorAverage()
+                .build()
+        // ==== 32125: Aluminium Fluoride ==== //
+            def aluminiumfluoride = new Material.Builder(32125, resource("greggenuity", "aluminium_fluoride"))
+                .dust().iconSet("dull")
+                .components(material("aluminium") * 1, material("fluorine") * 3)
+                .colorAverage()
+                .build()
     // ======== 32301 to 32400: Magic ======== //
         // ==== 32301: Thaumium ==== //
             def thaumium = new Material.Builder(32301, resource("greggenuity", "thaumium"))
                 .ingot().color(0x591f8f).iconSet("dull")
                 .components(material("steel") * 1, material("quintessence") * 1)
-                .cableProperties(32, 2, 0) // Lossless 
+                .cableProperties(32, 1, 0) // Lossless 
                 .flags(
                     "disable_decomposition", "generate_plate", "generate_rod",
                     "generate_ring", "generate_bolt_screw" 
@@ -198,7 +211,7 @@ import gregtech.api.fluids.FluidBuilder;
                 .itemPipeProperties(1000, 1)
                 .build()
         // ==== 32302: Botanic Mana ==== //
-            def botanic_mana = new Material.Builder(32302, resource("greggenuity", "botanic_mana"))
+            def concentratedmana = new Material.Builder(32302, resource("greggenuity", "concentrated_mana"))
                 .liquid().color(0x41b4dd)
                 .components(material("quintessence") * 1)
                 .flags("disable_decomposition")
@@ -217,7 +230,7 @@ import gregtech.api.fluids.FluidBuilder;
             def starmetal = new Material.Builder(32304, resource("greggenuity", "astral_starmetal"))
                 .ingot().color(0x002264).iconSet("shiny")
                 .components(material("stainless_steel") * 1, material("quintessence") * 1)
-                .cableProperties(512, 3, 0)
+                .cableProperties(512, 2, 0)
                 .rotorStats(8.75f, 5.0f, 800)
                 .flags(
                     "disable_decomposition", "generate_plate", "generate_rod",
@@ -238,7 +251,7 @@ import gregtech.api.fluids.FluidBuilder;
             def terrasteel = new Material.Builder(32306, resource("greggenuity", "terrasteel"))
                 .ingot().color(0x50fa00).iconSet("metallic")
                 .components(material("astral_starmetal") * 1)
-                .cableProperties(8192, 4, 0)
+                .cableProperties(8192, 3, 0)
                 .rotorStats(8.0f, 8.0f, 1360)
                 .flags(
                     "disable_decomposition", "generate_plate", "generate_rod",
@@ -259,7 +272,7 @@ import gregtech.api.fluids.FluidBuilder;
         // ==== 32308: Mithrillium ==== // 
             def mithrillium = new Material.Builder(32308, resource("greggenuity", "mithrillium"))
                 .ingot().color(0x39829d).iconSet("bright")
-                .cableProperties(131072, 10, 0)
+                .cableProperties(131072, 4, 0)
                 .rotorStats(9.5f, 9.5f, 1200)
                 .flags(
                     "disable_decomposition", "generate_plate", "generate_rod",
@@ -341,7 +354,7 @@ import gregtech.api.fluids.FluidBuilder;
                 .liquid().gem().iconSet("ruby").colorAverage()
                 .components(material("aer_infused") * 1, material("aqua_infused") * 1, material("perditio_infused") * 1, material("ordo_infused") * 1, material("ignis_infused") * 1, material("terra_infused") * 1)
                 .build()
-            material("vis").setFormula("Qe6", true)
+            material("vis").setFormula("Qe", true)
         // ==== 32318: Resplendic Acid ==== //
             def resplendicacid = new Material.Builder(32318, resource("greggenuity", "resplendic_acid"))
                 .liquid().colorAverage()
@@ -354,7 +367,33 @@ import gregtech.api.fluids.FluidBuilder;
                 .components(material("titantheum") * 1, material("acetic_acid") * 1)
                 .flags("disable_decomposition")
                 .build()
-        
+        // ==== 32320: Flux Sludge ==== //
+            def fluxsludge = new Material.Builder(32320, resource("greggenuity", "flux_sludge"))
+                .dust().colorAverage()
+                .components(material("aer_infused") * 1, material("aqua_infused") * 1, material("ordo_infused") * 1, material("perditio_infused") * 1, material("ignis_infused") * 1, material("terra_infused") * 1, )
+                .flags("disable_decomposition")
+                .build()
+        // ==== 32321: Mana Sludge ==== //
+            def manasludge = new Material.Builder(32321, resource("greggenuity", "mana_sludge"))
+                .liquid().colorAverage()
+                .components(material("concentrated_mana") * 1, material("flux_sludge") * 1)
+                .flags("disable_decomposition")
+                .build()
+        // ==== 32322: Distilled Mana ==== //
+            def distilledmana = new Material.Builder(32322, resource("greggenuity", "distilled_mana"))
+                .liquid().color(0x8da0c2)
+                .flags("disable_decomposition")
+                .build()
+        // ==== 32323: Mithril ==== //
+            def mithril = new Material.Builder(32323, resource("greggenuity", "mithril"))
+                .ingot().color(0xd6e5ff).iconSet("bright")
+                .rotorStats(7.5, 4.5, 2200)
+                .toolStats(toolBuilder(3.5, 3.5, 2000, 3))
+                .flags(
+                    "disable_decomposition", "generate_plate", "generate_rod",
+                    "generate_ring", "generate_bolt_screw", "no_smelting"
+                    )
+                .build()
     // ======== 32401 to 32500: SciFi ======== //
         // ==== 32401: Darksteel ==== //
             def darksteel = new Material.Builder(32401, resource("greggenuity", "dark_steel"))
@@ -376,19 +415,19 @@ import gregtech.api.fluids.FluidBuilder;
                 .itemPipeProperties(2000, 2)
                 .components(material("iron") * 1, material("beryllium") * 1, material("emerald") * 1)
                 .flags(
-                    "disable_decomposition", "generate_plate", "generate_rod", "generate_bolt_screw"
+                    "generate_plate", "generate_rod", "generate_bolt_screw"
                     )
                 .build()
         // ==== 32403: Energetic Alloy ==== //
             def energetic = new Material.Builder(32403, resource("greggenuity", "energetic_alloy"))
-                .ingot().color(0x9afeb1).iconSet("bright")
+                .ingot().color(0xdf9c00).iconSet("bright")
                 .liquid(new FluidBuilder()
                     .temperature(2200)
                 )
                 .cableProperties(128, 4, 3) // Good amperage 
                 .components(material("pulsating_iron") * 1, material("red_alloy") * 1)
                 .flags(
-                    "disable_decomposition", "generate_plate", "generate_rod", "generate_bolt_screw"
+                    "generate_plate", "generate_rod", "generate_bolt_screw"
                     )
                 .build()
         // ==== 32404: Vibrant Alloy ==== //
@@ -397,20 +436,22 @@ import gregtech.api.fluids.FluidBuilder;
                 .liquid(new FluidBuilder()
                     .temperature(2400)
                 )
+                .blastTemp(2800, "HIGH", 480, 670)
                 .fluidPipeProperties(2400, 120, true) // Great fluid pipe 
                 .components(material("energetic_alloy") * 1, material("ender_eye") * 1, material("chrome") * 1)
                 .flags(
-                    "disable_decomposition", "generate_plate", "generate_rod", "generate_bolt_screw", "generate_double_plate"
+                    "generate_plate", "generate_rod", "generate_bolt_screw", "generate_double_plate"
                     )
                 .build()
         // ==== 32405: Endsteel ==== //
             def endsteel = new Material.Builder(32405, resource("greggenuity", "end_steel"))
-                .ingot().color(0xcec79b).iconSet("dull")
-                .components(material("iridium") * 1, material("ender_pearl") * 2)
+                .ingot().color(0xcfc97d).iconSet("shiny")
+                .components(material("iridium") * 1, material("ender_pearl") * 2, material("dark_steel") * 1)
                 .liquid(new FluidBuilder(
                 ).temperature(2400))
+                .blastTemp(4500, "HIGHER", 1920, 690)
                 .flags(
-                    "disable_decomposition", "generate_plate", "generate_rod", "generate_bolt_screw"
+                    "generate_plate", "generate_rod", "generate_bolt_screw"
                     )
                 .build() 
         // ==== 32406: Fluix ==== //
@@ -423,7 +464,7 @@ import gregtech.api.fluids.FluidBuilder;
         // ==== 32407: Fluixsteel ==== //
             def fluixsteel = new Material.Builder(32407, resource("greggenuity", "fluix_steel"))
                 .ingot().iconSet("shiny").color(0x4F4A9E)
-                .components(material("fluix") * 1, material("steel") * 1, material("chrome") * 1)
+                .components(material("fluix") * 1, material("steel") * 1, material("rose_gold") * 1)
                 .itemPipeProperties(100, 1)
                 .flags(
                     "disable_decomposition", "generate_plate", "generate_foil",
@@ -454,7 +495,7 @@ import gregtech.api.fluids.FluidBuilder;
                 .components(material("fluix") * 1, material("tungsten_steel") * 1)
                 .fluidPipeProperties(5000, 300, true, true, true, true) 
                 .flags(
-                    "disable_decomposition", "generate_plate", "generate_foil",
+                    "disable_decomposition", "generate_plate",
                     "generate_rod", "generate_bolt_screw"
                     )                
                 .build()
@@ -462,11 +503,13 @@ import gregtech.api.fluids.FluidBuilder;
             def chromaticsteel = new Material.Builder(32411, resource("greggenuity", "chromatic_steel"))
                 .ingot().iconSet("shiny").colorAverage()
                 .components(material("black_steel") * 1, material("red_steel") * 1, material("blue_steel") * 1)
+                .blastTemp(5800, "HIGH")
                 .build()
         // ==== 32412: Titansteel ==== //
             def titansteel = new Material.Builder(32412, resource("greggenuity", "titansteel"))
                 .ingot().iconSet("metallic").colorAverage()
                 .components(material("tungsten_steel") * 1, material("chromatic_steel") * 1)
+                .blastTemp(6000, "HIGHER")
                 .build()
         // ==== 32413: Signalum ==== //
             def signalum = new Material.Builder(32413, resource("greggenuity", "signalum"))
@@ -482,6 +525,27 @@ import gregtech.api.fluids.FluidBuilder;
                 .flags("generate_plate", "no_smelting", "generate_bolt_screw" )
                 .blastTemp(4000)
                 .build()
+        // ==== 32415: Soularium ==== //
+            def soularium = new Material.Builder(32415, resource("greggenuity", "soularium"))
+                .ingot().color(0x593E26).iconSet("metallic")
+                .components(material("titanium") * 1, material("void") * 1)
+                .flags(
+                    "disable_decomposition", "generate_plate", "generate_rod", "generate_bolt_screw")
+                .build()
+        // ==== 32416: Stellar Alloy ==== //
+            def stellar = new Material.Builder(32416, resource("greggenuity", "stellar_alloy"))
+                .ingot().color(0xfbffe9).iconSet("shiny")
+                .components(material("titansteel") * 1, material("nether_star") * 1, material("vibrant_alloy") * 1, material("end_steel") * 1)
+                .flags(
+                    "disable_decomposition", "generate_plate", "generate_rod", "generate_bolt_screw")
+                .build()
+        // ==== 32417: Bedrockium ==== //
+            def bedrockium = new Material.Builder(32417, resource("greggenuity", "bedrockium"))
+                .ingot().color(0x474747).iconSet("rough")
+                .flags(
+                    "disable_decomposition", "generate_plate", "generate_rod", "generate_bolt_screw")
+                .build()
+                
 
 
     // ======== 32501 to 32600: TBD ======== //
@@ -503,6 +567,10 @@ import gregtech.api.fluids.FluidBuilder;
         // ==== Graphite ==== //
             def bluesteel = material("blue_steel")
             bluesteel.addFlags("generate_double_plate")
+        // ==== Wood ==== //
+            def wood = material("wood")
+            //wood.addIngot()
+            wood.addFlags("generate_dense", "generate_foil", "generate_rod", "generate_long_rod")
         // ==== Naquadria Solutions ==== //
             material("impure_enriched_naquadah_solution").setFormula("Nq*?")
             material("acidic_enriched_naquadah_solution").setFormula("Nq*?")

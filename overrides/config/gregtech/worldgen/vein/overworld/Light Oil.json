@@ -1,5 +1,6 @@
 {
-  "weight": -100,
+  "name": "ggn.veins.ow.light_oil",
+  "weight": 10,
   "density": 1.0,
   "max_height": 40,
   "min_height": 10,

@@ -34,6 +34,9 @@
         def reservoirSignalum = item('thermalexpansion:reservoir', 3)
         def reservoirResonant = item('thermalexpansion:reservoir', 4)
 
+        def itemShield = item('minecraft:shield')
+        def thermalShieldSteel = item('thermalfoundation:tool.shield_steel')
+
         def buzzsawAluminium = metaitem('toolHeadBuzzSawAluminium')
 
         def concentratedTerra = item('greggenuity:concentratedterra')
@@ -242,8 +245,8 @@
             // Machine
             crafting.addShaped("ggn_thermal_phyto", phytogenicInsolator,
             [
-                [robotarmmv, seedWheat, robotarmmv],
-                [concentratedTerra, hullmv, concentratedAqua],
+                [robotarmMv, seedWheat, robotarmMv],
+                [concentratedTerra, hullMv, concentratedAqua],
                 [plateInvar, plateInvar, plateInvar]
             ])
             // Nutrient Recovery - Efficient fertilizer upgrade
@@ -269,7 +272,7 @@
             ])
         // ===== Aqueous Accumulator ===== //
             assline.recipeBuilder()
-                .inputs(hullluv, pumpluv * 4, plateDenseAquaInfused * 32, concentratedAqua * 32)
+                .inputs(hullLuv, pumpLuv * 4, plateDenseAquaInfused * 32, concentratedAqua * 32)
                 .fluidInputs(solder * 1152, lubricant * 576)
                 .outputs(aqueousAccumulator)
                 .EUt(12000)
@@ -278,29 +281,29 @@
         // ===== Nullifier ===== //
             crafting.addShaped("ggn_thermal_nullifier", nullifier,
             [
-                [conveyorlv, plateAluminium, conveyorlv],
-                [pistonlv, hulllv, pistonlv],
+                [conveyorLv, plateAluminium, conveyorLv],
+                [pistonLv, hullLv, pistonLv],
                 [plateAluminium, pearlEnder, plateAluminium]
             ])
         // ===== Arboreal Extractor ===== //
             crafting.addShaped("ggn_thermal_arborealextractor", arborealExtractor,
             [
-                [pumplv, plateInvar, pumplv],
-                [treatedWoodPipe, hulllv, treatedWoodPipe],
+                [pumpLv, plateInvar, pumpLv],
+                [treatedWoodPipe, hullLv, treatedWoodPipe],
                 [plateInvar, plateInvar, plateInvar]
             ])
         // ===== Item Allocator ===== //
             crafting.addShaped("ggn_thermal_itemallocator", itemAllocator,
             [
                 [plateAluminium, anychest, plateAluminium],
-                [conveyorlv, hulllv, conveyorlv],
+                [conveyorLv, hullLv, conveyorLv],
                 [plateAluminium, hopper, plateAluminium]
             ])
         // ===== Fluid Allocator ===== //
             crafting.addShaped("ggn_thermal_fluidallocator", fluidAllocator,
             [
                 [plateAluminium, drumBronze, plateAluminium],
-                [pumplv, hulllv, pumplv],
+                [pumpLv, hullLv, pumpLv],
                 [plateAluminium, hopper, plateAluminium]
             ])
         // ===== Decoctive Diffuser ===== //
@@ -314,17 +317,17 @@
             crafting.addShaped("ggn_thermal_creatureencapulator", creatureEncapulator,
             [
                 [pearlEnder, thermalMorb, pearlEnder],
-                [conveyormv, hullmv, conveyormv],
+                [conveyorMv, hullMv, conveyorMv],
                 [plateAluminium, plateAluminium, plateAluminium]
             ])
         // ===== Vacuumulator ===== //
             crafting.addShaped("ggn_thermal_vacuumulator", vacuumulator,
             [
                 [glasstube, rotorSteel, glasstube],
-                [pumplv, hulllv, pistonlv],
+                [pumpLv, hullLv, pistonLv],
                 [plateSteel, plateSteel, plateSteel]
             ])
-    // ======== Utility ======== //
+    // ======== Utilities ======== //
         // ===== Removing Recipes ===== //
             def thermalUtility = [
                 portableTank,
@@ -417,7 +420,7 @@
                 [
                     [foilRedAlloy, plateBatteryAlloy, foilRedAlloy],
                     [plateBatteryAlloy, batterylithium, plateBatteryAlloy],
-                    [null, circuitlv, null]
+                    [null, circuitLv, null]
                 ])
             // Hardened
                 crafting.addShaped("ggn_thermal_fluxcapacitorhardened", fluxCapacitorHardened,
@@ -505,102 +508,133 @@
             ])
             //Reusable
             crafting.removeByOutput(thermalMorbReusable)
-
-        // Centrifuging Map
-            def morbCentrifugingBasic = [
-                [item('thermalexpansion:morb').withNbt(['id': 'minecraft:polar_bear'])]          : [first:item('minecraft:fish'), second:item('minecraft:fish', 1), third:metaitem('dustIce')],
-                [item('thermalexpansion:morb').withNbt(['id': 'minecraft:mooshroom'])]           : [first:item('minecraft:beef'), second:item('minecraft:brown_mushroom'), third:item('minecraft:red_mushroom')],
-                [item('thermalexpansion:morb').withNbt(['id': 'minecraft:slime'])]               : [first:item('minecraft:slime_ball'), second:item('minecraft:slime_ball'), third:item('minecraft:slime_ball')],
-                [item('thermalexpansion:morb').withNbt(['id': 'minecraft:guardian'])]            : [first:item('minecraft:prismarine_shard'), second:item('minecraft:prismarine_crystals'), third:item('minecraft:sponge', 1)],
-                [item('thermalexpansion:morb').withNbt(['id': 'minecraft:ghast'])]               : [first:item('minecraft:gunpowder'), second:item('minecraft:ghast_tear'), third:item('minecraft:ghast_tear')],
-                [item('thermalexpansion:morb').withNbt(['id': 'minecraft:donkey'])]              : [first:item('minecraft:leather'), second:item('minecraft:leather'), third:item('minecraft:leather')],
-                [item('thermalexpansion:morb').withNbt(['id': 'minecraft:blaze'])]               : [first:item('minecraft:blaze_rod'), second:metaitem('dustSulfur'), third:item('minecraft:blaze_powder')],
-                [item('thermalexpansion:morb').withNbt(['id': 'minecraft:villager'])]            : [first:metaitem('dustTinyEmerald'), second:metaitem('dustSmallEmerald'), third:metaitem('dustEmerald')],
-                [item('thermalexpansion:morb').withNbt(['id': 'minecraft:enderman'])]            : [first:item('minecraft:ender_pearl'), second:metaitem('dustEnderPearl'), third:metaitem('dustTinyEnderPearl')],
-                [item('thermalexpansion:morb').withNbt(['id': 'minecraft:vindication_illager'])] : [first:metaitem('dustSmallEmerald'), second:metaitem('dustEmerald'), third:item('minecraft:emerald')],
-                [item('thermalexpansion:morb').withNbt(['id': 'quark:ashen'])]                   : [first:item('minecraft:bone'), second:item('minecraft:arrow'), third:metaitem('dustDarkAsh')],
-                [item('thermalexpansion:morb').withNbt(['id': 'minecraft:squid'])]               : [first:item('minecraft:fish'), second:item('minecraft:dye'), third:item('minecraft:dye')],
-                [item('thermalexpansion:morb').withNbt(['id': 'minecraft:parrot'])]              : [first:item('minecraft:feather'), second:item('minecraft:feather'), third:item('quark:parrot_egg', 4)],
-                [item('thermalexpansion:morb').withNbt(['id': 'minecraft:zombie'])]              : [first:item('minecraft:rotten_flesh'), second:item('minecraft:potato'), third:metaitem('dustSmallIron')],
-                [item('thermalexpansion:morb').withNbt(['id': 'minecraft:silverfish'])]          : [first:metaitem('dustTinySilver'), second:metaitem('dustTinySilver'), third:metaitem('dustSilver')],
-                [item('thermalexpansion:morb').withNbt(['id': 'minecraft:bat'])]                 : [first:item('minecraft:leather'), second:item('minecraft:leather'), third:metaitem('dustStone')],
-                [item('thermalexpansion:morb').withNbt(['id': 'minecraft:husk'])]                : [first:item('minecraft:rotten_flesh'), second:item('minecraft:potato'), third:metaitem('dustSmallIron')],
-                [item('thermalexpansion:morb').withNbt(['id': 'minecraft:elder_guardian'])]      : [first:item('minecraft:prismarine_shard') * 4, second:item('minecraft:prismarine_crystals') * 4, third:item('minecraft:sponge', 1) * 4],
-                [item('thermalexpansion:morb').withNbt(['id': 'minecraft:rabbit'])]              : [first:item('minecraft:rabbit_hide'), second:item('minecraft:rabbit'), third:item('minecraft:rabbit_foot')],
-                [item('thermalexpansion:morb').withNbt(['id': 'thermalfoundation:blizz'])]       : [first:item('thermalfoundation:material', 2048), second:item('minecraft:snowball'), third:metaitem('dustIce')],
-                [item('thermalexpansion:morb').withNbt(['id': 'minecraft:endermite'])]           : [first:metaitem('dustTinyEnderPearl'), second:metaitem('dustEndstone'), third:metaitem('dustEnderPearl')],
-                [item('thermalexpansion:morb').withNbt(['id': 'minecraft:cave_spider'])]         : [first:item('minecraft:string'), second:item('minecraft:spider_eye'), third:item('minecraft:string')],
-                [item('thermalexpansion:morb').withNbt(['id': 'minecraft:zombie_horse'])]        : [first:item('minecraft:rotten_flesh'), second:item('minecraft:rotten_flesh'), third:item('minecraft:leather')],
-                [item('thermalexpansion:morb').withNbt(['id': 'minecraft:zombie_villager'])]     : [first:item('minecraft:rotten_flesh'), second:metaitem('dustSmallEmerald'), third:metaitem('dustEmerald')],
-                [item('thermalexpansion:morb').withNbt(['id': 'minecraft:magma_cube'])]          : [first:item('minecraft:magma_cream'), second:metaitem('dustSulfur'), third:metaitem('dustNetherrack')],
-                [item('thermalexpansion:morb').withNbt(['id': 'minecraft:stray'])]               : [first:item('minecraft:bone'), second:item('minecraft:arrow'), third:metaitem('dustIce')],
-                [item('thermalexpansion:morb').withNbt(['id': 'minecraft:shulker'])]             : [first:item('minecraft:shulker_shell'), second:metaitem('dustEndstone'), third:metaitem('dustEnderPearl')],
-                [item('thermalexpansion:morb').withNbt(['id': 'minecraft:sheep'])]               : [first:item('minecraft:mutton'), second:item('minecraft:wool'), third:item('minecraft:wool')],
-                [item('thermalexpansion:morb').withNbt(['id': 'minecraft:skeleton'])]            : [first:item('minecraft:bone'), second:item('minecraft:arrow'), third:metaitem('dustCalcium')],
-                [item('thermalexpansion:morb').withNbt(['id': 'minecraft:cow'])]                 : [first:item('minecraft:leather'), second:item('minecraft:beef'), third:item('minecraft:beef')],
-                [item('thermalexpansion:morb').withNbt(['id': 'minecraft:zombie_pigman'])]       : [first:item('minecraft:rotten_flesh'), second:item('minecraft:porkchop'), third:metaitem('dustSmallGold')],
-                [item('thermalexpansion:morb').withNbt(['id': 'minecraft:skeleton_horse'])]      : [first:item('minecraft:bone'), second:item('minecraft:bone'), third:item('minecraft:leather')],
-                [item('thermalexpansion:morb').withNbt(['id': 'quark:dweller'])]                 : [first:item('minecraft:rotten_flesh'), second:item('minecraft:potato'), third:metaitem('dustSmallIron')],
-                [item('thermalexpansion:morb').withNbt(['id': 'thermalfoundation:basalz'])]      : [first:item('thermalfoundation:material', 2052), second:metaitem('dustObsidian'), third:metaitem('dustObsidian')],
-                [item('thermalexpansion:morb').withNbt(['id': 'minecraft:chicken'])]             : [first:item('minecraft:feather'), second:item('minecraft:chicken'), third:item('minecraft:bone')],
-                [item('thermalexpansion:morb').withNbt(['id': 'thermalfoundation:blitz'])]       : [first:item('thermalfoundation:material', 2050), second:metaitem('dustSaltpeter'), third:metaitem('dustSaltpeter')],
-                [item('thermalexpansion:morb').withNbt(['id': 'minecraft:spider'])]              : [first:item('minecraft:string'), second:item('minecraft:spider_eye'), third:item('minecraft:string')],
-                [item('thermalexpansion:morb').withNbt(['id': 'minecraft:pig'])]                 : [first:item('minecraft:porkchop'), second:item('minecraft:porkchop'), third:item('quark:tallow')],
-                [item('thermalexpansion:morb').withNbt(['id': 'minecraft:witch'])]               : [first:item('minecraft:glowstone_dust'), second:item('minecraft:redstone'), third:item('minecraft:gunpowder')],
-                [item('thermalexpansion:morb').withNbt(['id': 'minecraft:llama'])]               : [first:item('minecraft:wool'), second:item('minecraft:leather'), third:item('minecraft:leather')],
-                ]
-            for (entry in morbCentrifugingBasic) {
-                centrifuge.recipeBuilder().EUt(40).duration(200)
-                .inputs(entry.key)
-                .chancedOutput(thermalMorb, 2500, 500)
-                .chancedOutput(entry.value.first * 3, 2500, 1000)
-                .chancedOutput(entry.value.second * 2, 2000, 1000)
-                .chancedOutput(entry.value.third, 1500, 1000)
-                .fluidOutputs(fluid("experience") * 100)
+            assline.recipeBuilder()
+                .EUt(8000)
+                .duration(800)
+                .inputs(thermalMorb, fieldgenIv, plateSignalum * 16, screwSignalum * 16)
+                .fluidInputs(solder * 288, lubricant * 100)
+                .outputs(thermalMorbReusable)
                 .buildAndRegister()
-            }
-        // Specific Recipes
-            // Evoker
-                centrifuge.recipeBuilder().EUt(40).duration(200)
-                    .inputs(item('thermalexpansion:morb').withNbt(['id': 'minecraft:evocation_illager']))
+        // Normal Centrifuging
+            // Centrifuging Map
+                def morbCentrifugingBasic = [
+                    [item('thermalexpansion:morb').withNbt(['id': 'minecraft:polar_bear'])]          : [first:item('minecraft:fish'), second:item('minecraft:fish', 1), third:metaitem('dustIce')],
+                    [item('thermalexpansion:morb').withNbt(['id': 'minecraft:mooshroom'])]           : [first:item('minecraft:beef'), second:item('minecraft:brown_mushroom'), third:item('minecraft:red_mushroom')],
+                    [item('thermalexpansion:morb').withNbt(['id': 'minecraft:slime'])]               : [first:item('minecraft:slime_ball'), second:item('minecraft:slime_ball'), third:item('minecraft:slime_ball')],
+                    [item('thermalexpansion:morb').withNbt(['id': 'minecraft:guardian'])]            : [first:item('minecraft:prismarine_shard'), second:item('minecraft:prismarine_crystals'), third:item('minecraft:sponge', 1)],
+                    [item('thermalexpansion:morb').withNbt(['id': 'minecraft:ghast'])]               : [first:item('minecraft:gunpowder'), second:item('minecraft:ghast_tear'), third:item('minecraft:ghast_tear')],
+                    [item('thermalexpansion:morb').withNbt(['id': 'minecraft:donkey'])]              : [first:item('minecraft:leather'), second:item('minecraft:leather'), third:item('minecraft:leather')],
+                    [item('thermalexpansion:morb').withNbt(['id': 'minecraft:blaze'])]               : [first:item('minecraft:blaze_rod'), second:metaitem('dustSulfur'), third:item('minecraft:blaze_powder')],
+                    [item('thermalexpansion:morb').withNbt(['id': 'minecraft:villager'])]            : [first:metaitem('dustTinyEmerald'), second:metaitem('dustSmallEmerald'), third:metaitem('dustEmerald')],
+                    [item('thermalexpansion:morb').withNbt(['id': 'minecraft:enderman'])]            : [first:item('minecraft:ender_pearl'), second:metaitem('dustEnderPearl'), third:metaitem('dustTinyEnderPearl')],
+                    [item('thermalexpansion:morb').withNbt(['id': 'minecraft:vindication_illager'])] : [first:metaitem('dustSmallEmerald'), second:metaitem('dustEmerald'), third:item('minecraft:emerald')],
+                    [item('thermalexpansion:morb').withNbt(['id': 'quark:ashen'])]                   : [first:item('minecraft:bone'), second:item('minecraft:arrow'), third:metaitem('dustDarkAsh')],
+                    [item('thermalexpansion:morb').withNbt(['id': 'minecraft:squid'])]               : [first:item('minecraft:fish'), second:item('minecraft:dye'), third:item('minecraft:dye')],
+                    [item('thermalexpansion:morb').withNbt(['id': 'minecraft:parrot'])]              : [first:item('minecraft:feather'), second:item('minecraft:feather'), third:item('quark:parrot_egg', 4)],
+                    [item('thermalexpansion:morb').withNbt(['id': 'minecraft:zombie'])]              : [first:item('minecraft:rotten_flesh'), second:item('minecraft:potato'), third:metaitem('dustSmallIron')],
+                    [item('thermalexpansion:morb').withNbt(['id': 'minecraft:silverfish'])]          : [first:metaitem('dustTinySilver'), second:metaitem('dustTinySilver'), third:metaitem('dustSilver')],
+                    [item('thermalexpansion:morb').withNbt(['id': 'minecraft:bat'])]                 : [first:item('minecraft:leather'), second:item('minecraft:leather'), third:metaitem('dustStone')],
+                    [item('thermalexpansion:morb').withNbt(['id': 'minecraft:husk'])]                : [first:item('minecraft:rotten_flesh'), second:item('minecraft:potato'), third:metaitem('dustSmallIron')],
+                    [item('thermalexpansion:morb').withNbt(['id': 'minecraft:elder_guardian'])]      : [first:item('minecraft:prismarine_shard') * 4, second:item('minecraft:prismarine_crystals') * 4, third:item('minecraft:sponge', 1) * 4],
+                    [item('thermalexpansion:morb').withNbt(['id': 'minecraft:rabbit'])]              : [first:item('minecraft:rabbit_hide'), second:item('minecraft:rabbit'), third:item('minecraft:rabbit_foot')],
+                    [item('thermalexpansion:morb').withNbt(['id': 'thermalfoundation:blizz'])]       : [first:item('thermalfoundation:material', 2048), second:item('minecraft:snowball'), third:metaitem('dustIce')],
+                    [item('thermalexpansion:morb').withNbt(['id': 'minecraft:endermite'])]           : [first:metaitem('dustTinyEnderPearl'), second:metaitem('dustEndstone'), third:metaitem('dustEnderPearl')],
+                    [item('thermalexpansion:morb').withNbt(['id': 'minecraft:cave_spider'])]         : [first:item('minecraft:string'), second:item('minecraft:spider_eye'), third:item('minecraft:string')],
+                    [item('thermalexpansion:morb').withNbt(['id': 'minecraft:zombie_horse'])]        : [first:item('minecraft:rotten_flesh'), second:item('minecraft:rotten_flesh'), third:item('minecraft:leather')],
+                    [item('thermalexpansion:morb').withNbt(['id': 'minecraft:zombie_villager'])]     : [first:item('minecraft:rotten_flesh'), second:metaitem('dustSmallEmerald'), third:metaitem('dustEmerald')],
+                    [item('thermalexpansion:morb').withNbt(['id': 'minecraft:magma_cube'])]          : [first:item('minecraft:magma_cream'), second:metaitem('dustSulfur'), third:metaitem('dustNetherrack')],
+                    [item('thermalexpansion:morb').withNbt(['id': 'minecraft:stray'])]               : [first:item('minecraft:bone'), second:item('minecraft:arrow'), third:metaitem('dustIce')],
+                    [item('thermalexpansion:morb').withNbt(['id': 'minecraft:shulker'])]             : [first:item('minecraft:shulker_shell'), second:metaitem('dustEndstone'), third:metaitem('dustEnderPearl')],
+                    [item('thermalexpansion:morb').withNbt(['id': 'minecraft:sheep'])]               : [first:item('minecraft:mutton'), second:item('minecraft:wool'), third:item('minecraft:wool')],
+                    [item('thermalexpansion:morb').withNbt(['id': 'minecraft:skeleton'])]            : [first:item('minecraft:bone'), second:item('minecraft:arrow'), third:metaitem('dustCalcium')],
+                    [item('thermalexpansion:morb').withNbt(['id': 'minecraft:cow'])]                 : [first:item('minecraft:leather'), second:item('minecraft:beef'), third:item('minecraft:beef')],
+                    [item('thermalexpansion:morb').withNbt(['id': 'minecraft:zombie_pigman'])]       : [first:item('minecraft:rotten_flesh'), second:item('minecraft:porkchop'), third:metaitem('dustSmallGold')],
+                    [item('thermalexpansion:morb').withNbt(['id': 'minecraft:skeleton_horse'])]      : [first:item('minecraft:bone'), second:item('minecraft:bone'), third:item('minecraft:leather')],
+                    [item('thermalexpansion:morb').withNbt(['id': 'quark:dweller'])]                 : [first:item('minecraft:rotten_flesh'), second:item('minecraft:potato'), third:metaitem('dustSmallIron')],
+                    [item('thermalexpansion:morb').withNbt(['id': 'thermalfoundation:basalz'])]      : [first:item('thermalfoundation:material', 2052), second:metaitem('dustObsidian'), third:metaitem('dustObsidian')],
+                    [item('thermalexpansion:morb').withNbt(['id': 'minecraft:chicken'])]             : [first:item('minecraft:feather'), second:item('minecraft:chicken'), third:item('minecraft:bone')],
+                    [item('thermalexpansion:morb').withNbt(['id': 'thermalfoundation:blitz'])]       : [first:item('thermalfoundation:material', 2050), second:metaitem('dustSaltpeter'), third:metaitem('dustSaltpeter')],
+                    [item('thermalexpansion:morb').withNbt(['id': 'minecraft:spider'])]              : [first:item('minecraft:string'), second:item('minecraft:spider_eye'), third:item('minecraft:string')],
+                    [item('thermalexpansion:morb').withNbt(['id': 'minecraft:pig'])]                 : [first:item('minecraft:porkchop'), second:item('minecraft:porkchop'), third:item('quark:tallow')],
+                    [item('thermalexpansion:morb').withNbt(['id': 'minecraft:witch'])]               : [first:item('minecraft:glowstone_dust'), second:item('minecraft:redstone'), third:item('minecraft:gunpowder')],
+                    [item('thermalexpansion:morb').withNbt(['id': 'minecraft:llama'])]               : [first:item('minecraft:wool'), second:item('minecraft:leather'), third:item('minecraft:leather')],
+                    ]
+                for (entry in morbCentrifugingBasic) {
+                    centrifuge.recipeBuilder().EUt(40).duration(200)
+                    .inputs(entry.key)
                     .chancedOutput(thermalMorb, 2500, 500)
-                    .chancedOutput(metaitem('dustTinyEmerald') * 3, 2500, 1000)
-                    .chancedOutput(metaitem('dustSmallEmerald') * 2, 2000, 1000)
-                    .chancedOutput(metaitem('dustEmerald'), 1500, 1000)
-                    .chancedOutput(item('minecraft:totem_of_undying'), 1000, 100)
+                    .chancedOutput(entry.value.first * 3, 2500, 1000)
+                    .chancedOutput(entry.value.second * 2, 2000, 1000)
+                    .chancedOutput(entry.value.third, 1500, 1000)
                     .fluidOutputs(fluid("experience") * 100)
                     .buildAndRegister()
-            // Wither Skeleton
-                centrifuge.recipeBuilder().EUt(40).duration(200)
-                    .inputs(item('thermalexpansion:morb').withNbt(['id': 'minecraft:wither_skeleton']))
-                    .chancedOutput(thermalMorb, 2500, 500)
-                    .chancedOutput(item('minecraft:coal') * 3, 2500, 1000)
-                    .chancedOutput(item('darkutils:material') * 2, 2000, 1000)
-                    .chancedOutput(item("extrautils2:ingredients", 10), 1500, 1000)
-                    .chancedOutput(item('minecraft:skull', 1), 100, 100)
-                    .fluidOutputs(fluid("experience") * 100)
-                    .buildAndRegister()
-            // Creeper
-                centrifuge.recipeBuilder().EUt(40).duration(200)
-                    .inputs(item('thermalexpansion:morb').withNbt(['id': 'minecraft:creeper']))
-                    .chancedOutput(thermalMorb, 2500, 500)
-                    .chancedOutput(item('minecraft:gunpowder') * 3, 2500, 1000)
-                    .chancedOutput(item('minecraft:sand') * 2, 2000, 1000)
-                    .chancedOutput(metaitem('gelled_toluene'), 1500, 1000)
-                    .fluidOutputs(fluid("experience") * 100)
-                    .chancedFluidOutput(fluid("sulfuric_acid") * 250, 1000, 500)
-                    .buildAndRegister()
-            // Horse
-                centrifuge.recipeBuilder().EUt(40).duration(200)
-                    .inputs(item('thermalexpansion:morb').withNbt(['id': 'minecraft:horse']))
-                    .chancedOutput(thermalMorb, 2500, 500)
-                    .chancedOutput(item('minecraft:leather') * 3, 2500, 1000)
-                    .chancedOutput(item('minecraft:leather') * 2, 2000, 1000)
-                    .chancedOutput(item("minecraft:leather"), 1500, 1000)
-                    .fluidOutputs(fluid("experience") * 100)
-                    .chancedFluidOutput(fluid("glue") * 250, 1000, 500)
-                    .buildAndRegister()
+                }
+            // Specific Recipes
+                // Evoker
+                    centrifuge.recipeBuilder().EUt(40).duration(200)
+                        .inputs(item('thermalexpansion:morb').withNbt(['id': 'minecraft:evocation_illager']))
+                        .chancedOutput(thermalMorb, 2500, 500)
+                        .chancedOutput(metaitem('dustTinyEmerald') * 3, 2500, 1000)
+                        .chancedOutput(metaitem('dustSmallEmerald') * 2, 2000, 1000)
+                        .chancedOutput(metaitem('dustEmerald'), 1500, 1000)
+                        .chancedOutput(item('minecraft:totem_of_undying'), 1000, 100)
+                        .fluidOutputs(fluid("experience") * 100)
+                        .buildAndRegister()
+                // Wither Skeleton
+                    centrifuge.recipeBuilder().EUt(40).duration(200)
+                        .inputs(item('thermalexpansion:morb').withNbt(['id': 'minecraft:wither_skeleton']))
+                        .chancedOutput(thermalMorb, 2500, 500)
+                        .chancedOutput(item('minecraft:coal') * 3, 2500, 1000)
+                        .chancedOutput(item('darkutils:material') * 2, 2000, 1000)
+                        .chancedOutput(item("extrautils2:ingredients", 10), 1500, 1000)
+                        .chancedOutput(item('minecraft:skull', 1), 100, 100)
+                        .fluidOutputs(fluid("experience") * 100)
+                        .buildAndRegister()
+                // Creeper
+                    centrifuge.recipeBuilder().EUt(40).duration(200)
+                        .inputs(item('thermalexpansion:morb').withNbt(['id': 'minecraft:creeper']))
+                        .chancedOutput(thermalMorb, 2500, 500)
+                        .chancedOutput(item('minecraft:gunpowder') * 3, 2500, 1000)
+                        .chancedOutput(item('minecraft:sand') * 2, 2000, 1000)
+                        .chancedOutput(metaitem('gelled_toluene'), 1500, 1000)
+                        .fluidOutputs(fluid("experience") * 100)
+                        .chancedFluidOutput(fluid("sulfuric_acid") * 250, 1000, 500)
+                        .buildAndRegister()
+                // Horse
+                    centrifuge.recipeBuilder().EUt(40).duration(200)
+                        .inputs(item('thermalexpansion:morb').withNbt(['id': 'minecraft:horse']))
+                        .chancedOutput(thermalMorb, 2500, 500)
+                        .chancedOutput(item('minecraft:leather') * 3, 2500, 1000)
+                        .chancedOutput(item('minecraft:leather') * 2, 2000, 1000)
+                        .chancedOutput(item("minecraft:leather"), 1500, 1000)
+                        .fluidOutputs(fluid("experience") * 100)
+                        .chancedFluidOutput(fluid("glue") * 250, 1000, 500)
+                        .buildAndRegister()
 
+
+    // ======== Materials ======== //
+        // ==== Resonant Ender ==== //
+            // Pearl
+                extractor.recipeBuilder()
+                    .inputs(pearlEnder)
+                    .fluidOutputs(liquidender * 144)
+                    .duration(23)
+                    .EUt(30)
+                    .buildAndRegister()
+            // Plate
+                extractor.recipeBuilder()
+                    .inputs(plateEnderPearl)
+                    .fluidOutputs(liquidender * 144)
+                    .duration(23)
+                    .EUt(30)
+                    .buildAndRegister()
+            // Block
+                extractor.recipeBuilder()
+                    .inputs(blockEnderPearl)
+                    .fluidOutputs(liquidender * 1296)
+                    .duration(207)
+                    .EUt(30)
+                    .buildAndRegister()
 
 // ===== Misc ===== //
 

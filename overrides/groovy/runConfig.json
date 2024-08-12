@@ -1,8 +1,11 @@
 {
   "packName": "Greggenuity",
   "packId": "greggenuity",
-  "version": "1.0.0",
+  "version": "0.215A",
   "debug": false,
+  "classes": [
+    "classes/"
+  ],
   "loaders": {
     "preInit": [
       "preInit/"

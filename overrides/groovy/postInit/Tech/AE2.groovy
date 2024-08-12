@@ -197,6 +197,7 @@ import team.chisel.api.carving.CarvingUtils
             def vibrantquartzglass = item('appliedenergistics2:quartz_vibrant_glass')
             def wirelessaccesspoint = item('appliedenergistics2:wireless_access_point')
             def securityterminal = item('appliedenergistics2:security_station')
+            
             def quantumring = item('appliedenergistics2:quantum_ring')
             def quantumlink = item('appliedenergistics2:quantum_link')
             def mecontroller = item('appliedenergistics2:controller')
@@ -226,6 +227,8 @@ import team.chisel.api.carving.CarvingUtils
             def cableanchor = item('appliedenergistics2:part', 120)
 
             def wirelessreceiver = item('appliedenergistics2:material', 41)
+            
+            def aePattern = item('appliedenergistics2:material', 52)
 
         //Misc
             def conversionupgrade = item("storagedrawers:upgrade_conversion")
@@ -313,12 +316,49 @@ import team.chisel.api.carving.CarvingUtils
                 .inputs(dustFluix.copy().copy() * 1)
                 .outputs(pearlFluix)
                 .buildAndRegister()
-        // ==== Fluixsteel ==== //
-            //Fluix + Steel + Chrome + Lead
-            // A little lossy - 4:3 (25%)
+        // ==== Fluix Boules ==== //
+            // == Boules == //
+                ebf.recipeBuilder()
+                    .inputs(dustFluix * 32, dustCertusQuartz)
+                    .outputs(bouleFluix)
+                    .EUt(120)
+                    .duration(8000)
+                    .property("temperature", 1200)
+                    .buildAndRegister()
+            // == To Wafers == //
+                cutter.recipeBuilder()
+                    .inputs(bouleFluix)
+                    .outputs(waferFluix * 16)
+                    .EUt(30)
+                    .duration(600)
+                    .buildAndRegister()
+            // == Engraving == //
+                laserengraver.recipeBuilder()
+                    .notConsumable(lensFluix)
+                    .inputs(waferFluix)
+                    .outputs(waferEngravedFluix)
+                    .EUt(30)
+                    .duration(700)
+                    .buildAndRegister()
+            // == Cutting into Chips == //
+                cutter.recipeBuilder()
+                    .inputs(waferEngravedFluix)
+                    .outputs(chipFluix * 4)
+                    .EUt(30)
+                    .duration(1080)
+                    .buildAndRegister()
+        // ==== Fluix Materials ==== //
+            // Fluixsteel (Fluix + Steel + Rose Gold)
             mixer.recipeBuilder()
-                .inputs(dustFluix.copy(), dustChrome.copy(), dustSteel.copy())
+                .inputs(dustFluix.copy(), dustSteel.copy(), dustRoseGold)
                 .outputs(dustFluixSteel.copy() * 3)
+                .EUt(14)
+                .duration(300)
+                .buildAndRegister()
+            // Fluminium (Fluix + Steel + Sterling Silver)
+            mixer.recipeBuilder()
+                .inputs(dustFluix.copy(), dustAluminium.copy(), dustSterlingSilver.copy())
+                .outputs(dustFluminium.copy() * 3)
                 .EUt(14)
                 .duration(300)
                 .buildAndRegister()
@@ -333,21 +373,21 @@ import team.chisel.api.carving.CarvingUtils
                 // Printed Engineering
                     assembler.recipeBuilder()
                         .EUt(16).duration(600)
-                        .inputs(siliconPrinted.copy() * 1, nandChip.copy() * 2, plateDiamond.copy() * 2, screwFluix.copy() * 4)
+                        .inputs(siliconPrinted.copy() * 1, nandChip.copy() * 2, plateDiamond.copy() * 2, screwFluix.copy() * 4, chipFluix)
                         .fluidInputs(liquidredalloy * 288)
                         .outputs(engineeringPrinted)
                         .buildAndRegister()
                 // Printed Calculation
                     assembler.recipeBuilder()
                         .EUt(16).duration(600)
-                        .inputs(siliconPrinted.copy() * 1, nandChip.copy() * 2, plateCertusQuartz.copy() * 2, screwFluix.copy() * 4)
+                        .inputs(siliconPrinted.copy() * 1, nandChip.copy() * 2, plateCertusQuartz.copy() * 2, screwFluix.copy() * 4, chipFluix)
                         .fluidInputs(liquidredalloy * 288)
                         .outputs(calculationPrinted)
                         .buildAndRegister()
                 // Printed Logic
                     assembler.recipeBuilder()
                         .EUt(16).duration(600)
-                        .inputs(siliconPrinted.copy() * 1, nandChip.copy() * 2, plateGold.copy() * 2, screwFluix.copy() * 4)
+                        .inputs(siliconPrinted.copy() * 1, nandChip.copy() * 2, plateGold.copy() * 2, screwFluix.copy() * 4, chipFluix)
                         .fluidInputs(liquidredalloy * 288)
                         .outputs(logicPrinted)
                         .buildAndRegister()
@@ -376,7 +416,7 @@ import team.chisel.api.carving.CarvingUtils
         // ==== Wireless Receiver ==== //
             assembler.recipeBuilder()
                 .EUt(30).duration(180)
-                .inputs(sensormv, platePlastic * 4)
+                .inputs(sensorMv, platePlastic * 4)
                 .outputs(wirelessreceiver)
                 .fluidInputs(liquidfluix * 720)
                 .buildAndRegister()
@@ -615,7 +655,7 @@ import team.chisel.api.carving.CarvingUtils
                     [
                         [screwFluixSteel.copy() * 1, engineeringProcessor.copy() * 1, screwFluixSteel.copy() * 1],
                         [annihilationCore.copy() * 1, anypanel * 1, formationCore.copy() * 1],
-                        [screwFluixSteel.copy() * 1, assemblerlv    .copy() * 1, screwFluixSteel.copy() * 1]
+                        [screwFluixSteel.copy() * 1, assemblerLv.copy() * 1, screwFluixSteel.copy() * 1]
                     ])    
                 // Fluid Pattern Terminal
                     crafting.removeByOutput(fluidpatternterminal)
@@ -629,9 +669,9 @@ import team.chisel.api.carving.CarvingUtils
                     crafting.removeByOutput(fluidpatternterminalex)
                     crafting.addShaped("ggn_ae_fluidpatternterminalex", fluidpatternterminalex,
                     [
-                        [screwFlungstensteel.copy() * 1, circuitev * 1, screwFlungstensteel.copy() * 1],
+                        [screwFlungstensteel.copy() * 1, circuitEv * 1, screwFlungstensteel.copy() * 1],
                         [plateFlungstensteel.copy() * 1, fluidpatternterminal.copy() * 1, plateFlungstensteel.copy() * 1],
-                        [screwFlungstensteel.copy() * 1, circuitev * 1, screwFlungstensteel.copy() * 1]
+                        [screwFlungstensteel.copy() * 1, circuitEv * 1, screwFlungstensteel.copy() * 1]
                     ])
                 // Storage Terminal
                     crafting.addShaped("ggn_ae_defaultterminal", defaultterminal,
@@ -712,6 +752,60 @@ import team.chisel.api.carving.CarvingUtils
             // Flat ME Drive
                 crafting.addShapeless("ggn_ae_medriveflat", medriveflat, [medrive])
                 crafting.addShapeless("ggn_ae_flatmedrive", medrive, [medriveflat])
+            // ME Chest
+                crafting.addShaped("ggn_ae_mechest", mechest,
+                [
+                    [logicProcessor, gtScreen, logicProcessor],
+                    [plateFluixSteel, anychest, plateFluixSteel],
+                    [plateSteel, plateSteel, plateSteel]
+                ])
+            // IO Port
+                crafting.addShaped("ggn_ae_ioport", ioport,
+                [
+                    [null, formationCore, null],
+                    [engineeringProcessor, mechest, calculationProcessor],
+                    [null, annihilationCore, null]
+                ])
+            // Cell Workbench
+                crafting.addShaped("ggn_ae_cellworkbench", cellworkbench,
+                [
+                    [logicProcessor, gtScreen, logicProcessor],
+                    [plateFluixSteel, itemCraftingTable, plateFluixSteel],
+                    [plateSteel, plateSteel, plateSteel]
+                ])            
+            // Matter Condenser
+                crafting.addShaped("ggn_ae_condenser", mattercondenser,
+                [
+                    [plateDarkSteel, plateFluminium, plateDarkSteel],
+                    [annihilationCore, mechest, annihilationCore],
+                    [plateDarkSteel, plateFluixSteel, plateDarkSteel]
+                ])
+            // Energy Acceptor
+                crafting.addShaped("ggn_ae_energyacceptor", energyacceptor,
+                [
+                    [screwFluixSteel, logicProcessor, screwFluixSteel],
+                    [plateFluixSteel, energyInputMV, plateFluixSteel],
+                    [screwFluixSteel, calculationProcessor, screwFluixSteel]
+                ]) 
+            // Energy Cell
+                assembler.recipeBuilder()
+                    .fluidInputs(solder * 288)
+                    .inputs(frameStainlessSteel, plateFluixSteel * 6, screwFluixSteel * 24, batteryMvLithium)
+                    .outputs(energycell)
+                    .EUt(60)
+                    .duration(400)
+                    .buildAndRegister()
+
+            // Dense Energy Cell
+                assembler.recipeBuilder()
+                    .fluidInputs(solder * 576)
+                    .inputs(energycell * 4, plateFlungstensteel * 6, screwFlungstensteel * 24, batteryEvLapotron)
+                    .outputs(denseenergycell)
+                    .EUt(600)
+                    .duration(800)
+                    .buildAndRegister()
+        
+
         // ==== Wires & Cables ==== //
             // Quartz Fiber
                 extruder.recipeBuilder()
@@ -762,6 +856,17 @@ import team.chisel.api.carving.CarvingUtils
                 crafting.addShapeless("ggn_ae_densecovered", denseCableCovered, [denseCable])
                 crafting.addShapeless("ggn_ae_covereddense", denseCable, [denseCableCovered])
         // ==== Crafting & Automation ==== //
+            // Crafting Monitor
+                craftingmonitor
+            // Fluid Discretizer
+                fluiddiscretizer
+            // Molecular Assembler
+                crafting.addShaped("ggn_ae_molecularassembler", molecularassembler,
+                [
+                    [plateFluixSteel, engineeringProcessor, plateFluixSteel],
+                    [robotarmMv, formationCore, robotarmMv],
+                    [plateSteel, calculationProcessor, plateSteel]
+                ])
             // Crafting Unit
                 assembler.recipeBuilder()
                     .EUt(30).duration(200)
@@ -782,6 +887,32 @@ import team.chisel.api.carving.CarvingUtils
                     .inputs(platePlastic.copy() * 4, plateFluixSteel.copy() * 4, logicProcessor.copy() * 2, calculationProcessor.copy() * 2, nanocpuchip.copy() * 2)
                     .outputs(craftingUnitCPU)
                     .buildAndRegister()
+            // Patterns
+                // Polyethylene makes 4
+                assembler.recipeBuilder()
+                    .inputs(gtScreen, platePolyethylene * 4, logicProcessor, engineeringProcessor)
+                    .fluidInputs(solder * 72)
+                    .outputs(aePattern * 4)
+                    .EUt(7)
+                    .duration(140)
+                    .buildAndRegister()
+                // Polytetrafluoroethylene makes 8
+                assembler.recipeBuilder()
+                    .inputs(gtScreen, platePTFE * 4, logicProcessor, engineeringProcessor)
+                    .fluidInputs(solder * 72)
+                    .outputs(aePattern * 8)
+                    .EUt(7)
+                    .duration(140)
+                    .buildAndRegister()
+                // Polybenzimidazole makes 16
+                assembler.recipeBuilder()
+                    .inputs(gtScreen, platePBI * 4, logicProcessor, engineeringProcessor)
+                    .fluidInputs(solder * 72)
+                    .outputs(aePattern * 16)
+                    .EUt(7)
+                    .duration(140)
+                    .buildAndRegister()
+
             // Crafting Storage
                 crafting.removeByOutput(craftingUnit256k)
                 crafting.removeByOutput(craftingUnit1024k)
@@ -889,14 +1020,14 @@ import team.chisel.api.carving.CarvingUtils
                 // Item
                     assembler.recipeBuilder()
                         .EUt(30).duration(400)
-                        .inputs(plateFluixSteel.copy() * 6, conveyormv.copy() * 2, annihilationCore.copy() * 2)
+                        .inputs(plateFluixSteel.copy() * 6, conveyorMv.copy() * 2, annihilationCore.copy() * 2)
                         .fluidInputs(liquidfluix * 576)
                         .outputs(importBusItem)
                         .buildAndRegister()
                 // Fluid
                     assembler.recipeBuilder()
                         .EUt(30).duration(400)
-                        .inputs(plateFluminium.copy() * 6, pumpmv.copy() * 2, annihilationCore.copy() * 2)
+                        .inputs(plateFluminium.copy() * 6, pumpMv.copy() * 2, annihilationCore.copy() * 2)
                         .fluidInputs(liquidfluix * 576)
                         .outputs(importBusFluid)
                         .buildAndRegister()
@@ -904,7 +1035,7 @@ import team.chisel.api.carving.CarvingUtils
                     mods.thaumcraft.arcane_workbench.removeByOutput(importBusEssentia)
                     assembler.recipeBuilder()
                         .EUt(30).duration(400)
-                        .inputs(plateThaumium.copy() * 6, pumpmv.copy() * 2, coalescenceCore.copy() * 2)
+                        .inputs(plateThaumium.copy() * 6, pumpMv.copy() * 2, coalescenceCore.copy() * 2)
                         .fluidInputs(liquidvis * 576)
                         .outputs(importBusEssentia)
                         .buildAndRegister()
@@ -912,14 +1043,14 @@ import team.chisel.api.carving.CarvingUtils
                 // Item
                     assembler.recipeBuilder()
                         .EUt(30).duration(400)
-                        .inputs(plateFluixSteel.copy() * 6, conveyormv.copy() * 2, formationCore.copy() * 2)
+                        .inputs(plateFluixSteel.copy() * 6, conveyorMv.copy() * 2, formationCore.copy() * 2)
                         .fluidInputs(liquidfluix * 576)
                         .outputs(exportBusItem)
                         .buildAndRegister()
                 // Fluid
                     assembler.recipeBuilder()
                         .EUt(30).duration(400)
-                        .inputs(plateFluminium.copy() * 6, pumpmv.copy() * 2, formationCore.copy() * 2)
+                        .inputs(plateFluminium.copy() * 6, pumpMv.copy() * 2, formationCore.copy() * 2)
                         .fluidInputs(liquidfluix * 576)
                         .outputs(exportBusFluid)
                         .buildAndRegister()
@@ -927,7 +1058,7 @@ import team.chisel.api.carving.CarvingUtils
                     mods.thaumcraft.arcane_workbench.removeByOutput(exportBusEssentia)
                     assembler.recipeBuilder()
                         .EUt(30).duration(400)
-                        .inputs(plateThaumium.copy() * 6, pumpmv.copy() * 2, diffusionCore.copy() * 2)
+                        .inputs(plateThaumium.copy() * 6, pumpMv.copy() * 2, diffusionCore.copy() * 2)
                         .fluidInputs(liquidvis * 576)
                         .outputs(exportBusEssentia)
                         .buildAndRegister()
@@ -990,7 +1121,7 @@ import team.chisel.api.carving.CarvingUtils
                 // Access Point
                     crafting.addShaped("ggn_ae_wirelessaccess", wirelessaccesspoint,
                     [
-                        [sensormv, pearlFluix, sensormv],
+                        [sensorMv, pearlFluix, sensorMv],
                         [plateFluix, stickFluix, plateFluix],
                         [plateSteel, plateSteel, plateSteel]
                     ])
@@ -1065,22 +1196,36 @@ import team.chisel.api.carving.CarvingUtils
             crafting.addShapeless("ggn_ae_viewcell", viewcell.copy() * 1, 
             [storagehousing.copy(), gtscrewdriver])
         // Upgrades
-            /* FLAGGED: High Priority: Uses CT for now
+            crafting.addShaped("ggn_ae_upgradebase", basicUpgradeCard,
+            [
+                [screwFluixSteel, engineeringProcessor, screwFluixSteel],
+                [plateFluixSteel, circuitMv, plateFluixSteel],
+                [screwFluixSteel, logicProcessor, screwFluixSteel]
+            ])
+
+            crafting.addShaped("ggn_ae_advupgradebase", advUpgradeCard,
+            [
+                [screwFluixSteel, basicUpgradeCard, screwFluixSteel],
+                [plateStainlessSteel, circuitEv, plateStainlessSteel],
+                [screwFluixSteel, plateStainlessSteel, screwFluixSteel]
+            ])
+            // Chiselling
+                mods.chisel.carving.addGroup("aeupgrades")
+                mods.chisel.carving.addGroup("aeadvupgrades")
                 // Base Upgrades
-                    CarvingUtils.getChiselRegistry().addGroup(CarvingUtils.getDefaultGroupFor("aeupgrades"))
-                        CarvingUtils.getChiselRegistry().addVariation("aeupgrades", CarvingUtils.VariationFor(basicUpgradeCard, 1))
-                        CarvingUtils.getChiselRegistry().addVariation("aeupgrades", CarvingUtils.VariationFor(redstoneUpgradeCard, 2))
-                        CarvingUtils.getChiselRegistry().addVariation("aeupgrades", CarvingUtils.VariationFor(capacityUpgradeCard, 3))
-                        CarvingUtils.getChiselRegistry().addVariation("aeupgrades", CarvingUtils.VariationFor(magnetUpgradeCard, 4))
-                        CarvingUtils.getChiselRegistry().addVariation("aeupgrades", CarvingUtils.VariationFor(craftingUpgradeCard, 5))
+                        mods.chisel.carving.addVariation("aeupgrades", basicUpgradeCard)
+                        mods.chisel.carving.addVariation("aeupgrades", redstoneUpgradeCard)
+                        mods.chisel.carving.addVariation("aeupgrades", capacityUpgradeCard)
+                        mods.chisel.carving.addVariation("aeupgrades", magnetUpgradeCard)
+                        mods.chisel.carving.addVariation("aeupgrades", craftingUpgradeCard)
                 // Advanced Upgrades
-                    CarvingUtils.getChiselRegistry().addGroup(CarvingUtils.getDefaultGroupFor("aeadvupgrades"))
-                        CarvingUtils.getChiselRegistry().addVariation("aeadvupgrades", CarvingUtils.VariationFor(advUpgradeCard, 1))
-                        CarvingUtils.getChiselRegistry().addVariation("aeadvupgrades", CarvingUtils.VariationFor(inverterUpgradeCard, 2))
-                        CarvingUtils.getChiselRegistry().addVariation("aeadvupgrades", CarvingUtils.VariationFor(accelUpgradeCard, 3))
-                        CarvingUtils.getChiselRegistry().addVariation("aeadvupgrades", CarvingUtils.VariationFor(fuzzyUpgradeCard, 4))
-                        CarvingUtils.getChiselRegistry().addVariation("aeadvupgrades", CarvingUtils.VariationFor(patternUpgradeCard, 5))
-                */
+                        mods.chisel.carving.addVariation("aeadvupgrades", advUpgradeCard)
+                        mods.chisel.carving.addVariation("aeadvupgrades", inverterUpgradeCard)
+                        mods.chisel.carving.addVariation("aeadvupgrades", accelUpgradeCard)
+                        mods.chisel.carving.addVariation("aeadvupgrades", fuzzyUpgradeCard)
+                        mods.chisel.carving.addVariation("aeadvupgrades", patternUpgradeCard)
+                        mods.chisel.carving.addVariation("aeupgrades", craftingUpgradeCard)
+                        mods.chisel.carving.addVariation("aeupgrades", craftingUpgradeCard)
         // Certus Wrench
             crafting.addShaped("ggn_ae_certuswrench", certuswrench,
             [

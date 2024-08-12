@@ -114,6 +114,10 @@
                     "enderio:item_material:26": "dustCopper",
                     "thermalfoundation:material:64": "dustCopper",
                     "immersiveengineering:metal:9": "dustCopper",
+                    "libvulpes:productdust:4": "dustCopper",
+
+                //dustDilithium
+                    "libvulpes:productdust": "dustDilithium",
 
                 //dustDiamond
                     "actuallyadditions:item_dust:2": "dustDiamond",
@@ -138,6 +142,7 @@
                     "enderio:item_material:25": "dustGold",
                     "thermalfoundation:material:1": "dustGold",
                     "immersiveengineering:metal:19": "dustGold",
+                    "libvulpes:productdust:2": "dustGold",
 
                 //dustIron
                     "enderio:item_material:24": "dustIron",
@@ -145,6 +150,7 @@
                     "appliedenergistics2:material:49": "dustIron",
                     "thermalfoundation:material": "dustIron",
                     "immersiveengineering:metal:18": "dustIron",
+                    "libvulpes:productdust:1": "dustIron",
 
                 //dustLapis
                     "actuallyadditions:item_dust:4": "dustLapis",
@@ -162,6 +168,7 @@
 
                 //dustIridium
                     "thermalfoundation:material:71": "dustIridium",
+                    "libvulpes:productdust:10": "dustIridium",
 
                 //dustNetherQuartz
                     "enderio:item_material:33": "dustNetherQuartz",
@@ -216,6 +223,7 @@
                 //dustTin
                     "enderio:item_material:27": "dustTin",
                     "thermalfoundation:material:65": "dustTin",
+                    "libvulpes:productdust:5": "dustTin",
 
                 //dustUranium
                     "immersiveengineering:metal:14": "dustUranium",
@@ -588,11 +596,17 @@
                     "thermalfoundation:material:321": "plateTin",
                     "libvulpes:productplate:5": "plateTin",
 
+                //plateThaumium
+                    "thaumcraft:plate:2": "plateThaumium",
+
                 //plateUranium
                     "immersiveengineering:metal:35": "plateUranium",
 
                 //plateTitanium
                     "libvulpes:productplate:7": "plateTitanium",
+
+                //plateVoid
+                    "thaumcraft:plate:3": "plateVoid",
                 ]
                 platesDisabled.each { key, val ->
                     ore(val).remove(item(key))
@@ -704,16 +718,22 @@
             //Elementium
                 "nuggetElementium": "nuggetElementium",
                 "ingotElementium": "ingotElementium",
-
-            //Pulsating Iron
+            
+            //Manasteel
+                "nuggetManasteel": "nuggetManasteel",
+                "ingotManasteel": "ingotManasteel",       
+            
+            //Thaumium
                 "nuggetThaumium": "nuggetThaumium",
                 "ingotThaumium": "ingotThaumium",
 
+            //Mithrillium
+                "nuggetMithrillium": "nuggetMithrillium",                
+                "ingotMithrillium": "ingotMithrillium",
+            //
+
             ]
-            nonGTDisabled.each { key, val ->
-                ore(val).remove(metaitem(key))
-                mods.jei.ingredient.yeet(metaitem(key))
-            }  
+
     // ======== Tweaks ======== //
 
 // ================ OreDict ================ //

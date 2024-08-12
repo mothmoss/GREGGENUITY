@@ -94,5 +94,9 @@ import net.minecraftforge.event.entity.player.ItemTooltipEvent
         if (event.getItemStack() in item('extrautils2:ironwood_sapling')) {
         event.getToolTip() << "§aLight it on fire to darken the wood."
         }
+    // ======== EIO ======== //
+        if (event.getItemStack() in item('enderio:item_yeta_wrench')) {
+        event.getToolTip() << "§aConsider using a GregTech wrench instead."
+        }
    }     
 // ================ Tooltips ================ //

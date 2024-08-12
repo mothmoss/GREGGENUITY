@@ -161,10 +161,11 @@ import gregtech.api.unification.ore.OrePrefix
                     [metaitem("crushedPurifiedBasalticMineralSand")]  : [metaitem("crushedCentrifugedBasalticMineralSand") * 2, metaitem("dustTinyBasalt") * 3],
                     [metaitem("crushedPurifiedAerInfused")]           : [metaitem("crushedCentrifugedAerInfused") * 2, metaitem("dustTinyAerInfused") * 3],
                     [metaitem("crushedPurifiedAquaInfused")]          : [metaitem("crushedCentrifugedAquaInfused") * 2, metaitem("dustTinyAquaInfused") * 3],
-                    [metaitem("crushedPurifiedPerditioInfused")]       : [metaitem("crushedCentrifugedPerditioInfused") * 2, metaitem("dustTinyPerditioInfused") * 3],
+                    [metaitem("crushedPurifiedPerditioInfused")]      : [metaitem("crushedCentrifugedPerditioInfused") * 2, metaitem("dustTinyPerditioInfused") * 3],
                     [metaitem("crushedPurifiedIgnisInfused")]         : [metaitem("crushedCentrifugedIgnisInfused") * 2, metaitem("dustTinyIgnisInfused") * 3],
                     [metaitem("crushedPurifiedOrdoInfused")]          : [metaitem("crushedCentrifugedOrdoInfused") * 2, metaitem("dustTinyOrdoInfused") * 3],
                     [metaitem("crushedPurifiedTerraInfused")]         : [metaitem("crushedCentrifugedTerraInfused") * 2, metaitem("dustTinyTerraInfused") * 3],    
+                    [metaitem("crushedPurifiedCryolite")]             : [metaitem("crushedCentrifugedCryolite") * 2, metaitem("dustTinyAlumina") * 3],    
                 ]
 
                 for (entry in automap) {

@@ -81,11 +81,25 @@
         gtknife = ore('toolKnife')
         extrudershapewire = metaitem("shape.extruder.wire")
         extrudershapebolt = metaitem('shape.extruder.bolt')
+        // Molds
+            gtMoldPlate = metaitem('shape.mold.plate')
+            gtMoldGear = metaitem('shape.mold.gear')
+            gtMoldCredit = metaitem('shape.mold.credit')
+            gtMoldBottle = metaitem('shape.mold.bottle')
+            gtMoldIngot = metaitem('shape.mold.ingot')
+            gtMoldBall = metaitem('shape.mold.ball')
+            gtMoldBlock = metaitem('shape.mold.block')
+            gtMoldNugget = metaitem('shape.mold.nugget')
+            gtMoldCylinder = metaitem('shape.mold.cylinder')
+            gtMoldAnvil = metaitem('shape.mold.anvil')
+            gtMoldGearSmall = metaitem('shape.mold.gear.small')
+            gtMoldRotor = metaitem('shape.mold.rotor')
     // ======== Fluids ======== //
         solder = fluid("soldering_alloy")
         lubricant = fluid("lubricant")
         hydrogen = fluid("hydrogen")
         oxygen = fluid("oxygen")
+        nitrogen = fluid("nitrogen")
         liquidlead = fluid("lead")
         liquidredalloy = fluid("red_alloy")
         liquidender = fluid("ender")
@@ -105,59 +119,110 @@
         liquiddistilledwater = fluid("distilled_water")
         mercury = fluid("mercury")
         acetone = fluid("acetone")
+        liquidender = fluid("ender")
+        seedoil = fluid("seed_oil")
+        liquiddeath = fluid("liquid_death")
+        liquidvibrantalloy = fluid("vibrant_alloy")
+        liquidpulsatingiron = fluid("pulsating_iron")
+        liquidexperience = fluid("experience")
+        liquiddeath = fluid("liquid_death")
     
     // ======== Metaitems ======== //
+        //ULV
+        hullUlv = metaitem("hull.ulv")
+
         //LV
-        hulllv = metaitem('hull.lv')
-        conveyorlv = metaitem('conveyor.module.lv')
-        pumplv = metaitem('electric.pump.lv')
-        sensorlv = metaitem('sensor.lv')
-        emitterlv = metaitem('emitter.lv')
-        motorlv = metaitem('electric.motor.lv')
-        pistonlv = metaitem('electric.piston.lv')
-        robotarmlv = metaitem('robot.arm.lv')
-        fieldgenlv = metaitem('field.generator.lv')
-        emitterlv = metaitem('emitter.lv')
-        sensorlv = metaitem('sensor.lv')
+        hullLv = metaitem('hull.lv')
+        conveyorLv = metaitem('conveyor.module.lv')
+        pumpLv = metaitem('electric.pump.lv')
+        sensorLv = metaitem('sensor.lv')
+        emitterLv = metaitem('emitter.lv')
+        motorLv = metaitem('electric.motor.lv')
+        pistonLv = metaitem('electric.piston.lv')
+        robotarmLv = metaitem('robot.arm.lv')
+        fieldgenLv = metaitem('field.generator.lv')
+        emitterLv = metaitem('emitter.lv')
+        sensorLv = metaitem('sensor.lv')
 
-        //MV
-        hullmv = metaitem('hull.mv')
-        conveyormv = metaitem('conveyor.module.mv')
-        pumpmv = metaitem('electric.pump.mv')
-        sensormv = metaitem('sensor.mv')
-        emittermv = metaitem('emitter.mv')
-        motormv = metaitem('electric.motor.mv')
-        pistonmv = metaitem('electric.piston.mv')
-        robotarmmv = metaitem('robot.arm.mv')
-        fieldgenmv = metaitem('field.generator.mv')
-        emittermv = metaitem('emitter.mv')
-        sensormv = metaitem('sensor.mv')
+        //Mv
+        hullMv = metaitem('hull.mv')
+        conveyorMv = metaitem('conveyor.module.mv')
+        pumpMv = metaitem('electric.pump.mv')
+        sensorMv = metaitem('sensor.mv')
+        emitterMv = metaitem('emitter.mv')
+        motorMv = metaitem('electric.motor.mv')
+        pistonMv = metaitem('electric.piston.mv')
+        robotarmMv = metaitem('robot.arm.mv')
+        fieldgenMv = metaitem('field.generator.mv')
+        emitterMv = metaitem('emitter.mv')
+        sensorMv = metaitem('sensor.mv')
 
-        //HV
-        hullhv = metaitem('hull.hv')
-        conveyorhv = metaitem('conveyor.module.hv')
-        pumphv = metaitem('electric.pump.hv')
-        sensorhv = metaitem('sensor.hv')
-        emitterhv = metaitem('emitter.hv')
-        motorhv = metaitem('electric.motor.hv')
-        pistonhv = metaitem('electric.piston.hv')
-        robotarmhv = metaitem('robot.arm.hv')
-        fieldgenhv = metaitem('field.generator.hv')
-        emitterhv = metaitem('emitter.hv')
-        sensorhv = metaitem('sensor.hv')
+        energyInputMV = metaitem('energy_hatch.input.mv')
+
+        //Hv
+        hullHv = metaitem('hull.hv')
+        conveyorHv = metaitem('conveyor.module.hv')
+        pumpHv = metaitem('electric.pump.hv')
+        sensorHv = metaitem('sensor.hv')
+        emitterHv = metaitem('emitter.hv')
+        motorHv = metaitem('electric.motor.hv')
+        pistonHv = metaitem('electric.piston.hv')
+        robotarmHv = metaitem('robot.arm.hv')
+        fieldgenHv = metaitem('field.generator.hv')
+        emitterHv = metaitem('emitter.hv')
+        sensorHv = metaitem('sensor.hv')
+
+        //Ev
+        hullEv = metaitem('hull.ev')
+        conveyorEv = metaitem('conveyor.module.ev')
+        pumpEv = metaitem('electric.pump.ev')
+        sensorEv = metaitem('sensor.ev')
+        emitterEv = metaitem('emitter.ev')
+        motorEv = metaitem('electric.motor.ev')
+        pistonEv = metaitem('electric.piston.ev')
+        robotarmEv = metaitem('robot.arm.ev')
+        fieldgenEv = metaitem('field.generator.ev')
+        emitterEv = metaitem('emitter.ev')
+        sensorEv = metaitem('sensor.ev')
+
+        //Iv
+        hullIv = metaitem('hull.iv')
+        conveyorIv = metaitem('conveyor.module.iv')
+        pumpIv = metaitem('electric.pump.iv')
+        sensorIv = metaitem('sensor.iv')
+        emitterIv = metaitem('emitter.iv')
+        motorIv = metaitem('electric.motor.iv')
+        pistonIv = metaitem('electric.piston.iv')
+        robotarmIv = metaitem('robot.arm.iv')
+        fieldgenIv = metaitem('field.generator.iv')
+        emitterIv = metaitem('emitter.iv')
+        sensorIv = metaitem('sensor.iv')
 
         //LUV
-        hullluv = metaitem('hull.luv')
-        conveyorluv = metaitem('conveyor.module.luv')
-        pumpluv = metaitem('electric.pump.luv')
-        sensorluv = metaitem('sensor.luv')
-        emitterluv = metaitem('emitter.luv')
-        motorluv = metaitem('electric.motor.luv')
-        pistonluv = metaitem('electric.piston.luv')
-        robotarmluv = metaitem('robot.arm.luv')
-        fieldgenluv = metaitem('field.generator.luv')
-        emitterluv = metaitem('emitter.luv')
-        sensorluv = metaitem('sensor.luv')
+        hullLuv = metaitem('hull.luv')
+        conveyorLuv = metaitem('conveyor.module.luv')
+        pumpLuv = metaitem('electric.pump.luv')
+        sensorLuv = metaitem('sensor.luv')
+        emitterLuv = metaitem('emitter.luv')
+        motorLuv = metaitem('electric.motor.luv')
+        pistonLuv = metaitem('electric.piston.luv')
+        robotarmLuv = metaitem('robot.arm.luv')
+        fieldgenLuv = metaitem('field.generator.luv')
+        emitterLuv = metaitem('emitter.luv')
+        sensorLuv = metaitem('sensor.luv')
+
+        //LUV
+        hullZpm = metaitem('hull.zpm')
+        conveyorZpm = metaitem('conveyor.module.zpm')
+        pumpZpm = metaitem('electric.pump.zpm')
+        sensorZpm = metaitem('sensor.zpm')
+        emitterZpm = metaitem('emitter.zpm')
+        motorZpm = metaitem('electric.motor.zpm')
+        pistonZpm = metaitem('electric.piston.zpm')
+        robotarmZpm = metaitem('robot.arm.zpm')
+        fieldgenZpm = metaitem('field.generator.zpm')
+        emitterZpm = metaitem('emitter.zpm')
+        sensorZpm = metaitem('sensor.zpm')
 
         //Chips
         nandChip = metaitem("circuit.nand_chip")
@@ -167,7 +232,7 @@
         qubitcpuchip = metaitem("plate.qbit_central_processing_unit")
 
         //Machines
-        assemblerlv = metaitem('assembler.lv')
+        assemblerLv = metaitem('assembler.lv')
 
         //Misc
         shuttercover = metaitem('cover.shutter')
@@ -178,23 +243,41 @@
             anypanel = ore("itemIlluminatedPanel")
             anychest = ore("chest")
             anydrawer = ore("drawerBasic")
-            anyshard = ore("anyShard")
+            anyshard = ore("shardAny")
+            anyconcentrated = ore("shardConcentrated")
+            anywoodplank = ore("plankWood")
+        //Batteries
+            batteryMvLithium = metaitem('battery.re.mv.lithium')
+            batteryEvLapotron = metaitem('lapotron_crystal')
         //Block
             blockCopper = metaitem("blockCopper")
             blockSteel = metaitem("blockSteel")
             blockElectrum = metaitem("blockElectrum")
+            blockDarkSteel = ore("blockDarkSteel")
+            blockThaumium = ore("blockThaumium")
+            blockIron = ore("blockIron")
+            blockWroughtIron = metaitem("blockWroughtIron")
+            blockDiamond = ore("blockDiamond")
+            blockEnderPearl = metaitem("blockEnderPearl")
+            blockQuartz = ore("blockQuartz")
+            blockPulsatingIron = ore("blockPulsatingIron")            
+        //Block (Glass)
             blockGlassTempered = item('gregtech:transparent_casing')
             blockGlassInvar = item('thermalfoundation:glass_alloy', 2)
             blockGlassReinforced = item('thermalfoundation:glass_alloy', 2)
             blockGlassSignalum = item('thermalfoundation:glass_alloy', 2)
-            blockDarkSteel = ore("blockDarkSteel")
-            blockThaumium = ore("blockThaumium")
+            blockGlassVibrant = item('appliedenergistics2:quartz_vibrant_glass')
+            blockGlassFusedQuartz = ore("fusedQuartz")
         //Circuits
             circuitLv = ore("circuitLv")
             circuitMv = ore("circuitMv")
             circuitHv = ore("circuitHv")
             circuitEv = ore("circuitEv")
             circuitIv = ore("circuitIv")
+            circuitLuv = ore("circuitLuv")
+            circuitZpm = ore("circuitZpm")
+            circuitUv = ore("circuitUv")
+            circuitUhv = ore("circuitUhv")
 
         //Dust
             dustCertusQuartz = metaitem("dustCertusQuartz")
@@ -207,7 +290,6 @@
             dustSteel = metaitem("dustSteel")
             dustFluixSteel = metaitem("dustFluixSteel")
             dustGlass = ore('dustGlass')
-            dustAluminium = metaitem("dustAluminium")
             dustStone = metaitem("dustStone")
             dustAer = metaitem('dustAerInfused')
             dustAqua = metaitem('dustAquaInfused')
@@ -216,10 +298,38 @@
             dustOrdo = metaitem('dustOrdoInfused')
             dustTerra = metaitem('dustTerraInfused')
             dustRedstone = ore("dustRedstone").first
-        
+            dustAluminiumFluoride = metaitem("dustAluminiumFluoride")
+            dustSodiumHydroxide = metaitem("dustSodiumHydroxide")
+            dustSodiumFluoride = metaitem("dustSodiumFluoride")
+            dustCryolite = metaitem("dustCryolite")
+            dustAlumina = metaitem("dustAlumina")
+            dustRoseGold = metaitem("dustRoseGold")
+            dustSterlingSilver = metaitem("dustSterlingSilver")
+            dustFluminium = metaitem("dustFluminium")
+            dustGlowstone = ore("dustGlowstone").first
+            dustRedAlloy = metaitem("dustRedAlloy")
+            dustPulsatingIron = metaitem("dustPulsatingIron")
+            dustEnergeticAlloy = metaitem("dustEnergeticAlloy")
+            dustDarkSteel = metaitem("dustDarkSteel")
+            dustBeryllium = metaitem("dustBeryllium")
+            dustEmerald = metaitem("dustEmerald")
+            dustObsidian = metaitem("dustObsidian")
+            dustIridium = metaitem("dustIridium")
+            dustEnderPearl = metaitem("dustEnderPearl")
+            dustEndSteel = metaitem("dustEndSteel")
+            dustVibrantAlloy = metaitem("dustVibrantAlloy")
+            dustEnderEye = metaitem("dustEnderEye")
+            dustSoularium = metaitem("dustSoularium")
+            dustTitanium = metaitem("dustTitanium")
+            dustVoid = metaitem("dustVoid")
+
+
         //Dust (Small)
             dustSmallThaumium = metaitem("dustSmallThaumium")
             dustSmallIron = metaitem("dustSmallIron")
+            dustSmallGalliumArsenide = metaitem("dustSmallGalliumArsenide")
+        //Frame
+            frameStainlessSteel = metaitem('frameStainlessSteel')
 
         //Foils
             foilSilicon = metaitem("foilSilicon")
@@ -239,6 +349,7 @@
             foilIgnis = metaitem('foilIgnisInfused')
             foilOrdo = metaitem('foilOrdoInfused')
             foilTerra = metaitem('foilTerraInfused')
+            foilGold = metaitem("foilGold")
         //Gear
             gearCobaltBrass = metaitem('gearCobaltBrass')
 
@@ -252,6 +363,9 @@
             gemOrdo = metaitem('gemOrdoInfused')
             gemTerra = metaitem('gemTerraInfused')
             gemCoke = metaitem("gemCoke")
+            gemQuartz = ore("gemQuartz")
+        //Gem (Flawless)
+            gemFlawlessEmerald = metaitem("gemFlawlessEmerald")
 
         //Ingots
             ingotIron = ore("ingotIron").first
@@ -260,6 +374,12 @@
             ingotWroughtIron = metaitem("ingotWroughtIron")
             ingotSteel = metaitem("ingotSteel")
             ingotThaumium = ore("ingotThaumium").first
+            ingotManasteel = ore("ingotManasteel").first
+            ingotRedAlloy = metaitem("ingotRedAlloy")
+            ingotPulsatingIron = metaitem("ingotPulsatingIron")
+            ingotEnergeticAlloy = metaitem("ingotEnergeticAlloy")
+            ingotDarkSteel = metaitem("ingotDarkSteel")
+            ingotSoularium = metaitem("ingotSoularium")
  
         //Lens
             lensFluix = metaitem("lensFluix")
@@ -308,6 +428,23 @@
             plateBrass = metaitem("plateBrass")
             plateSilver = metaitem("plateSilver")
             plateTitaniumCarbide = metaitem("plateTitaniumCarbide")
+            plateTreatedWood = metaitem("plateTreatedWood")
+            plateRedAlloy = metaitem("plateRedAlloy")
+            plateManasteel = metaitem("plateManasteel")
+            platePolyethylene = metaitem("platePlastic")
+            platePTFE = metaitem("platePolytetrafluoroethylene")
+            platePBI = metaitem("platePolybenzimidazole")
+            plateEnderPearl = metaitem("plateEnderPearl")
+            plateSoularium = metaitem("plateSoularium")
+            plateNaquadah = metaitem("plateNaquadah")
+            plateRoseGold = metaitem("plateRoseGold")
+            plateWood = metaitem("plateWood")
+            plateStellarAlloy = metaitem("plateStellarAlloy")
+            plateVibrantAlloy = metaitem("plateVibrantAlloy")
+            plateEndSteel = metaitem("plateEndSteel")
+            platePulsatingIron = metaitem("platePulsatingIron")
+            plateEnergeticAlloy = metaitem("plateEnergeticAlloy")
+
         //Plate (Double)
             plateDoubleFluixSteel = metaitem("plateDoubleFluixSteel")
             plateDoubleFluminium = metaitem("plateDoubleFluminium")
@@ -318,8 +455,29 @@
             plateDenseSteel = metaitem("plateDenseSteel")
         //Ring
             ringThaumium = metaitem("ringThaumium")
+            ringManasteel = metaitem("ringManasteel")
         //Rotor
             rotorSteel = metaitem('rotorSteel')
+        //Runes
+            // Elemental
+            runeWater = ore("runeWaterB").first
+            runeFire = ore("runeFireB").first
+            runeEarth = ore("runeEarthB").first
+            runeAir = ore("runeAirB").first
+            // Seasonal
+            runeSpring = ore("runeSpringB").first
+            runeSummer = ore("runeSummerB").first
+            runeAutumn = ore("runeAutumnB").first
+            runeWinter = ore("runeWinterB").first
+            // Sins
+            runeMana = ore("runeManaB").first
+            runeLust = ore("runeLustB").first
+            runeGluttony = ore("runeGluttonyB").first
+            runeGreed = ore("runeGreedB").first
+            runeSloth = ore("runeSlothB").first
+            runeWrath = ore("runeWrathB").first
+            runeEnvy = ore("runeEnvyB").first
+            runePride = ore("runePrideB").first
 
         //Saplings
             treeSapling = ore("treeSapling")
@@ -332,6 +490,14 @@
             stickAluminium = metaitem("stickAluminium")
             stickBlaze = ore("stickBlaze").first
             stickThaumium = metaitem("stickThaumium")
+            stickSteel = metaitem("stickSteel")
+            stickIron = metaitem("stickIron")
+            stickDarkSteel = metaitem("stickDarkSteel")
+            stickDiamond = metaitem("stickDiamond")
+            stickWroughtIron = metaitem("stickWroughtIron")
+            stickVibrantAlloy = metaitem("stickVibrantAlloy")
+            stickEnergeticAlloy = metaitem("stickEnergeticAlloy")
+            stickPulsatingIron = metaitem("stickPulsatingIron")
 
         //Screws
             screwFluixSteel = metaitem("screwFluixSteel")
@@ -345,6 +511,20 @@
             screwBronze = metaitem("screwBronze")
             screwSignalum = metaitem("screwInvar")
             screwEnderium = metaitem("screwInvar")
+            screwStainlessSteel = metaitem("screwStainlessSteel") 
+            screwGold = metaitem("screwGold")
+            screwManasteel = metaitem("screwManasteel")
+            screwSoularium = metaitem("screwSoularium")
+            screwRedAlloy = metaitem("screwRedAlloy")
+            screwOsmiridium = metaitem("screwOsmiridium")
+            screwWroughtIron = metaitem("screwWroughtIron")
+            screwDarkSteel = metaitem("screwDarkSteel")
+            screwIron = metaitem("screwIron")
+            screwVibrantAlloy = metaitem("screwVibrantAlloy")
+            screwEnergeticAlloy = metaitem("screwEnergeticAlloy")
+            screwStellarAlloy = metaitem("screwStellarAlloy")
+            screwPulsatingIron = metaitem("screwPulsatingIron")
+            screwEndSteel = metaitem("screwEndSteel")
         
         //Wire (Fine)
             wireFineFluix = metaitem("wireFineFluix")
@@ -353,6 +533,24 @@
             seedWheat = ore("seedWheat").first
             itemLeather = ore("itemLeather").first
             itemString = ore("string").first
+            itemManaString = ore("manaString").first
+            gtScreen = metaitem('cover.screen')
+            gtWirelessTransmitter = metaitem('wireless')
+            xuUpgradeBlank = ore("xuUpgradeBlank").first
+            itemElytra = item('minecraft:elytra')
+            itemCraftingTable = item('minecraft:crafting_table')
+            barsIron = ore("barsIron").first
+            itemPaper = item('minecraft:paper')
+            itemBottle = item('minecraft:glass_bottle')
+            itemBottleXp = item('minecraft:experience_bottle')
+        
+        // ContentTweaker
+            bouleFluix = item('greggenuity:fluixboule')
+            waferFluix = item('greggenuity:fluixwafer')
+            waferEngravedFluix = item('greggenuity:engravedfluixwafer')
+            chipFluix = item('greggenuity:fluixchip')
+            sieveZeolite = item('greggenuity:sieve')
+            sieveManasteel = item('greggenuity:manasieve')
 
 
 
@@ -378,4 +576,57 @@
         praemunio = aspect("praemunio")
         permutatio = aspect("permutatio")
         machina = aspect("machina")
+    // ======== Shards ======== //
+        crystalAlkimia = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'alkimia', 'amount': 1]]]) 
+        crystalAversio = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'aversio', 'amount': 1]]]) 
+        crystalCaeles = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'caeles', 'amount': 1]]]) 
+        crystalVentus = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'ventus', 'amount': 1]]]) 
+        crystalVinculum = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'vinculum', 'amount': 1]]]) 
+        crystalPotentia = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'potentia', 'amount': 1]]]) 
+        crystalVitreus = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'vitreus', 'amount': 1]]]) 
+        crystalSpiritus = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'spiritus', 'amount': 1]]]) 
+        crystalTenebrae = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'tenebrae', 'amount': 1]]]) 
+        crystalVolatus = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'volatus', 'amount': 1]]]) 
+        crystalVictus = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'victus', 'amount': 1]]]) 
+        crystalSensus = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'sensus', 'amount': 1]]]) 
+        crystalAuram = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'auram', 'amount': 1]]]) 
+        crystalPerditio = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'perditio', 'amount': 1]]]) 
+        crystalInstrumentum = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'instrumentum', 'amount': 1]]]) 
+        crystalPraecantatio = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'praecantatio', 'amount': 1]]]) 
+        crystalDesiderium = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'desiderium', 'amount': 1]]]) 
+        crystalAlienis = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'alienis', 'amount': 1]]]) 
+        crystalMachina = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'machina', 'amount': 1]]]) 
+        crystalImperium = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'imperium', 'amount': 1]]]) 
+        crystalIgnis = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'ignis', 'amount': 1]]]) 
+        crystalMotus = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'motus', 'amount': 1]]]) 
+        crystalCognitio = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'cognitio', 'amount': 1]]]) 
+        crystalPermutatio = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'permutatio', 'amount': 1]]]) 
+        crystalLux = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'lux', 'amount': 1]]]) 
+        crystalAqua = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'aqua', 'amount': 1]]]) 
+        crystalAer = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'aer', 'amount': 1]]]) 
+        crystalMortuus = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'mortuus', 'amount': 1]]]) 
+        crystalFluctus = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'fluctus', 'amount': 1]]]) 
+        crystalSonus = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'sonus', 'amount': 1]]]) 
+        crystalTerra = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'terra', 'amount': 1]]]) 
+        crystalDraco = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'draco', 'amount': 1]]]) 
+        crystalInfernum = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'infernum', 'amount': 1]]]) 
+        crystalVitium = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'vitium', 'amount': 1]]]) 
+        crystalFabrico = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'fabrico', 'amount': 1]]]) 
+        crystalMetallum = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'metallum', 'amount': 1]]]) 
+        crystalPraemunio = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'praemunio', 'amount': 1]]]) 
+        crystalExitium = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'exitium', 'amount': 1]]]) 
+        crystalExanimis = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'exanimis', 'amount': 1]]]) 
+        crystalGelum = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'gelum', 'amount': 1]]]) 
+        crystalBestia = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'bestia', 'amount': 1]]]) 
+        crystalHumanus = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'humanus', 'amount': 1]]]) 
+        crystalHerba = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'herba', 'amount': 1]]]) 
+        crystalOrdo = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'ordo', 'amount': 1]]]) 
+        crystalVisum = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'visum', 'amount': 1]]]) 
+        crystalVacuos = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'vacuos', 'amount': 1]]]) 
+        concentratedAer = item('greggenuity:concentratedaer')
+        concentratedAqua = item('greggenuity:concentratedaqua')
+        concentratedOrdo = item('greggenuity:concentratedordo')
+        concentratedPerditio = item('greggenuity:concentratedperditio')
+        concentratedIgnis = item('greggenuity:concentratedignis')
+        concentratedTerra = item('greggenuity:concentratedterra')
 // ================ Globals ================ //

@@ -149,7 +149,18 @@ import net.minecraftforge.event.furnace.FurnaceFuelBurnTimeEvent
                 item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key': 'vacuos', 'amount': 1]]]),
             ]
                 for (entry in thaumcraftShardOredict) {
-                    oreDict.add("anyShard", entry)
+                    oreDict.add("shardAny", entry)
+                }
+            def thaumcraftConcentratedShardOredict = [
+                concentratedAer,
+                concentratedAqua,
+                concentratedOrdo,
+                concentratedIgnis,
+                concentratedPerditio,
+                concentratedTerra
+            ]
+                for (entry in thaumcraftConcentratedShardOredict) {
+                    oreDict.add("shardConcentrated", entry)
                 }
         // ==== General Recipes ==== //
             // Crystal Condensing
@@ -197,6 +208,13 @@ import net.minecraftforge.event.furnace.FurnaceFuelBurnTimeEvent
                 .fluidOutputs(liquidvis * 10)
                 .EUt(40)
                 .duration(30)
+                .buildAndRegister()
+
+            extractor.recipeBuilder()
+                .inputs(anyconcentrated)
+                .fluidOutputs(liquidvis * 1000)
+                .EUt(40)
+                .duration(300)
                 .buildAndRegister()
         // ==== Salis Mundus ==== //
             // Crafting - 6 to 1
@@ -334,6 +352,34 @@ import net.minecraftforge.event.furnace.FurnaceFuelBurnTimeEvent
                     .fluidInputs(liquidmana * 2000)
                     .outputs(alumentum)
                     .buildAndRegister()
+            // Primitive Blast Furnace
+                // Coal - 2 per 90, 2 per 40
+                // Coke - 1 per 75, 1 per 30
+                // Alumentum - 1 per 60, 1 per 20
+                    // Ingot
+                    pbf.recipeBuilder()
+                        .duration(1200)
+                        .inputs(ingotIron, alumentum)
+                        .outputs(ingotSteel)
+                        .buildAndRegister()
+
+                    pbf.recipeBuilder()
+                        .duration(400)
+                        .inputs(ingotWroughtIron, alumentum)
+                        .outputs(ingotSteel)
+                        .buildAndRegister()
+                    // Block
+                    pbf.recipeBuilder()
+                        .duration(10800)
+                        .inputs(blockIron, alumentum * 9)
+                        .outputs(blockSteel)
+                        .buildAndRegister()
+                    
+                    pbf.recipeBuilder()
+                        .duration(3600)
+                        .inputs(blockWroughtIron, alumentum * 9)
+                        .outputs(blockSteel)
+                        .buildAndRegister()
         // ==== Ferrous Wood ==== //
             // Removing Plank to Nugget recipes
             //furnace.removeByInput(ferrousPlank)

@@ -19,4 +19,8 @@ content.createItem("fluixboule").register()
 content.createItem("fluixwafer").register()
 content.createItem("engravedfluixwafer").register()
 content.createItem("fluixchip").register()
+content.createItem("sieve").register()
+content.createItem("manasieve").register()
+
+content.createItem("blankmodule").register()
 

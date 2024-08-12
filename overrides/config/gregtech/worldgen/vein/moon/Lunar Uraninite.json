@@ -9,8 +9,7 @@
     "min_amount": 4,
     "max_amount": 6
   },
-  "generation_predicate": {"block": "galacticraftcore:basic_block_moon:4", "ore_dict": ["ore:stoneMoon"]},
-  "dimension_filter": ["dimension_id:-28"],
+  "dimension_filter": ["dimension_id:100"],
   "generator": {
     "type": "layered",
     "radius": [
