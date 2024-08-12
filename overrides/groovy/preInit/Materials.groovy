@@ -219,7 +219,7 @@ import gregtech.api.fluids.FluidBuilder;
         // ==== 32303: Manasteel ==== //
             def manasteel = new Material.Builder(32303, resource("greggenuity", "manasteel"))
                 .ingot().color(0x1f80ff).iconSet("metallic")
-                .components(material("steel") * 1, material("botanic_mana") * 1)
+                .components(material("steel") * 1, material("quintessence") * 1)
                 .cableProperties(128, 2, 0) // Lossless 
                 .flags(
                     "disable_decomposition", "generate_plate", "generate_rod",
@@ -373,12 +373,14 @@ import gregtech.api.fluids.FluidBuilder;
                 .components(material("aer_infused") * 1, material("aqua_infused") * 1, material("ordo_infused") * 1, material("perditio_infused") * 1, material("ignis_infused") * 1, material("terra_infused") * 1, )
                 .flags("disable_decomposition")
                 .build()
+            fluxsludge.setFormula("Qe?", true)
         // ==== 32321: Mana Sludge ==== //
             def manasludge = new Material.Builder(32321, resource("greggenuity", "mana_sludge"))
                 .liquid().colorAverage()
                 .components(material("concentrated_mana") * 1, material("flux_sludge") * 1)
                 .flags("disable_decomposition")
                 .build()
+            fluxsludge.setFormula("Qe?", true)
         // ==== 32322: Distilled Mana ==== //
             def distilledmana = new Material.Builder(32322, resource("greggenuity", "distilled_mana"))
                 .liquid().color(0x8da0c2)
@@ -387,8 +389,8 @@ import gregtech.api.fluids.FluidBuilder;
         // ==== 32323: Mithril ==== //
             def mithril = new Material.Builder(32323, resource("greggenuity", "mithril"))
                 .ingot().color(0xd6e5ff).iconSet("bright")
-                .rotorStats(7.5, 4.5, 2200)
-                .toolStats(toolBuilder(3.5, 3.5, 2000, 3))
+                .rotorStats(7.5f, 4.5f, 2200)
+                .toolStats(ToolProperty.Builder.of(4F, 4F, 2500, 3))
                 .flags(
                     "disable_decomposition", "generate_plate", "generate_rod",
                     "generate_ring", "generate_bolt_screw", "no_smelting"

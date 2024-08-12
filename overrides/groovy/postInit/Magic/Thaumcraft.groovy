@@ -344,12 +344,20 @@ import net.minecraftforge.event.furnace.FurnaceFuelBurnTimeEvent
                     .aspect(ignis * 10)
                     .aspect(perditio * 5)
                     .register()
-            // Chemreactor
-                chemreactor.recipeBuilder()
-                    .EUt(128)
+            // Autoclave
+                autoclave.recipeBuilder()
+                    .EUt(120)
                     .duration(2400)
                     .inputs(gemCoke)
-                    .fluidInputs(liquidmana * 2000)
+                    .fluidInputs(liquidmanadistilled * 2000)
+                    .outputs(alumentum)
+                    .buildAndRegister()
+
+                autoclave.recipeBuilder()
+                    .EUt(120)
+                    .duration(1200)
+                    .inputs(gemCoke)
+                    .fluidInputs(liquidmanaconcentrated * 1000)
                     .outputs(alumentum)
                     .buildAndRegister()
             // Primitive Blast Furnace

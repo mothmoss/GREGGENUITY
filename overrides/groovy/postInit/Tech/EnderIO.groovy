@@ -83,8 +83,12 @@
             def eioConduitItem = item('enderio:item_item_conduit')
             def eioConduitFluid = item('enderio:item_liquid_conduit', 2)
             def eioConduitRedstone = item('enderio:item_redstone_conduit')
-            def eioConduitME = item('enderio:item_me_conduit', 1)                    
-            
+            def eioConduitME = item('enderio:item_me_conduit', 1)
+            def eioConduitFacade = item('enderio:item_conduit_facade')
+            def eioFilterBase = item('enderio:item_basic_item_filter')
+            def eioFilterAdvanced = item('enderio:item_advanced_item_filter')
+            def eioFilterRedstone = item('enderio:item_material', 60)
+            def meCableDense = item('appliedenergistics2:part', 76)
 
     // ======== Hiding ======== //
         // ==== Hidemap ==== //
@@ -381,8 +385,13 @@
                     .property("temperature", 3000)
                     .buildAndRegister()
     // ======== Fluids ======== //
+        mixer.recipeBuilder()
+            .inputs(dustMeat)
+            .fluidInputs(liquiddistilledwater * 100)
+            .fluidOutputs(nutrientdistillation * 100)
+            .EUt(7).duration(120)
+            .buildAndRegister()
         // Do I plan on using them? Recipes from ZS
-            // Distilled Water + Dust Meat = Nutrient Distillation 
             // Nutrient Distillation + Enderpearl = Ender Distillation 
             // Ender Distillation + Precient Powder/Dust Pulsating Iron = Vapor of Levity 
             // Naptha + Dust Blaze/Dust Redstone = Firewater
@@ -701,7 +710,7 @@
                 assembler.recipeBuilder()
                     .EUt(120).duration(400)
                     .inputs(eioChassis, eioRodExperience, screwDarkSteel * 16, plateEnergeticAlloy * 8, blockPulsatingIron)
-                    .fluidInputs(ender * 720)
+                    .fluidInputs(liquidender * 720)
                     .outputs(eioExperienceObelisk)
                     .buildAndRegister()
             // Inhibitor 
@@ -733,7 +742,7 @@
                 assembler.recipeBuilder()
                     .EUt(120).duration(400)
                     .inputs(eioChassis, crystalPulsating, plateEnergeticAlloy * 6, screwDarkSteel * 24, blockPulsatingIron)
-                    .fluidInputs(ender * 720)
+                    .fluidInputs(liquidender * 720)
                     .outputs(eioObeliskRelocator)
                     .buildAndRegister()
     // ======== Visuals ======== //
@@ -772,5 +781,124 @@
 
         // ==== Removing ==== //
             furnace.removeByInput(item('enderio:item_material', 22))
-        // ==== Removing ==== //
+        // ==== Conduit Types ==== //
+            // ==== Redstone - LV ==== //
+                crafting.removeByOutput(eioConduitRedstone)
+                assembler.recipeBuilder()
+                    .EUt(16).duration(80)
+                    .inputs(wireDoubleRedAlloy * 8, platePulsatingIron * 4)
+                    .fluidInputs(liquidender * 144)
+                    .outputs(eioConduitRedstone * 8)
+                    .buildAndRegister()  
+            // ==== Item - MV ==== // 
+                crafting.removeByOutput(eioConduitItem)
+                assembler.recipeBuilder()
+                    .EUt(16).duration(80)
+                    .inputs(pipeNormalPulsatingIron * 4, plateEnergeticAlloy * 4, screwPulsatingIron * 16)
+                    .fluidInputs(liquidender * 144)
+                    .outputs(eioConduitItem * 4)
+                    .buildAndRegister()  
+            // ==== Fluid - HV ==== // 
+                crafting.removeByOutput(eioConduitFluid)
+                assembler.recipeBuilder()
+                    .EUt(16).duration(80)
+                    .inputs(pipeNormalVibrantAlloy * 4, plateVibrantAlloy * 4, screwVibrantAlloy * 16)
+                    .fluidInputs(liquidender * 144)
+                    .outputs(eioConduitFluid * 4)
+                    .buildAndRegister()
+            // ==== ME - LV ==== // 
+                crafting.removeByOutput(eioConduitME)
+                assembler.recipeBuilder()
+                    .EUt(16).duration(80)
+                    .inputs(meCableDense * 4, plateFluixSteel * 4, screwFluixSteel * 16)
+                    .fluidInputs(liquidender * 144)
+                    .outputs(eioConduitME * 4)
+                    .buildAndRegister()  
+        // ==== Filters ==== //
+            // Base Filters
+                // Normal
+                    crafting.removeByOutput(eioFilterBase)
+                    crafting.addShaped("ggn_eio_filterbase", eioFilterBase * 4,
+                    [
+                        [screwPulsatingIron, eioPaperBlack, screwPulsatingIron],
+                        [eioPaperBlack, plateDarkSteel, eioPaperBlack],
+                        [screwPulsatingIron, eioPaperBlack, screwPulsatingIron],
+                    ])
+                // Advanced
+                    crafting.removeByOutput(eioFilterAdvanced)
+                    crafting.addShaped("ggn_eio_advanced", eioFilterAdvanced,
+                    [
+                        [eioFilterBase, screwDarkSteel, eioFilterBase],
+                        [screwDarkSteel, plateStainlessSteel, screwDarkSteel],
+                        [eioFilterBase, screwDarkSteel, eioFilterBase]
+                    ])
+                // Redstone
+                    crafting.removeByOutput(eioFilterRedstone)
+                    crafting.addShaped("ggn_eio_redstone", eioFilterRedstone,
+                    [
+                        [screwRedAlloy, eioPaperBlack, screwRedAlloy],
+                        [eioPaperBlack, plateDarkSteel, eioPaperBlack],
+                        [screwRedAlloy, eioPaperBlack, screwRedAlloy],
+                    ])
+
+
+            // Chisel Groups
+                mods.chisel.carving.addGroup("EIOFilters") 
+                mods.chisel.carving.addGroup("EIOBigFilters") 
+                mods.chisel.carving.addGroup("EIORedstoneFilters") 
+                // Filters
+                    def eioItem = [
+                        item("enderio:item_basic_item_filter"),
+                        item("enderio:item_mod_item_filter"),
+                        item("enderio:item_power_item_filter"),                                
+                        item("enderio:item_soul_filter_normal"),
+                        item("enderio:item_enchantment_filter_normal"),
+                        item("enderio:item_existing_item_filter"),
+                        item("enderio:item_fluid_filter"),
+                        item("enderio:item_limited_item_filter"),
+                        item("enderio:item_extract_speed_upgrade"),
+                        item("enderio:item_extract_speed_downgrade")
+                    ]
+                    for (entry in eioItem) {
+                        mods.chisel.carving.addVariation("EIOFilters", entry)
+                    }
+                // Advanced Filters
+                    def eioItem2 = [
+                        item("enderio:item_advanced_item_filter"),
+                        item("enderio:item_big_item_filter"),
+                        item("enderio:item_big_advanced_item_filter"),
+                        item("enderio:item_enchantment_filter_big"),
+                        item("enderio:item_soul_filter_big"),
+                    ]
+                    for (entry in eioItem2) {
+                        mods.chisel.carving.addVariation("EIOBigFilters", entry)
+                    }
+                // Redstone Filters
+                    def eioItem3 = [
+                        item("enderio:item_material:60"),
+                        item("enderio:item_redstone_timer_filter"),
+                        item("enderio:item_redstone_sensor_filter"),
+                        item("enderio:item_redstone_or_filter"),
+                        item("enderio:item_redstone_not_filter"),
+                        item("enderio:item_redstone_nor_filter"),
+                        item("enderio:item_redstone_nand_filter"),
+                        item("enderio:item_redstone_counting_filter"),
+                        item("enderio:item_redstone_and_filter"),
+                        item("enderio:item_redstone_xor_filter"),
+                        item("enderio:item_redstone_xnor_filter"),
+                        item("enderio:item_redstone_toggle_filter")
+                    ]
+                    for (entry in eioItem3) {
+                        mods.chisel.carving.addVariation("EIORedstoneFilters", entry)
+                    }
+
+        // ==== Visuals ==== //
+            // Facade
+                crafting.remove("enderio:conduit_facade_transparent")
+                crafting.addShaped("ggn_eio_facade", eioConduitFacade * 16,
+                [
+                    [dustClay, dustPulsatingIron, dustClay],
+                    [dustPulsatingIron, anywool, dustPulsatingIron],
+                    [dustClay, dustPulsatingIron, dustClay]
+                ])
 // ================ EnderIO ================ //

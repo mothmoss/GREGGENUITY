@@ -94,6 +94,26 @@
             gtMoldAnvil = metaitem('shape.mold.anvil')
             gtMoldGearSmall = metaitem('shape.mold.gear.small')
             gtMoldRotor = metaitem('shape.mold.rotor')
+            gtMoldBlank = metaitem('shape.empty')
+            gtExtruderPlate = metaitem('shape.extruder.plate')
+            gtExtruderRod = metaitem('shape.extruder.rod')
+            gtExtruderBolt = metaitem('shape.extruder.bolt')
+            gtExtruderRing = metaitem('shape.extruder.ring')
+            gtExtruderCell = metaitem('shape.extruder.cell')
+            gtExtruderIngot = metaitem('shape.extruder.ingot')
+            gtExtruderWire = metaitem('shape.extruder.wire')
+            gtExtruderPipeTiny = metaitem('shape.extruder.pipe.tiny')
+            gtExtruderPipeSmall = metaitem('shape.extruder.pipe.small')
+            gtExtruderPipeNormal = metaitem('shape.extruder.pipe.normal')
+            gtExtruderPipeLarge = metaitem('shape.extruder.pipe.large')
+            gtExtruderPipeHuge = metaitem('shape.extruder.pipe.huge')
+            gtExtruderBlock = metaitem('shape.extruder.block')
+            gtExtruderGear = metaitem('shape.extruder.gear')
+            gtExtruderBottle = metaitem('shape.extruder.bottle')
+            gtExtruderFoil = metaitem('shape.extruder.foil')
+            gtExtruderGearSmall = metaitem('shape.extruder.gear_small')
+            gtExtruderRodLong = metaitem('shape.extruder.rod_long')
+            gtExtruderRotor = metaitem('shape.extruder.rotor')
     // ======== Fluids ======== //
         solder = fluid("soldering_alloy")
         lubricant = fluid("lubricant")
@@ -107,7 +127,8 @@
         liquidrubber = fluid("rubber")
         liquidsteel = fluid("steel")
         liquidborosilicate = fluid("borosilicate_glass")
-        liquidmana = fluid("botanic_mana")
+        liquidmanaconcentrated = fluid("concentrated_mana")
+        liquidmanadistilled = fluid("distilled_mana")
         liquidplastic = fluid("plastic")
         liquidptfe = fluid("polytetrafluoroethylene")
         liquidpbi = fluid("polybenzimidazole")
@@ -126,6 +147,7 @@
         liquidpulsatingiron = fluid("pulsating_iron")
         liquidexperience = fluid("experience")
         liquiddeath = fluid("liquid_death")
+        nutrientdistillation = fluid("nutrient_distillation")
     
     // ======== Metaitems ======== //
         //ULV
@@ -246,6 +268,7 @@
             anyshard = ore("shardAny")
             anyconcentrated = ore("shardConcentrated")
             anywoodplank = ore("plankWood")
+            anywool = ore("wool")
         //Batteries
             batteryMvLithium = metaitem('battery.re.mv.lithium')
             batteryEvLapotron = metaitem('lapotron_crystal')
@@ -322,6 +345,8 @@
             dustSoularium = metaitem("dustSoularium")
             dustTitanium = metaitem("dustTitanium")
             dustVoid = metaitem("dustVoid")
+            dustMeat = metaitem("dustMeat")
+            dustClay = metaitem("dustClay")
 
 
         //Dust (Small)
@@ -453,6 +478,7 @@
         //Plate (Dense)
             plateDenseAquaInfused = metaitem("plateDenseAquaInfused")
             plateDenseSteel = metaitem("plateDenseSteel")
+
         //Ring
             ringThaumium = metaitem("ringThaumium")
             ringManasteel = metaitem("ringManasteel")
@@ -525,7 +551,13 @@
             screwStellarAlloy = metaitem("screwStellarAlloy")
             screwPulsatingIron = metaitem("screwPulsatingIron")
             screwEndSteel = metaitem("screwEndSteel")
-        
+        //Transport
+            // Item
+                pipeNormalPulsatingIron = metaitem('pipeNormalItemPulsatingIron')
+            // Fluid
+                pipeNormalVibrantAlloy = metaitem('pipeNormalFluidVibrantAlloy')
+            // Energy
+                wireDoubleRedAlloy = metaitem('wireGtDoubleRedAlloy')
         //Wire (Fine)
             wireFineFluix = metaitem("wireFineFluix")
         
