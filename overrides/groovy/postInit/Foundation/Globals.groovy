@@ -345,6 +345,7 @@
             dustVoid = metaitem("dustVoid")
             dustMeat = metaitem("dustMeat")
             dustClay = metaitem("dustClay")
+            dustSilicon = metaitem("dustSilicon")
 
 
         //Dust (Small)
@@ -595,6 +596,7 @@
             glasstube = metaitem('component.glass.tube')
             itemCauldron = item('minecraft:cauldron')
             itemHopper = item('minecraft:hopper')
+            waferSilicon = metaitem('wafer.silicon')
 
         // ContentTweaker
             bouleFluix = item('greggenuity:fluixboule')

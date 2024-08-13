@@ -317,21 +317,14 @@ import team.chisel.api.carving.CarvingUtils
                 .inputs(dustFluix.copy().copy() * 1)
                 .outputs(pearlFluix)
                 .buildAndRegister()
-        // ==== Fluix Boules ==== //
-            // == Boules == //
-                ebf.recipeBuilder()
-                    .inputs(dustFluix * 32, dustCertusQuartz)
-                    .outputs(bouleFluix)
-                    .EUt(120)
-                    .duration(8000)
-                    .property("temperature", 1200)
-                    .buildAndRegister()
-            // == To Wafers == //
-                cutter.recipeBuilder()
-                    .inputs(bouleFluix)
-                    .outputs(waferFluix * 16)
-                    .EUt(30)
-                    .duration(600)
+        // ==== Fluix Chips ==== //
+            // == Wafers == //
+                chembath.recipeBuilder()
+                    .inputs(waferSilicon)
+                    .fluidInputs(liquidfluix * 288)
+                    .outputs(waferFluix)
+                    .EUt(16)
+                    .duration(60)
                     .buildAndRegister()
             // == Engraving == //
                 laserengraver.recipeBuilder()
@@ -367,27 +360,33 @@ import team.chisel.api.carving.CarvingUtils
             // Printed Circuits
                 // Silicon Printed
                     press.recipeBuilder()
-                        .EUt(7).duration(400)
+                        .EUt(7).duration(100)
                         .inputs(plateFluix.copy() * 1, foilSilicon.copy() * 4)
                         .outputs(siliconPrinted.copy() * 1)
                         .buildAndRegister()
+
+                    press.recipeBuilder()
+                        .EUt(7).duration(200)
+                        .inputs(plateFluix * 1, dustSilicon * 4)
+                        .outputs(siliconPrinted)
+                        .buildAndRegister()
                 // Printed Engineering
                     assembler.recipeBuilder()
-                        .EUt(16).duration(600)
+                        .EUt(16).duration(300)
                         .inputs(siliconPrinted.copy() * 1, nandChip.copy() * 2, plateDiamond.copy() * 2, screwFluix.copy() * 4, chipFluix)
                         .fluidInputs(liquidredalloy * 288)
                         .outputs(engineeringPrinted)
                         .buildAndRegister()
                 // Printed Calculation
                     assembler.recipeBuilder()
-                        .EUt(16).duration(600)
+                        .EUt(16).duration(300)
                         .inputs(siliconPrinted.copy() * 1, nandChip.copy() * 2, plateCertusQuartz.copy() * 2, screwFluix.copy() * 4, chipFluix)
                         .fluidInputs(liquidredalloy * 288)
                         .outputs(calculationPrinted)
                         .buildAndRegister()
                 // Printed Logic
                     assembler.recipeBuilder()
-                        .EUt(16).duration(600)
+                        .EUt(16).duration(300)
                         .inputs(siliconPrinted.copy() * 1, nandChip.copy() * 2, plateGold.copy() * 2, screwFluix.copy() * 4, chipFluix)
                         .fluidInputs(liquidredalloy * 288)
                         .outputs(logicPrinted)
@@ -395,21 +394,21 @@ import team.chisel.api.carving.CarvingUtils
             // Processors
                 // Engineering
                     laserengraver.recipeBuilder()
-                        .EUt(32).duration(1000)
+                        .EUt(30).duration(500)
                         .inputs(engineeringPrinted)
                         .notConsumable(lensFluix)
                         .outputs(engineeringProcessor.copy() * 3)
                         .buildAndRegister()
                 // Calculation
                     laserengraver.recipeBuilder()
-                        .EUt(32).duration(1000)
+                        .EUt(32).duration(500)
                         .inputs(calculationPrinted)
                         .notConsumable(lensFluix)
                         .outputs(calculationProcessor.copy() * 3)
                         .buildAndRegister()
                 // Logic
                     laserengraver.recipeBuilder()
-                        .EUt(32).duration(1000)
+                        .EUt(32).duration(500)
                         .inputs(logicPrinted)
                         .notConsumable(lensFluix)
                         .outputs(logicProcessor.copy() * 3)

@@ -96,7 +96,6 @@ import gregtech.api.recipes.category.RecipeCategories
             def btFlaskSoul = item('botania:brewflask').withNbt(['brewKey': 'soulCross'])
             def eioBrokenSpawner = item("enderio:item_broken_spawner")
             def aaBrokenShard = item('actuallyadditions:item_misc', 20)
-            
         // Visuals
             def eioFurnitureLadder = item('enderio:block_dark_steel_ladder')
             def eioFurnitureTrapdoor = item('enderio:block_dark_steel_trapdoor')

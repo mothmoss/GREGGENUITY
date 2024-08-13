@@ -40,13 +40,11 @@ import gregtech.api.unification.ore.OrePrefix
             .fluidInputs(fluid("dilute_petrotheum") * 144)
             .fluidOutputs(fluid("petrotheum") * 72)
             .buildAndRegister()
-
-
     // ======== Machine Maps ======== //
         // ==== Autoclave ==== //
             // Rationale
                 // Uses 250 petrotheum for x2 ore
-                // FLAGGED: Should output diluted petrotheum?metaitem("Diluted )Ea rthen Waste?"
+                // FLAGGED: Should output diluted Earthen Waste?"
             // Map
                 def automap = [
                     [metaitem("crushedPurifiedAluminium")]            : [metaitem("crushedCentrifugedAluminium") * 2, metaitem("dustTinyBauxite") * 3],
@@ -176,13 +174,4 @@ import gregtech.api.unification.ore.OrePrefix
                     .fluidOutputs(fluid("dilute_petrotheum") * 144)
                     .buildAndRegister()
                 }
-
-
-
-
-
-
-
-
-
 // ================ Ore Processing ================ //

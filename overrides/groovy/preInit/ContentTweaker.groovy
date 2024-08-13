@@ -15,7 +15,6 @@ content.createItem("concentratedperditio").register()
 content.createItem("concentratedignis").register()
 content.createItem("concentratedterra").register()
 
-content.createItem("fluixboule").register()
 content.createItem("fluixwafer").register()
 content.createItem("engravedfluixwafer").register()
 content.createItem("fluixchip").register()
