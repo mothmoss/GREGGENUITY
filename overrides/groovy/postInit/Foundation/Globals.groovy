@@ -137,6 +137,7 @@
         liquidconcrete = fluid("concrete")
         liquidstarlight = fluid('astralsorcery.liquidstarlight')
         liquidwater = fluid("water")
+        liquidlava = fluid("lava")
         liquiddistilledwater = fluid("distilled_water")
         mercury = fluid("mercury")
         acetone = fluid("acetone")
@@ -256,10 +257,6 @@
         //Machines
         assemblerLv = metaitem('assembler.lv')
 
-        //Misc
-        shuttercover = metaitem('cover.shutter')
-        glasstube = metaitem('component.glass.tube')
-
     // ======== General ======== //
         //Any
             anypanel = ore("itemIlluminatedPanel")
@@ -283,7 +280,8 @@
             blockDiamond = ore("blockDiamond")
             blockEnderPearl = metaitem("blockEnderPearl")
             blockQuartz = ore("blockQuartz")
-            blockPulsatingIron = ore("blockPulsatingIron")            
+            blockPulsatingIron = ore("blockPulsatingIron") 
+            blockAquaInfused = ore("blockAquaInfused")           
         //Block (Glass)
             blockGlassTempered = item('gregtech:transparent_casing')
             blockGlassInvar = item('thermalfoundation:glass_alloy', 2)
@@ -353,6 +351,13 @@
             dustSmallThaumium = metaitem("dustSmallThaumium")
             dustSmallIron = metaitem("dustSmallIron")
             dustSmallGalliumArsenide = metaitem("dustSmallGalliumArsenide")
+
+        //Dust (Tiny)
+            dustTinyDarkSteel = metaitem("dustTinyDarkSteel")
+            dustTinyIron = metaitem("dustTinyIron")
+            dustTinyWood = metaitem("dustTinyWood")
+
+
         //Frame
             frameStainlessSteel = metaitem('frameStainlessSteel')
 
@@ -405,7 +410,9 @@
             ingotEnergeticAlloy = metaitem("ingotEnergeticAlloy")
             ingotDarkSteel = metaitem("ingotDarkSteel")
             ingotSoularium = metaitem("ingotSoularium")
- 
+            ingotSteelMagnetic = metaitem('ingotSteelMagnetic')
+
+
         //Lens
             lensFluix = metaitem("lensFluix")
 
@@ -469,6 +476,12 @@
             plateEndSteel = metaitem("plateEndSteel")
             platePulsatingIron = metaitem("platePulsatingIron")
             plateEnergeticAlloy = metaitem("plateEnergeticAlloy")
+            plateIridium = metaitem("plateIridium")
+            plateSilicon = metaitem("plateSilicon")
+        
+        // Nuggets
+            nuggetDarkSteel = metaitem("nuggetDarkSteel") 
+            nuggetIron = metaitem("nuggetDarkSteel") 
 
         //Plate (Double)
             plateDoubleFluixSteel = metaitem("plateDoubleFluixSteel")
@@ -482,6 +495,8 @@
         //Ring
             ringThaumium = metaitem("ringThaumium")
             ringManasteel = metaitem("ringManasteel")
+            ringIron = metaitem("ringIron")
+            ringDarkSteel = metaitem("ringDarkSteel")
         //Rotor
             rotorSteel = metaitem('rotorSteel')
         //Runes
@@ -524,6 +539,7 @@
             stickVibrantAlloy = metaitem("stickVibrantAlloy")
             stickEnergeticAlloy = metaitem("stickEnergeticAlloy")
             stickPulsatingIron = metaitem("stickPulsatingIron")
+            stickSteelMagnetic = metaitem('stickSteelMagnetic')
 
         //Screws
             screwFluixSteel = metaitem("screwFluixSteel")
@@ -575,7 +591,11 @@
             itemPaper = item('minecraft:paper')
             itemBottle = item('minecraft:glass_bottle')
             itemBottleXp = item('minecraft:experience_bottle')
-        
+            shuttercover = metaitem('cover.shutter')
+            glasstube = metaitem('component.glass.tube')
+            itemCauldron = item('minecraft:cauldron')
+            itemHopper = item('minecraft:hopper')
+
         // ContentTweaker
             bouleFluix = item('greggenuity:fluixboule')
             waferFluix = item('greggenuity:fluixwafer')

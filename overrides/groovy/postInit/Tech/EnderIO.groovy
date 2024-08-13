@@ -1,4 +1,5 @@
 // Imports
+import gregtech.api.recipes.category.RecipeCategories
 
 // ================ EnderIO ================ //
     // ======== Definitions ======== //
@@ -6,6 +7,8 @@
             def eioChassis = item('enderio:item_material', 1)
             def eioTankNormal = item('enderio:block_tank')
             def eioTankPressurized = item('enderio:block_tank', 1)
+            def eioEndervoir = item('enderio:block_reservoir')
+            def eioOmnivoir = item('enderio:block_omni_reservoir')
         // Crystals
             def crystalPulsating = item('enderio:item_material', 14)
             def crystalVibrant = item('enderio:item_material', 15)
@@ -63,6 +66,43 @@
             def eioRodExperience = item('enderio:item_xp_transfer')
             def tcBrain = item('thaumcraft:brain')
             def eioMagnet = item('enderio:item_magnet')
+
+            def tcEverfullUrn = item('thaumcraft:everfull_urn')
+            def gtWaterCover = metaitem('cover.infinite_water')
+            def eioVacuumChest = item('enderio:block_vacuum_chest')
+            def eioTravelAnchor = item('enderio:block_travel_anchor')
+            def eioExitRail = item('enderio:block_exit_rail')
+            def eioPaintingMachine = item('enderio:block_painter')
+
+            def itemRail = item('minecraft:rail')
+            def itemPiston = item('minecraft:piston')
+            def itemTrapdoorIron = item('minecraft:iron_trapdoor')
+            def itemDoorIron = item('minecraft:iron_door')
+
+            def eioLightElectric = item('enderio:block_electric_light')
+            def eioLightElectricInv = item('enderio:block_electric_light', 1)
+            def eioLight = item('enderio:block_electric_light', 2)
+            def eioLightInv = item('enderio:block_electric_light', 3)
+            def eioLightWireless = item('enderio:block_electric_light', 4)
+            def eioLightWirelessInv = item('enderio:block_electric_light', 5)
+
+            def eioObsidianReinforced = item('enderio:block_reinforced_obsidian')
+            def eioSoulBinder = item('enderio:block_soul_binder')
+            def eioSpawner = item('enderio:block_powered_spawner')
+            def eioTravellingStaff = item('enderio:item_travel_staff')
+            def eioTesseract = item('enderio:block_transceiver')
+            def eioVacuumChestXp = item('enderio:block_xp_vacuum')
+            def tcVoidSeed = item('thaumcraft:void_seed')
+            def btFlaskSoul = item('botania:brewflask').withNbt(['brewKey': 'soulCross'])
+            def eioBrokenSpawner = item("enderio:item_broken_spawner")
+            def aaBrokenShard = item('actuallyadditions:item_misc', 20)
+            
+        // Visuals
+            def eioFurnitureLadder = item('enderio:block_dark_steel_ladder')
+            def eioFurnitureTrapdoor = item('enderio:block_dark_steel_trapdoor')
+            def eioFurnitureDoor = item('enderio:block_dark_steel_door')
+            def eioFurnitureAnvil = item('enderio:block_dark_steel_anvil')
+            def eioFurnitureBars = item('enderio:block_dark_iron_bars')
         // Machines
             def eioWirelessCharger = item('enderio:block_wireless_charger')
             def eioWirelessChargerAntenna = item('enderio:block_normal_wireless_charger')
@@ -181,6 +221,7 @@
             item("enderio:item_inventory_charger"),
             item("enderio:item_inventory_charger_vibrant"),
             item("enderio:item_staff_of_levity"),
+            item('enderio:item_staff_of_levity').withNbt(['enderio.darksteel.upgrade.energyUpgrade': ['level': 3, 'energy': 1000000], 'enderio:famount': 8000]),
             item("enderio:block_death_pouch"),
             item("enderio:block_inventory_panel"),
             item("enderio:item_inventory_remote"),
@@ -550,6 +591,14 @@
                         .EUt(30)
                         .duration(260)
                         .buildAndRegister()
+            // == Darksteel Upgrades == //
+                // Blank
+                crafting.addShaped("ggn_eio_upgradeblank", eioUpgradeBlank,
+                [
+                    [plateDarkSteel, plateDarkSteel, plateDarkSteel],
+                    [screwDarkSteel, eioPaperBlack, screwDarkSteel],
+                    [plateDarkSteel, plateDarkSteel, plateDarkSteel]
+                ])
         // ==== Fluid Tanks ==== //
             // Normal
                 crafting.removeByOutput(eioTankNormal)
@@ -567,6 +616,71 @@
                     [plateGlass, eioTankNormal, plateGlass],
                     [plateDarkSteel, barsDarkSteel, plateDarkSteel],
                 ])
+        // ==== Endervoir ==== //
+            // Omnivoir
+                crafting.removeByOutput(eioOmnivoir)
+                crafting.addShaped("ggn_eio_omnivoir", eioOmnivoir * 4,
+                [
+                    [blockGlassFusedQuartz, plateWroughtIron, blockGlassFusedQuartz],
+                    [plateWroughtIron, itemCauldron, plateWroughtIron],
+                    [blockGlassFusedQuartz, plateWroughtIron, blockGlassFusedQuartz]
+                ])
+            // Endervoir
+                crafting.removeByOutput(eioEndervoir)
+                crafting.addShaped("ggn_eio_endervoirmagic", eioEndervoir * 4,
+                [
+                    [blockAquaInfused, plateGlass, blockAquaInfused],
+                    [plateGlass, tcEverfullUrn, plateGlass],
+                    [blockAquaInfused, plateGlass, blockAquaInfused]
+                ])
+
+                crafting.addShaped("ggn_eio_endervoirtech", eioEndervoir * 4,
+                [
+                    [blockAquaInfused, plateGlass, blockAquaInfused],
+                    [plateGlass, pumpMv, plateGlass],
+                    [blockAquaInfused, plateGlass, blockAquaInfused]
+                ])
+            // Infinite Water Cover
+                mods.gregtech.assembler.removeByInput(480, [metaitem('electric.pump.hv') * 2, item('minecraft:cauldron'), metaitem('circuit.advanced_integrated')], null)
+                crafting.addShaped("ggn_eio_gtwatercover", gtWaterCover * 2,
+                [
+                    [plateDenseAquaInfused, plateIridium, plateDenseAquaInfused],
+                    [pumpIv, circuitIv, pumpIv],
+                    [plateDenseAquaInfused, plateIridium, plateDenseAquaInfused],
+                ])
+
+        // ==== Travel Anchor ==== //
+            crafting.removeByOutput(eioTravelAnchor)
+            assembler.recipeBuilder()
+                .EUt(16).duration(200)
+                .inputs(eioChassis, crystalEnder, platePulsatingIron * 6, screwPulsatingIron * 24)
+                .fluidInputs(liquidender * 432)
+                .outputs(eioTravelAnchor * 2)
+                .buildAndRegister()
+        // ==== Exit Rail ==== //
+            crafting.removeByOutput(itemRail)
+            crafting.removeByOutput(eioExitRail)
+            assembler.recipeBuilder()
+                .inputs(itemRail, itemPiston, plateIron, plateRedAlloy)
+                .outputs(eioExitRail)
+                .EUt(7).duration(20)
+                .buildAndRegister()
+        // ==== Staff of Traveling ==== //
+            crafting.removeByOutput(eioTravellingStaff)
+            crafting.addShaped("ggn_eio_stafftravel", eioTravellingStaff,
+            [
+                [screwPulsatingIron, plateVibrantAlloy, crystalEnder],
+                [gtfile, stickVibrantAlloy, plateVibrantAlloy],
+                [stickVibrantAlloy, gtscrewdriver, screwPulsatingIron]
+            ])
+        // ==== Electromagnet ==== //
+            crafting.removeByOutput(eioMagnet)
+            crafting.addShaped("ggn_eio_magnet", eioMagnet,
+            [
+                [screwRedAlloy, ringDarkSteel, screwRedAlloy],
+                [stickSteelMagnetic, gtscrewdriver, stickSteelMagnetic],
+                [ingotSteelMagnetic, gtfile, ingotSteelMagnetic]
+            ])
     // ======== Components ======== //
         // ==== Chassis ==== //
             crafting.addShaped("ggn_eio_chassis", eioChassis,
@@ -745,6 +859,61 @@
                     .fluidInputs(liquidender * 720)
                     .outputs(eioObeliskRelocator)
                     .buildAndRegister()
+        // ==== Painting Machine ==== //
+            crafting.removeByOutput(eioPaintingMachine)
+            crafting.addShaped("ggn_eio_painter", eioPaintingMachine,
+            [
+                [platePulsatingIron, screwGold, platePulsatingIron],
+                [platePulsatingIron, eioChassis, platePulsatingIron],
+                [platePulsatingIron, screwGold, platePulsatingIron]
+            ])
+        // ==== Tranceiver ==== //
+            crafting.removeByOutput(eioTesseract)
+            assembler.recipeBuilder()
+                .inputs(eioChassis * 2, circuitIv * 16, sensorEv * 8, emitterEv * 8, plateVibrantAlloy * 16, screwVibrantAlloy * 64)
+                .fluidInputs(liquidender * 8000)
+                .outputs(eioTesseract * 2)
+                .EUt(2000).duration(600)
+                .buildAndRegister()
+
+            assembler.recipeBuilder()
+                .inputs(eioChassis * 2, tcVoidSeed * 2, circuitIv * 8, sensorEv * 4, emitterEv * 4, plateVibrantAlloy * 16, screwVibrantAlloy * 64)
+                .fluidInputs(liquidender * 8000)
+                .outputs(eioTesseract * 2)
+                .EUt(2000).duration(600)
+                .buildAndRegister()
+        // ==== Soul Binder ==== //
+            crafting.removeByOutput(eioSoulBinder)
+            crafting.addShaped("ggn_eio_soulbinder", eioSoulBinder,
+            [
+                [plateSoularium, btFlaskSoul, plateSoularium],
+                [circuitIv, eioChassis, circuitIv],
+                [plateSoularium, blockDarkSteel, plateSoularium]
+            ])
+        // ==== Powered Spawner ==== //
+            crafting.removeByOutput(eioSpawner)
+            assembler.recipeBuilder()
+                .EUt(500).duration(200)
+                .inputs(eioChassis, eioBrokenSpawner, aaBrokenShard * 8, plateDarkSteel * 32)
+                .outputs(eioSpawner)
+                .buildAndRegister()
+        // ==== Vacuum Chest ==== //
+            crafting.removeByOutput(eioVacuumChest)
+            crafting.addShaped("ggn_eio_vacuumchest", eioVacuumChest,
+            [
+                [platePulsatingIron, itemHopper, platePulsatingIron],
+                [stickPulsatingIron, anychest, stickPulsatingIron],
+                [platePulsatingIron, platePulsatingIron, platePulsatingIron]
+            ])
+        // ==== Experience Vacuum ==== //
+            crafting.removeByOutput(eioVacuumChestXp)
+            crafting.addShaped("ggn_eio_vacuumchestxp", eioVacuumChestXp,
+            [
+                [platePulsatingIron, eioRodExperience, platePulsatingIron],
+                [stickPulsatingIron, anychest, stickPulsatingIron],
+                [platePulsatingIron, platePulsatingIron, platePulsatingIron]
+            ])
+            
     // ======== Visuals ======== //
         // ==== Fused Quartz ==== // 
             alloy.recipeBuilder()
@@ -761,6 +930,129 @@
                 .inputs(gemCertusQuartz * 4)
                 .notConsumable(gtMoldBlock)
                 .outputs(blockGlassFusedQuartz.first)
+                .buildAndRegister()
+        // ==== Darksteel Furniture ==== // 
+            // Ladder
+                crafting.removeByOutput(eioFurnitureLadder)
+                crafting.addShaped("ggn_eio_furnitureladder", eioFurnitureLadder * 2,
+                [
+                    [stickDarkSteel, gtfile, stickDarkSteel],
+                    [stickDarkSteel, stickDarkSteel, stickDarkSteel],
+                    [stickDarkSteel, gthammer, stickDarkSteel]
+                ])
+                assembler.recipeBuilder()
+                    .EUt(7).duration(40)
+                    .inputs(stickDarkSteel * 7)
+                    .outputs(eioFurnitureLadder * 2)
+                    .buildAndRegister()
+            // Trapdoor
+                crafting.removeByOutput(eioFurnitureTrapdoor)
+                crafting.addShaped("ggn_eio_furnituretrapdoor", eioFurnitureTrapdoor,
+                [
+                    [screwDarkSteel, plateDarkSteel, screwDarkSteel],
+                    [plateDarkSteel, itemTrapdoorIron, plateDarkSteel],
+                    [gtsaw, plateDarkSteel, gtscrewdriver]
+                ])
+                assembler.recipeBuilder()
+                    .EUt(7).duration(40)
+                    .inputs(plateDarkSteel * 4, screwDarkSteel * 2, itemTrapdoorIron)
+                    .notConsumable(circuit4)
+                    .outputs(eioFurnitureTrapdoor)
+                    .buildAndRegister()
+            // Door
+                crafting.removeByOutput(eioFurnitureDoor)
+                crafting.addShaped("ggn_eio_furnituredoor", eioFurnitureTrapdoor,
+                [
+                    [plateDarkSteel, plateDarkSteel, gthammer],
+                    [plateDarkSteel, ringDarkSteel, screwDarkSteel],
+                    [plateDarkSteel, plateDarkSteel, gtscrewdriver]
+                ])
+                assembler.recipeBuilder()
+                    .EUt(7).duration(40)
+                    .inputs(plateDarkSteel * 6)
+                    .notConsumable(circuit5)
+                    .outputs(eioFurnitureTrapdoor)
+                    .buildAndRegister()
+            // Anvil
+                crafting.removeByOutput(eioFurnitureAnvil)
+                solidifier.recipeBuilder()
+                    .EUt(16).duration(2240)
+                    .fluidInputs(fluid("dark_steel") * 4464)
+                    .notConsumable(gtMoldAnvil)
+                    .outputs(eioFurnitureAnvil)
+                    .buildAndRegister()
+
+                alloy.recipeBuilder()
+                    .EUt(16).duration(2240)
+                    .inputs(ingotDarkSteel * 31)
+                    .notConsumable(gtMoldAnvil)
+                    .outputs(eioFurnitureAnvil)
+                    .buildAndRegister()            
+            // Bars
+                crafting.removeByOutput(eioFurnitureBars)
+                crafting.addShaped("ggn_eio_furniturebars", eioFurnitureBars * 8,
+                [
+                    [null, gthammer, null],
+                    [stickDarkSteel, stickDarkSteel, stickDarkSteel],
+                    [stickDarkSteel, stickDarkSteel, stickDarkSteel]
+                ])
+
+                assembler.recipeBuilder()
+                    .EUt(4).duration(300)
+                    .inputs(stickDarkSteel * 3)
+                    .outputs(eioFurnitureBars * 4)
+                    .buildAndRegister()
+
+            // Recycling
+                // Ladder - 1 to 1 
+                macerator.recipeBuilder().inputs(eioFurnitureLadder).outputs(dustDarkSteel).EUt(2).duration(60).category(RecipeCategories.MACERATOR_RECYCLING).buildAndRegister()
+                arc.recipeBuilder().inputs(eioFurnitureLadder).outputs(ingotDarkSteel).EUt(2).duration(60).fluidInputs(oxygen * 60).category(RecipeCategories.ARC_FURNACE_RECYCLING).buildAndRegister()
+                extractor.recipeBuilder().inputs(eioFurnitureLadder).fluidOutputs(fluid("dark_steel") * 144).EUt(30).duration(60).category(RecipeCategories.EXTRACTOR_RECYCLING).buildAndRegister()
+                // Trapdoor - 1 to 6
+                macerator.recipeBuilder().inputs(eioFurnitureTrapdoor).outputs(dustDarkSteel * 6).EUt(2).duration(360).category(RecipeCategories.MACERATOR_RECYCLING).buildAndRegister()
+                arc.recipeBuilder().inputs(eioFurnitureTrapdoor).outputs(ingotDarkSteel * 6).EUt(2).duration(360).fluidInputs(oxygen * 360).category(RecipeCategories.ARC_FURNACE_RECYCLING).buildAndRegister()
+                extractor.recipeBuilder().inputs(eioFurnitureTrapdoor).fluidOutputs(fluid("dark_steel") * 864).EUt(30).duration(360).category(RecipeCategories.EXTRACTOR_RECYCLING).buildAndRegister()
+                // Door - 1 to 6
+                macerator.recipeBuilder().inputs(eioFurnitureDoor).outputs(dustDarkSteel * 6).EUt(2).duration(360).category(RecipeCategories.MACERATOR_RECYCLING).buildAndRegister()
+                arc.recipeBuilder().inputs(eioFurnitureDoor).outputs(ingotDarkSteel * 6).EUt(2).duration(360).fluidInputs(oxygen * 360).category(RecipeCategories.ARC_FURNACE_RECYCLING).buildAndRegister()
+                extractor.recipeBuilder().inputs(eioFurnitureDoor).fluidOutputs(fluid("dark_steel") * 864).EUt(30).duration(360).category(RecipeCategories.EXTRACTOR_RECYCLING).buildAndRegister()
+                // Anvil - 1 to 31
+                macerator.recipeBuilder().inputs(eioFurnitureAnvil).outputs(dustDarkSteel * 31).EUt(2).duration(1860).category(RecipeCategories.MACERATOR_RECYCLING).buildAndRegister()
+                arc.recipeBuilder().inputs(eioFurnitureAnvil).outputs(ingotDarkSteel * 31).EUt(2).duration(1860).fluidInputs(oxygen * 1860).category(RecipeCategories.ARC_FURNACE_RECYCLING).buildAndRegister()
+                extractor.recipeBuilder().inputs(eioFurnitureAnvil).fluidOutputs(fluid("dark_steel") * 4464).EUt(30).duration(1860).category(RecipeCategories.EXTRACTOR_RECYCLING).buildAndRegister()
+                // Bars - 1 to 1/9th
+                macerator.recipeBuilder().inputs(eioFurnitureBars).outputs(dustTinyDarkSteel).EUt(2).duration(7).category(RecipeCategories.MACERATOR_RECYCLING).buildAndRegister()
+                arc.recipeBuilder().inputs(eioFurnitureBars).outputs(nuggetDarkSteel).EUt(2).duration(7).fluidInputs(oxygen * 7).category(RecipeCategories.ARC_FURNACE_RECYCLING).buildAndRegister()
+                extractor.recipeBuilder().inputs(eioFurnitureBars).fluidOutputs(fluid("dark_steel") * 16).EUt(30).duration(7).category(RecipeCategories.EXTRACTOR_RECYCLING).buildAndRegister()
+        // ==== Electric Lights ==== // 
+            // Chisel Group
+                mods.chisel.carving.addGroup("EIOLights") 
+            // Electric Light
+                def electriclights = [
+                    eioLightElectric,
+                    eioLightElectricInv,
+                    eioLight,
+                    eioLightInv,
+                    eioLightWireless,
+                    eioLightWirelessInv,
+                ]
+                for (entry in electriclights) {
+                    crafting.removeByOutput(entry)
+                    mods.chisel.carving.addVariation("EIOLights", entry)
+                }
+                crafting.addShaped("ggn_eio_light", eioLight,
+                [
+                    [blockGlassFusedQuartz, blockGlassFusedQuartz, blockGlassFusedQuartz],
+                    [dustGlowstone, circuitLv, dustGlowstone],
+                    [plateSilicon, plateSilicon, plateSilicon]
+                ])
+        // ==== Reinforced Obsidian ==== //
+            crafting.removeByOutput(eioObsidianReinforced)
+            solidifier.recipeBuilder()
+                .fluidInputs(liquidlava * 1000)
+                .inputs(stickDarkSteel * 4)
+                .outputs(eioObsidianReinforced)
+                .EUt(16).duration(600)
                 .buildAndRegister()
     // ======== Conduits ======== //
         // ==== Tools ==== //

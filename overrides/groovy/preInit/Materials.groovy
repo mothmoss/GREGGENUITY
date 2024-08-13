@@ -495,10 +495,11 @@ import gregtech.api.fluids.FluidBuilder;
             def flungstensteel = new Material.Builder(32410, resource("greggenuity", "flungstensteel"))
                 .ingot().iconSet("shiny").color(0x6577e6)
                 .components(material("fluix") * 1, material("tungsten_steel") * 1)
-                .fluidPipeProperties(5000, 300, true, true, true, true) 
+                .fluidPipeProperties(2000, 300, true, true, false, false)
+                .blastTemp(2000, "HIGH") 
                 .flags(
                     "disable_decomposition", "generate_plate",
-                    "generate_rod", "generate_bolt_screw"
+                    "generate_rod", "generate_bolt_screw", "no_smelting"
                     )                
                 .build()
         // ==== 32411: Chromatic Steel ==== //
@@ -541,9 +542,10 @@ import gregtech.api.fluids.FluidBuilder;
                 .flags(
                     "disable_decomposition", "generate_plate", "generate_rod", "generate_bolt_screw")
                 .build()
+            stellar.setFormula("Ag13Al10Au13Be6BiCr5Cu38Fe40Hg12Ir2K8MgN10Ni3O34S10Si13WZn2?2", true)
         // ==== 32417: Bedrockium ==== //
             def bedrockium = new Material.Builder(32417, resource("greggenuity", "bedrockium"))
-                .ingot().color(0x474747).iconSet("rough")
+                .ingot().color(0x474747).iconSet("metallic")
                 .flags(
                     "disable_decomposition", "generate_plate", "generate_rod", "generate_bolt_screw")
                 .build()

@@ -229,6 +229,7 @@ import team.chisel.api.carving.CarvingUtils
             def wirelessreceiver = item('appliedenergistics2:material', 41)
             
             def aePattern = item('appliedenergistics2:material', 52)
+            def eioTesseract = item('enderio:block_transceiver')
 
         //Misc
             def conversionupgrade = item("storagedrawers:upgrade_conversion")
@@ -487,6 +488,7 @@ import team.chisel.api.carving.CarvingUtils
                     .outputs(storagehousing.copy() * 1)
                     .buildAndRegister()
             // Fluid
+                crafting.removeByOutput(storagehousingfluid)
                 assembler.recipeBuilder()
                     .duration(100).EUt(16)
                     .fluidInputs(solder * 576)
@@ -494,6 +496,7 @@ import team.chisel.api.carving.CarvingUtils
                     .outputs(storagehousingfluid.copy() * 1)
                     .buildAndRegister()
             // Advanced
+                crafting.removeByOutput(advancedhousing)
                 assembler.recipeBuilder()
                     .duration(100).EUt(16)
                     .fluidInputs(solder * 576)
@@ -1125,6 +1128,22 @@ import team.chisel.api.carving.CarvingUtils
                         [plateFluix, stickFluix, plateFluix],
                         [plateSteel, plateSteel, plateSteel]
                     ])
+            // Quantum Link
+                // Ring
+                    crafting.addShaped("ggn_ae_quantumring", quantumring,
+                    [
+                        [plateFlungstensteel, plateTitanium, plateFlungstensteel],
+                        [sensorEv, pearlFluix, sensorEv],
+                        [plateFlungstensteel, plateTitanium, plateFlungstensteel],
+                    ])
+                // Chamber
+                    crafting.addShaped("ggn_ae_quantumchamber", quantumlink,
+                    [
+                        [plateFlungstensteel, quartzglass, plateFlungstensteel],
+                        [sensorEv, eioTesseract, sensorEv],
+                        [plateFlungstensteel, quartzglass, plateFlungstensteel],
+                    ])
+                
             // Level X
                 // Emitter
                     // Fluid

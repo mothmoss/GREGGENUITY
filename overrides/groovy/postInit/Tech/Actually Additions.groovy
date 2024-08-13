@@ -169,7 +169,6 @@
             item("actuallyadditions:item_misc:17"),
             item("actuallyadditions:item_misc:18"),
             item("actuallyadditions:item_misc:19"),
-            item("actuallyadditions:item_misc:20"),
             item("actuallyadditions:item_misc:5"),
             item("actuallyadditions:item_misc:6"),
             item("actuallyadditions:item_misc:7"),

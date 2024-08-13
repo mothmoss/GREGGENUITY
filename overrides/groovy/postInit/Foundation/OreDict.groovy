@@ -323,6 +323,7 @@
             def sticksDisabled = [
                 //stickIron
                     "immersiveengineering:material:1": "stickIron",
+                    "libvulpes:productrod:1": "stickIron",
 
                 //stickSteel
                     "immersiveengineering:material:2": "stickSteel",
