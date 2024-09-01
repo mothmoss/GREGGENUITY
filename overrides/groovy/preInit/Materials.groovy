@@ -189,13 +189,50 @@ import gregtech.api.fluids.FluidBuilder;
         // ==== 32124: Sodium Fluoride ==== //
             def sodiumfluoride = new Material.Builder(32124, resource("greggenuity", "sodium_fluoride"))
                 .dust().iconSet("dull")
+                .flags("disable_decomposition")
                 .components(material("sodium") * 1, material("fluorine") * 1)
                 .colorAverage()
                 .build()
         // ==== 32125: Aluminium Fluoride ==== //
             def aluminiumfluoride = new Material.Builder(32125, resource("greggenuity", "aluminium_fluoride"))
                 .dust().iconSet("dull")
+                .flags("disable_decomposition")
                 .components(material("aluminium") * 1, material("fluorine") * 3)
+                .colorAverage()
+                .build()
+        // ==== 32126: Hydrogen Peroxide ==== //
+            def hydrogenperoxide = new Material.Builder(32126, resource("greggenuity", "hydrogen_peroxide"))
+                .liquid()
+                .flags("disable_decomposition")
+                .components(material("hydrogen") * 2, material("oxygen") * 2)
+                .colorAverage()
+                .build()
+        // ==== 32127: Piranha Solution ==== //
+            def piranhasolution = new Material.Builder(32127, resource("greggenuity", "piranha_solution"))
+                .liquid()
+                .flags("disable_decomposition")
+                .components(material("sulfuric_acid") * 1, material("hydrogen_peroxide") * 1)
+                .colorAverage()
+                .build()
+        // ==== 32128: Fluorosulfuric Acid ==== //
+            def fluorosulfuric = new Material.Builder(32128, resource("greggenuity", "fluorosulfuric_acid"))
+                .liquid()
+                .flags("disable_decomposition")
+                .components(material("hydrofluoric_acid") * 1, material("sulfur_trioxide") * 1)
+                .colorAverage()
+                .build()
+        // ==== 32129: Antimony Pentafluoride ==== //
+            def antimonypentafluoride = new Material.Builder(32129, resource("greggenuity", "antimony_pentafluoride"))
+                .dust().colorAverage()
+                .flags("disable_decomposition")
+                .components(material("antimony") * 1, material("fluorine") * 5)
+                .build()
+
+        // ==== 32130: Magic Acid ==== //
+            def magicacid = new Material.Builder(32130, resource("greggenuity", "magic_acid"))
+                .liquid()
+                .flags("disable_decomposition")
+                .components(material("fluorosulfuric_acid") * 1, material("antimony_pentafluoride") * 1)
                 .colorAverage()
                 .build()
     // ======== 32301 to 32400: Magic ======== //
@@ -381,8 +418,8 @@ import gregtech.api.fluids.FluidBuilder;
                 .flags("disable_decomposition")
                 .build()
             fluxsludge.setFormula("Qe?", true)
-        // ==== 32322: Distilled Mana ==== //
-            def distilledmana = new Material.Builder(32322, resource("greggenuity", "distilled_mana"))
+        // ==== 32322: Unrefined Mana ==== //
+            def manaunrefined = new Material.Builder(32322, resource("greggenuity", "unrefined_mana"))
                 .liquid().color(0x8da0c2)
                 .flags("disable_decomposition")
                 .build()

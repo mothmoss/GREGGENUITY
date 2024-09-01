@@ -127,8 +127,6 @@
         liquidrubber = fluid("rubber")
         liquidsteel = fluid("steel")
         liquidborosilicate = fluid("borosilicate_glass")
-        liquidmanaconcentrated = fluid("concentrated_mana")
-        liquidmanadistilled = fluid("distilled_mana")
         liquidplastic = fluid("plastic")
         liquidptfe = fluid("polytetrafluoroethylene")
         liquidpbi = fluid("polybenzimidazole")
@@ -149,7 +147,17 @@
         liquidexperience = fluid("experience")
         liquiddeath = fluid("liquid_death")
         nutrientdistillation = fluid("nutrient_distillation")
-    
+        aquaregia = fluid("aqua_regia")
+        resplendicacid = fluid("resplendic_acid")
+        fluorine = fluid("fluorine")
+        fluorosulfuric = fluid("fluorosulfuric_acid")
+        magicacid = fluid("magic_acid")
+        sulfurtrioxide = fluid("sulfur_trioxide")
+        hydrofluoric = fluid("hydrofluoric_acid")
+        manasludge = fluid("mana_sludge")
+        manaconcentrated = fluid("concentrated_mana")
+        manaunrefined = fluid("unrefined_mana")
+
     // ======== Metaitems ======== //
         //ULV
         hullUlv = metaitem("hull.ulv")
@@ -282,6 +290,8 @@
             blockQuartz = ore("blockQuartz")
             blockPulsatingIron = ore("blockPulsatingIron") 
             blockAquaInfused = ore("blockAquaInfused")           
+            blockMarble = ore("blockMarble")
+            blockAstralStarmetal = ore("blockAstralStarmetal")
         //Block (Glass)
             blockGlassTempered = item('gregtech:transparent_casing')
             blockGlassInvar = item('thermalfoundation:glass_alloy', 2)
@@ -289,6 +299,7 @@
             blockGlassSignalum = item('thermalfoundation:glass_alloy', 2)
             blockGlassVibrant = item('appliedenergistics2:quartz_vibrant_glass')
             blockGlassFusedQuartz = ore("fusedQuartz")
+            blockGlassLaminated = item('gregtech:transparent_casing', 2)
         //Circuits
             circuitLv = ore("circuitLv")
             circuitMv = ore("circuitMv")
@@ -346,6 +357,12 @@
             dustMeat = metaitem("dustMeat")
             dustClay = metaitem("dustClay")
             dustSilicon = metaitem("dustSilicon")
+            dustSalisMundus = item('thaumcraft:salis_mundus')
+            dustResplendite = metaitem("dustResplendite")
+            dustAntimonyTrifluoride = metaitem("dustAntimonyTrifluoride")
+            dustAntimonyPentafluoride = metaitem("dustAntimonyPentafluoride")
+            dustFluxSludge = metaitem('dustFluxSludge')
+            dustTitantheum = metaitem("dustTitantheum")
 
 
         //Dust (Small)
@@ -395,8 +412,14 @@
             gemTerra = metaitem('gemTerraInfused')
             gemCoke = metaitem("gemCoke")
             gemQuartz = ore("gemQuartz")
+            gemAquamarine = item('astralsorcery:itemcraftingcomponent')
+            gemAquamarineResonating = item('astralsorcery:itemcraftingcomponent', 4)
+
         //Gem (Flawless)
             gemFlawlessEmerald = metaitem("gemFlawlessEmerald")
+        
+        //Gem (Exquisite)
+            gemExquisiteAquaInfused = metaitem("gemExquisiteAquaInfused")
 
         //Ingots
             ingotIron = ore("ingotIron").first
@@ -416,6 +439,9 @@
 
         //Lens
             lensFluix = metaitem("lensFluix")
+            lensSapphire = metaitem('lensSapphire')
+            lensDiamond = metaitem("lensDiamond")
+            lensNetherStar = metaitem('lensNetherStar')
 
         //Pearls
             pearlFluix = ore("pearlFluix").first
@@ -479,6 +505,7 @@
             plateEnergeticAlloy = metaitem("plateEnergeticAlloy")
             plateIridium = metaitem("plateIridium")
             plateSilicon = metaitem("plateSilicon")
+            plateAstralStarmetal = metaitem("plateAstralStarmetal")
         
         // Nuggets
             nuggetDarkSteel = metaitem("nuggetDarkSteel") 
@@ -541,6 +568,7 @@
             stickEnergeticAlloy = metaitem("stickEnergeticAlloy")
             stickPulsatingIron = metaitem("stickPulsatingIron")
             stickSteelMagnetic = metaitem('stickSteelMagnetic')
+            stickLivingwood = item('botania:manaresource', 3)
 
         //Screws
             screwFluixSteel = metaitem("screwFluixSteel")
@@ -568,6 +596,7 @@
             screwStellarAlloy = metaitem("screwStellarAlloy")
             screwPulsatingIron = metaitem("screwPulsatingIron")
             screwEndSteel = metaitem("screwEndSteel")
+            screwAstralStarmetal = metaitem("screwAstralStarmetal")
         //Transport
             // Item
                 pipeNormalPulsatingIron = metaitem('pipeNormalItemPulsatingIron')
@@ -577,6 +606,7 @@
                 wireDoubleRedAlloy = metaitem('wireGtDoubleRedAlloy')
         //Wire (Fine)
             wireFineFluix = metaitem("wireFineFluix")
+            wireFineSteel = metaitem("wireFineSteel")
         
         //Misc
             seedWheat = ore("seedWheat").first
@@ -599,7 +629,6 @@
             waferSilicon = metaitem('wafer.silicon')
 
         // ContentTweaker
-            bouleFluix = item('greggenuity:fluixboule')
             waferFluix = item('greggenuity:fluixwafer')
             waferEngravedFluix = item('greggenuity:engravedfluixwafer')
             chipFluix = item('greggenuity:fluixchip')
@@ -630,6 +659,7 @@
         praemunio = aspect("praemunio")
         permutatio = aspect("permutatio")
         machina = aspect("machina")
+        metallum = aspect("metallum")
     // ======== Shards ======== //
         crystalAlkimia = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'alkimia', 'amount': 1]]]) 
         crystalAversio = item('thaumcraft:crystal_essence').withNbt(['Aspects': [['key':'aversio', 'amount': 1]]]) 
@@ -683,4 +713,5 @@
         concentratedPerditio = item('greggenuity:concentratedperditio')
         concentratedIgnis = item('greggenuity:concentratedignis')
         concentratedTerra = item('greggenuity:concentratedterra')
+        concentratedBalance = item("greggenuity:concentratedbalance")
 // ================ Globals ================ //

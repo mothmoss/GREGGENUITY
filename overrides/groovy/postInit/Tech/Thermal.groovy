@@ -577,7 +577,7 @@
                         .chancedOutput(metaitem('dustTinyEmerald') * 3, 2500, 1000)
                         .chancedOutput(metaitem('dustSmallEmerald') * 2, 2000, 1000)
                         .chancedOutput(metaitem('dustEmerald'), 1500, 1000)
-                        .chancedOutput(item('minecraft:totem_of_undying'), 1000, 100)
+                        .outputs(item('minecraft:totem_of_undying'))
                         .fluidOutputs(fluid("experience") * 100)
                         .buildAndRegister()
                 // Wither Skeleton

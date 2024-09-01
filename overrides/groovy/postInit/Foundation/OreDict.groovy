@@ -691,7 +691,7 @@
         // ===== Misc ===== //
             def miscDisabled = [
                     "thermalfoundation:material:802": "fuelCoke",
-                    "immersiveengineering:material:6": "fuelCoke"
+                    "immersiveengineering:material:6": "fuelCoke",
                 ]
                 miscDisabled.each { key, val ->
                     ore(val).remove(item(key))

@@ -942,6 +942,7 @@ import gregtech.api.recipes.category.RecipeCategories
                 assembler.recipeBuilder()
                     .EUt(7).duration(40)
                     .inputs(stickDarkSteel * 7)
+                    .notConsumable(circuit5)
                     .outputs(eioFurnitureLadder * 2)
                     .buildAndRegister()
             // Trapdoor
@@ -999,6 +1000,7 @@ import gregtech.api.recipes.category.RecipeCategories
                 assembler.recipeBuilder()
                     .EUt(4).duration(300)
                     .inputs(stickDarkSteel * 3)
+                    .notConsumable(circuit4)
                     .outputs(eioFurnitureBars * 4)
                     .buildAndRegister()
 

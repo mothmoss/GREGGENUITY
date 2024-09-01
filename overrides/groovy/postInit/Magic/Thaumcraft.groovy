@@ -17,8 +17,9 @@ import net.minecraftforge.event.furnace.FurnaceFuelBurnTimeEvent
             def quicksilver = item('thaumcraft:quicksilver')
             def alumentum = item('thaumcraft:alumentum')
         // Ironwood
-            def ferrousSapling = item('extrautils2:ironwood_sapling')
-            def ferrousSaplingDead = item('extrautils2:ironwood_sapling', 1)
+            def saplingFerrous = item('extrautils2:ironwood_sapling')
+            def saplingFerrousDead = item('extrautils2:ironwood_sapling', 1)
+            def saplingGreatwood = item('thaumcraft:sapling_greatwood')
             def ferrousLog = item('extrautils2:ironwood_log')
             def ferrousLogRaw = item('extrautils2:ironwood_log', 1)
             def ferrousPlank = item('extrautils2:ironwood_planks')
@@ -228,7 +229,7 @@ import net.minecraftforge.event.furnace.FurnaceFuelBurnTimeEvent
                 .fluidInputs(liquidvis * 6000)
                 .outputs(salismundus * 6)
                 .EUt(16)
-                .duration(6 * 20)
+                .duration(120)
                 .buildAndRegister()
             mixer.recipeBuilder()
                 .inputs(dustAer, dustAqua, dustOrdo, dustPerditio, dustIgnis, dustTerra)
@@ -349,7 +350,7 @@ import net.minecraftforge.event.furnace.FurnaceFuelBurnTimeEvent
                     .EUt(120)
                     .duration(2400)
                     .inputs(gemCoke)
-                    .fluidInputs(liquidmanadistilled * 2000)
+                    .fluidInputs(manaunrefined * 2000)
                     .outputs(alumentum)
                     .buildAndRegister()
 
@@ -357,7 +358,7 @@ import net.minecraftforge.event.furnace.FurnaceFuelBurnTimeEvent
                     .EUt(120)
                     .duration(1200)
                     .inputs(gemCoke)
-                    .fluidInputs(liquidmanaconcentrated * 1000)
+                    .fluidInputs(manaconcentrated * 1000)
                     .outputs(alumentum)
                     .buildAndRegister()
             // Primitive Blast Furnace
@@ -393,38 +394,38 @@ import net.minecraftforge.event.furnace.FurnaceFuelBurnTimeEvent
             //furnace.removeByInput(ferrousPlank)
             //furnace.removeByInput(ferrousPlankRaw)
             // Adding toasting recipes to darken wood
-            furnace.add(ferrousLog, ferrousLogRaw, 1F)
-            furnace.add(ferrousPlank, ferrousPlankRaw, 1F)
+                furnace.add(ferrousLog, ferrousLogRaw, 1F)
+                furnace.add(ferrousPlank, ferrousPlankRaw, 1F)
             //Dead Ferrous Sapling
-            oreDict.add("ferrousSaplingDead", ferrousSaplingDead)
+                oreDict.add("saplingFerrousDead", saplingFerrousDead)
+            //Ferrous Log Oredict
+                oreDict.add("logFerrous", ferrousLog)
+                oreDict.add("logFerrous", ferrousLogRaw)
+            // Making a dead sapling
+                mods.thaumcraft.crucible.recipeBuilder()
+                    .researchKey('UNLOCKALCHEMY@3')
+                    .catalyst(saplingGreatwood)
+                    .output(saplingFerrousDead)
+                    .aspect(metallum * 40)
+                    .aspect(herba * 20)
+                    .register()   
             // Reviving dead saplings
-            mods.tc.dustTrigger.triggerBuilder()
-                .target(ore("ferrousSaplingDead"))
-                .output(ferrousSapling)
-                .register()
+                mods.tc.dustTrigger.triggerBuilder()
+                    .target(ore("saplingFerrousDead"))
+                    .output(saplingFerrous)
+                    .register()
             //Ironwood
-            oreDict.add("plankIronwood", ferrousPlank)
-            oreDict.add("plankIronwood", ferrousPlankRaw)
+                oreDict.add("plankIronwood", ferrousPlank)
+                oreDict.add("plankIronwood", ferrousPlankRaw)
             //EBF
-            ebf.recipeBuilder()
-                .inputs(ore("plankIronwood"))
-                .fluidInputs(acetone * 108)
-                .outputs(dustSmallIron)
-                .property("temperature", 2400)
-                .EUt(40)
-                .duration(300)
-                .buildAndRegister()
-            
-
-
-
-            
-            
-
-
-
-
-
+                ebf.recipeBuilder()
+                    .inputs(ore("plankIronwood"))
+                    .fluidInputs(acetone * 108)
+                    .outputs(dustSmallIron)
+                    .property("temperature", 2400)
+                    .EUt(40)
+                    .duration(300)
+                    .buildAndRegister()
     // ======== Artifice ======== //
         // ==== Vis Resonator ==== //
             mods.thaumcraft.arcane_workbench.removeByOutput(resonatorVis)
